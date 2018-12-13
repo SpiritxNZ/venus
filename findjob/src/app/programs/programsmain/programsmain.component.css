@@ -1,0 +1,68 @@
+header{
+    height:620px;
+    background-image: url("../../../assets/serviceimage.jpg");
+    border-radius:0px;
+    background-size: cover;
+    text-align:center;
+}
+#headerdiv{
+    padding-top: 200px;
+    }
+.mid1Title{
+    font-size: 34px;
+    font-weight: bold;
+    color:white;
+}
+.mid1Content{
+    color:white;
+    font-size: 20px;
+}
+#servicesection2
+{
+    width: 100%;
+    display: inline-block;
+    text-align:center;
+    height: 300px;
+}
+.servicecontainer1
+{
+    background-size: 100%;
+    background-position: 50%;
+    height: 50px;
+    background-color: white;
+    transform: rotate(-3deg);
+    z-index: -1;
+}
+.col-md-4
+{
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+}
+span:hover
+{
+    transform: translateY(-1.25rem);
+    box-shadow: 0 2px 12px 3px hsla(0,0%,89%,.55);
+
+}
+span
+{
+    padding: 4rem .5rem 1rem;
+    box-shadow: none;
+    transition: transform .3s ease;
+}
+.serviceimages
+{
+    width: 40px;
+    height: 40px;
+}
+#servicesection4
+{
+    text-align: center;
+    height: 200px;
+    width: 100%;
+}
+.row
+{
+    padding-top: 20px;
+}

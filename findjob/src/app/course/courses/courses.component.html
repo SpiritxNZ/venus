@@ -1,0 +1,31 @@
+<!-- Header -->
+<header id="header">
+    <div class="jumbotron-fluid">
+        <h1 class="j1">Course Home</h1>
+        <h2 class="s1">View our amazing selection of courses</h2>
+    </div>
+</header>
+<!-- Course selection -->
+<div class="container">
+    <div class="row">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch" *ngFor="let course of courses">
+            <div class="card mx-auto">
+                <!-- link to course page -->
+                <a href="{{course.link}}">
+                    <!--image-->
+                    <img class="card-img-top" src="{{course.thumbnail}}">
+                    <!--course title, lecturer, description-->
+                    <div class="card-body top">
+                        <h5 class="card-title m2">{{course.name}}</h5>
+                        <h6 class="card-subtitle s2">{{course.lecturer}}</h6>
+                        <p class="s3">{{course.desc}}</p>
+                    </div>
+                    <!--optional free trial-->
+                    <div class="card-body bottom">
+                        <div class="s3Blue" *ngIf="course.freetrial">Free Trial</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
