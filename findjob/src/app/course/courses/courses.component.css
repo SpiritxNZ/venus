@@ -1,5 +1,5 @@
 header{
-    height:450px;
+    height:350px;
     background-image: url("/assets/index-header-pic.jpg");
     background-position: center;
     border-radius:0px;
@@ -7,7 +7,7 @@ header{
     text-align:center;
 }
 header .jumbotron-fluid {
-    padding-top: 150px;
+    padding-top: 100px;
 }
 header h2 {
     font-size: 26px;
