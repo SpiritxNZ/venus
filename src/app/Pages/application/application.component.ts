@@ -12,6 +12,26 @@ export class ApplicationComponent implements OnInit {
 
   myForm: FormGroup;
 
+  ids: any[] = [
+    {
+      "id": "interest1"
+    },
+    {
+      "id": "interest2"
+    },
+    {
+      "id": "interest3"
+    },
+    {
+      "id": "interest4"
+    },
+    {
+      "id": "interest5"
+    },
+    {
+      "id": "interest6"
+    }
+  ];
   constructor(
     private fb: FormBuilder
     ) {}

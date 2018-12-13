@@ -8,26 +8,159 @@
 span{
     color: red;
 }
-input[type="radio"]{
-    display:none;
-}
 
-input[type="radio"] + label
-{
-    background: #999;
-    height: 16px;
-    width: 16px;
-    border: 1px solid transparent;
-    display:inline-block;
-    padding: 0 0 0 0px;
-}
 
-input[type="radio"]:checked + label
+
+
+ul {
+    list-style: none;
+}
+li {
+    display: inline-block;
+    margin-right: 15px;
+}
+input {
+    visibility:hidden;
+}
+h3{
+    position:absolute;
+    bottom: 5px;
+}
+label {
+    cursor: pointer;
+    text-align: center;
+    
+}
+#div1
 {
-    background-image: url("../../../assets/darkbackgroundimage.jpg");
-    height: 91px;
+    background-image: url("../../../assets/interest1.svg");
+    height: 100px;
     width: 134px;
-    border: 1px solid rgba(40, 140, 255, 0.712);
-    display:inline-block;
+}
+#label1 {
+
+    height: 134px;
+    width: 134px;
+    border: 3px solid transparent;
+    border-radius: 5px;
     padding: 0 0 0 0px;
 }
+#input1:checked + #label1 {
+   
+    height: 134px;
+    width: 134px;
+    border: 3px solid rgba(40, 140, 255, 0.712);
+    border-radius: 5px;
+    padding: 0 0 0 0px;
+}
+#input2 + #label2 {
+    background-image: url("../../../assets/interest2.svg");
+    background-size: cover;
+    height: 134px;
+    width: 134px;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    padding: 0 0 0 0px;
+}
+#input2:checked + #label2 {
+    background-image: url("../../../assets/interest2.svg");
+    background-size: cover;
+    height: 134px;
+    width: 134px;
+    border: 3px solid rgba(40, 140, 255, 0.712);
+    border-radius: 5px;
+    padding: 0 0 0 0px;
+}
+#input3 + #label3 {
+    background-image: url("../../../assets/interest3.svg");
+    background-size: cover;
+    height: 134px;
+    width: 134px;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    padding: 0 0 0 0px;
+}
+#input3:checked + #label3 {
+    background-image: url("../../../assets/interest3.svg");
+    background-size: cover;
+    height: 134px;
+    width: 134px;
+    border: 3px solid rgba(40, 140, 255, 0.712);
+    border-radius: 5px;
+    padding: 0 0 0 0px;
+}
+#input4 + #label4 {
+    background-image: url("../../../assets/interest4.svg");
+    background-size: cover;
+    height: 134px;
+    width: 134px;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    padding: 0 0 0 0px;
+}
+#input4:checked + #label4 {
+    background-image: url("../../../assets/interest4.svg");
+    background-size: cover;
+    height: 134px;
+    width: 134px;
+    border: 3px solid rgba(40, 140, 255, 0.712);
+    border-radius: 5px;
+    padding: 0 0 0 0px;
+}
+#input5 + #label5 {
+    background-image: url("../../../assets/interest5.svg");
+    background-size: cover;
+    height: 134px;
+    width: 134px;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    padding: 0 0 0 0px;
+}
+#input5:checked + #label5 {
+    background-image: url("../../../assets/interest5.svg");
+    background-size: cover;
+    height: 134px;
+    width: 134px;
+    border: 3px solid rgba(40, 140, 255, 0.712);
+    border-radius: 5px;
+    padding: 0 0 0 0px;
+}
+#input6 + #label6 {
+    background-image: url("../../../assets/interest6.svg");
+    background-size: cover;
+    height: 134px;
+    width: 134px;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    padding: 0 0 0 0px;
+}
+#input6:checked + #label6 {
+    background-image: url("../../../assets/interest6.svg");
+    background-size: cover;
+    height: 134px;
+    width: 134px;
+    border: 3px solid rgba(40, 140, 255, 0.712);
+    border-radius: 5px;
+    padding: 0 0 0 0px;
+}
+/* input + label
+{
+    background-image: url("../../../assets/interest1.svg");
+    background-size: cover;
+    height: 134px;
+    width: 134px;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    padding: 0 0 0 0px;
+}
+
+input:checked + label
+{
+    background-image: url("../../../assets/interest1.svg");
+    background-size: cover;
+    height: 134px;
+    width: 134px;
+    border: 3px solid rgba(40, 140, 255, 0.712);
+    border-radius: 5px;
+    padding: 0 0 0 0px;
+} */
