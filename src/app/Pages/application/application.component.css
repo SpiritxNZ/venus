@@ -22,10 +22,6 @@ li {
 input {
     visibility:hidden;
 }
-h3{
-    position:absolute;
-    bottom: 5px;
-}
 label {
     cursor: pointer;
     text-align: center;
@@ -33,10 +29,22 @@ label {
 #div1
 {
     background-image: url("../../../assets/interest1.svg");
-    height: 100px;
+    height: 90px;
     width: 134px;
 }
-#label1 {
+#div1
+{
+    background-image: url("../../../assets/interest1.svg");
+    height: 90px;
+    width: 134px;
+}
+#div1
+{
+    background-image: url("../../../assets/interest1.svg");
+    height: 90px;
+    width: 134px;
+}
+label {
 
     height: 134px;
     width: 134px;
@@ -44,7 +52,7 @@ label {
     border-radius: 5px;
     padding: 0 0 0 0px;
 }
-#input1:checked + #label1 {
+input:checked + label {
    
     height: 134px;
     width: 134px;
@@ -52,96 +60,7 @@ label {
     border-radius: 5px;
     padding: 0 0 0 0px;
 }
-#input2 + #label2 {
-    background-image: url("../../../assets/interest2.svg");
-    background-size: cover;
-    height: 134px;
-    width: 134px;
-    border: 3px solid transparent;
-    border-radius: 5px;
-    padding: 0 0 0 0px;
-}
-#input2:checked + #label2 {
-    background-image: url("../../../assets/interest2.svg");
-    background-size: cover;
-    height: 134px;
-    width: 134px;
-    border: 3px solid rgba(40, 140, 255, 0.712);
-    border-radius: 5px;
-    padding: 0 0 0 0px;
-}
-#input3 + #label3 {
-    background-image: url("../../../assets/interest3.svg");
-    background-size: cover;
-    height: 134px;
-    width: 134px;
-    border: 3px solid transparent;
-    border-radius: 5px;
-    padding: 0 0 0 0px;
-}
-#input3:checked + #label3 {
-    background-image: url("../../../assets/interest3.svg");
-    background-size: cover;
-    height: 134px;
-    width: 134px;
-    border: 3px solid rgba(40, 140, 255, 0.712);
-    border-radius: 5px;
-    padding: 0 0 0 0px;
-}
-#input4 + #label4 {
-    background-image: url("../../../assets/interest4.svg");
-    background-size: cover;
-    height: 134px;
-    width: 134px;
-    border: 3px solid transparent;
-    border-radius: 5px;
-    padding: 0 0 0 0px;
-}
-#input4:checked + #label4 {
-    background-image: url("../../../assets/interest4.svg");
-    background-size: cover;
-    height: 134px;
-    width: 134px;
-    border: 3px solid rgba(40, 140, 255, 0.712);
-    border-radius: 5px;
-    padding: 0 0 0 0px;
-}
-#input5 + #label5 {
-    background-image: url("../../../assets/interest5.svg");
-    background-size: cover;
-    height: 134px;
-    width: 134px;
-    border: 3px solid transparent;
-    border-radius: 5px;
-    padding: 0 0 0 0px;
-}
-#input5:checked + #label5 {
-    background-image: url("../../../assets/interest5.svg");
-    background-size: cover;
-    height: 134px;
-    width: 134px;
-    border: 3px solid rgba(40, 140, 255, 0.712);
-    border-radius: 5px;
-    padding: 0 0 0 0px;
-}
-#input6 + #label6 {
-    background-image: url("../../../assets/interest6.svg");
-    background-size: cover;
-    height: 134px;
-    width: 134px;
-    border: 3px solid transparent;
-    border-radius: 5px;
-    padding: 0 0 0 0px;
-}
-#input6:checked + #label6 {
-    background-image: url("../../../assets/interest6.svg");
-    background-size: cover;
-    height: 134px;
-    width: 134px;
-    border: 3px solid rgba(40, 140, 255, 0.712);
-    border-radius: 5px;
-    padding: 0 0 0 0px;
-}
+
 /* input + label
 {
     background-image: url("../../../assets/interest1.svg");
