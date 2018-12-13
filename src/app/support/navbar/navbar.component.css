@@ -30,3 +30,9 @@ a.nav-link
 .dropdown-item:active {
     color:black;
 }
+@media(max-width:768px) {
+    .dropdown-menu {
+        border:none;
+        border-radius: 0;
+    }
+}
