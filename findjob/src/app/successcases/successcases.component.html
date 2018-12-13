@@ -1,0 +1,35 @@
+<section id="section1">
+  
+</section>
+<!----------------------------------------------------------------------------------------------------------------------------------------->
+<section id="section2">
+    <div class="container">
+        <h1 class="j1" style="color:black;">Look at our successful cases</h1>
+        <h2 class="mid1Content">successful cases successful cases successful</h2>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4" data-radium="true" *ngFor="let person of successfulpeople">
+            <div class="successcasescontainer">
+              <div class="praise-card" data-radium="true">
+                <img class="successcasesimage" src="{{ person.image }}" alt="img" data-radium="true">
+                  <div class="div1" data-radium="true">
+                    <h3 class="h3" data-radium="true">
+                        {{ person.name }}&nbsp;|&nbsp;{{ person.university }}
+                    </h3>
+                      <div class="div2" data-radium="true">
+                        <div class="div3" data-radium="true">
+                        Offer：{{ person.offerlocation }}，{{ person.offerposition }}
+                        </div>
+                      <div class="div3" data-radium="true">courses: {{ person.courses }}
+                    </div>
+                  </div>
+                </div>
+                <div class="div4" data-radium="true" >
+                    {{ person.details |  slice: 0:200}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
+      

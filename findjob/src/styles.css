@@ -1,0 +1,262 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+.dialog1 .mat-dialog-container{
+    border-radius: 10px;
+    width:600px;
+}
+.dialog2 .mat-dialog-container{
+    border-radius: 10px;
+    width:650px;
+    height: 600px;
+}
+.dialog2 .mat-dialog-content{
+    max-height: 100%;
+}
+@media (max-width: 576px) {
+    .dialog1 .mat-dialog-container{
+        width:100%;
+    }
+}
+
+
+ .navbar .logo{
+     color:#0099FF;
+     font-size:21px;
+     padding: 0px;
+     font-family: Arial;
+     margin-top: -0.2rem;
+ }
+ .navbar .logo:hover{
+     filter:brightness(75%);
+     -webkit-filter: brightness(75%);
+     transition: 0.5s;
+ }
+
+ .container{
+    padding-top:10px;
+}
+
+.navbar-nav .nav-item .navLink{
+    letter-spacing: 1px;
+    font-family: Helvetica;
+}
+
+.navbar-nav .nav-item .navLink:hover{
+    border-bottom: 1px solid;
+    padding-top:7px;
+}
+
+.navbar .navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 31 31' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,153,255, 0.9)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='22' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    padding:22px;
+}
+
+.navbar .navbar-toggler{
+    padding:0px;
+    margin:0px;
+    border-width:0px;
+}
+
+.sec1{
+    padding-bottom: 20px;
+
+}
+
+ /* General Font 1 Section Start */
+.j1{
+    font-size:50px;
+    font-weight: bold;
+    color:white;
+}
+.j2{
+    font-size:40px;
+    font-weight: bold;
+    color:white;
+}
+
+@media (max-width: 576px) {
+    .j1{
+        font-size:40px;
+    }
+}
+@media (max-width: 576px) {
+    .fc-time-grid-container {
+        height: 12rem !important;
+    }
+}
+
+.l1{
+    font-size: 40px;
+    font-weight: bold;
+    color:#363636;
+}
+.l2{
+    font-size: 30px;
+    font-weight: bold;
+    color:#363636;
+}
+.m1{
+    font-size:25px;
+    color:#525252;
+    font-weight: bold;
+}
+.m2{
+    font-size:20px;
+    color:#525252;
+    font-weight: bold;
+}
+.s1{
+    font-size:18px;
+    color:#424242;
+}
+.s2{
+    font-size:15px;
+    color:#424242;
+}
+.s2bold{
+    font-size:15px;
+    color:#424242;
+    font-weight: bold;
+}
+.s2blue{
+    color:#0099FF;
+    font-size: 15px;
+}
+.s3{
+    font-size:14px;
+    color:#424242;
+}
+.s3Blue{
+    font-size: 14px;
+    color:#0099FF;
+}
+.s3bold{
+    font-size:13px;
+    color:#4b4b4b;
+    font-weight: bold;
+}
+.s4{
+    font-size: 12px;
+    color:#424242;
+    font-weight: normal;
+}
+s4{
+    font-size:13px;
+    color:#0099FF;
+}
+.error-feedback{
+    color:#b30000;
+    font-size: 18px;
+    text-align:center;
+}
+.invalid_feedback{
+    color:red;
+    font-size: 12px;
+}
+
+/* General Button styles */
+.btn_blue{
+    background-color: #0099FF;
+    width: 85px;
+    height: 30px;
+    font-size:13px;
+    border-width:0px;
+    padding:5px;
+    border-radius: 5px;
+    /* position: absolute; */
+    bottom:2px;
+    right:20px;
+    color:white;
+}
+
+.btn_blue_large{
+    font-size: 20px;
+    background-color: #0099FF;
+    margin-bottom: 13px;
+    padding: 10px 13px 10px 13px;
+    text-decoration: bold;
+    color:white;
+    border-color:white;
+    border-width: 1px;
+}
+
+.btn{
+    cursor:pointer;
+}
+
+/* Other Styles */
+.clickable{
+    cursor:pointer;
+}
+
+/* Full calendar styles
+
+/* change the out border color for week view */
+.fc-agendaWeek-view{
+    border:0.5px solid rgb(201, 201, 201);
+  }
+  /* grid head border color */
+  .fc-agendaWeek-view th{
+    border:0.5px solid rgb(201, 201, 201);
+  }
+  /* grid row vertical border color */
+  .fc-agendaWeek-view td{
+    border:1px solid rgb(201, 201, 201);
+  }
+  /* grid row horizontal border color */
+  .fc-agendaWeek-view tr{
+    border:1px solid rgb(201, 201, 201);
+  }
+  /*for schedule gap size*/
+  body tr {
+    height: 12px !important;
+    font-size: 13px;
+  }
+  /* list view border */
+  .fc-list-view {
+    border: 1px solid #dee2e6;
+  }
+  .fc-time-grid .fc-slats td {
+    height: 1.6em;
+  }
+  /* .fc-day-header .fc-fri{
+    border:1px solid black;
+  } */
+
+  /* .fc .fc-agendaWeek-view tr{
+    border: 1px solid black;
+  } */
+
+
+.popover{
+    max-width: none !important;
+    width: auto;
+}
+/*used to stop the button hover flicking in chat component, like "send a photo" tooltip*/
+.tooltip { 
+    pointer-events: none; 
+}
+
+/*when page loading data from backend ,add <div class="loader"> in your page */
+.loader {
+    margin-left: auto;
+    margin-right: auto;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #0099FF;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
