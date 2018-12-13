@@ -2,11 +2,6 @@ a.nav-link
 {
     color: white;
 }
-
-.coursesdropdown
-{
-    width: 100%;
-}
 .mathicon
 {
     background-image: url("../../../assets/math.png");
@@ -27,4 +22,11 @@ a.nav-link
     background-position: left center;
     background-size: 25px;
     background-repeat: no-repeat;
+}
+.dropdown-item {
+    margin-left: 5px;
+    background-color: transparent;
+}
+.dropdown-item:active {
+    color:black;
 }
