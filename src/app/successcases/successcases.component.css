@@ -1,0 +1,91 @@
+#section1
+{
+    height: 450px;
+    width: 100%;
+    background-image: url("../../assets/successcasesbg.jpg");
+    background-size: cover;
+}
+#section2,#section3
+{
+    background-color: #f4f4f4;
+    text-align: center;
+}
+.card-header
+{
+    background-color: white;
+}
+.row
+{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.successcasescontainer
+{
+    position: relative;
+    height: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 55px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    background: #fff;
+    text-align: left;
+}
+.successcasesimage
+{
+    position: absolute; 
+    top: -50px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 100px; 
+    height: 100px; 
+    border-radius: 100%;
+}
+.div1
+{
+    height: 150px; 
+    padding-top: 55px; 
+    text-align: center;
+}
+.div2
+{
+    font-size: 0.875em; 
+    color: rgb(80, 145, 230); 
+    line-height: 24px; 
+    font-weight: 200;
+}
+.div3
+{
+    height: 24px; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+}
+.div4
+{
+    height: 220px; 
+    font-size: 0.8em; 
+    font-weight: 200; 
+    color: rgb(136, 136, 136); 
+    line-height: 24px; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    display: -webkit-box; 
+    -webkit-line-clamp: 9; 
+    white-space: normal; 
+    overflow-wrap: break-word; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+}
+.h3
+{
+    height: 24px; 
+    font-size: 1.05em; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+    color: rgb(53, 53, 53); 
+    font-weight: 300; 
+    margin: 0px 0px 7px;
+}
