@@ -24,24 +24,23 @@ padding-top: 200px;
 .sectionContent{
     font-size: 20px;
 }
+.carousel-caption {
+    text-align: left;
+    bottom: 0;
+    left: 20px;
+}
 .imgTextname{
-    position: absolute ;
     z-index: 1;
     color:#EDEDED;
     font-size: 18px;
     text-shadow: 4px;
-    top:84%;
-    left: 20px;
     filter:brightness(100%);
 }
 .imgTextdetail{
-    position: absolute ;
     z-index: 1;
     color:#EDEDED;
     font-size: 13px;
     text-shadow: 4px;
-    top:90%;
-    left: 20px;
     filter:brightness(100%);
 }
 .sectionimages
@@ -53,7 +52,7 @@ padding-top: 200px;
     -webkit-filter: brightness(20%);
     transition: 1s;
 }
-div.col-md-3 :hover
+div.col-md-3 :hover, .carousel-caption:hover
 {   
     filter: brightness(100%);
     cursor: pointer;
