@@ -52,8 +52,7 @@ padding-top: 200px;
     -webkit-filter: brightness(20%);
     transition: 1s;
 }
-div.col-md-3 :hover, .carousel-caption:hover,
-.imgTextname:hover, .imgTextdetail:hover
+div.col-md-3 :hover
 {   
     filter: brightness(100%);
     cursor: pointer;
