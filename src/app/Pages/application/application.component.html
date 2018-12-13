@@ -2,54 +2,70 @@
 <section id="section1">
   
 </section>
-
-<div class="row">
-    <div class="col-6">
-        <h2>IMAGES</h2>
-    </div>
-    <div class="col-6">
-            <form [formGroup]="myForm">
-
-                <div class="form-group">
-                    <label for="firstname">First Name:</label>
-                    <input class="form-control" formControlName="firstname">
-                    <span *ngIf="firstname.invalid && firstname.touched">
-                        Enter Your First Name
-                    </span>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h2>IMAGES</h2>
+        </div>
+        <div class="col-6">
+                <h4 class="j1" style="color:black; font-size: 30px;" data-toggle="collapse" data-target="#interest">
+                    I'm interested in...
+                    <h4 class="j1" style="color:black; font-size: 20px;" data-toggle="collapse" data-target="#interest">
+                        What area are you interested in getting the most assistance with?
+                    </h4>
+                </h4>
+                <div id="interest" class="collapse hide">
+                    <form action="">
+                        <input type="radio" id="shipadd2" name="gender" />
+                        <label for="shipadd2"></label>
+                    </form>
                 </div>
 
-                <div class="form-group">
-                        <label for="lastname">Last Name:</label>
-                        <input class="form-control" formControlName="lastname">
-                        <span *ngIf="lastname.invalid && lastname.touched">
-                            Enter Your Last Name
-                        </span>
-                    </div>
-                
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input class="form-control" formControlName="email">
-                    <span *ngIf="email.invalid && email.touched">
-                        Your email does not look right
-                    </span>
-                </div>  
+                <h4 class="j1" style="color:black; font-size: 30px;" data-toggle="collapse" data-target="#contact">
+                    My contact info is...
+                </h4>
+                <div id="contact" class="collapse hide">
+                    <form [formGroup]="myForm">
 
-                <div class="form-group">
-                        <label for="phone">Phone:</label>
-                        <input class="form-control" formControlName="phone">
-                        <span *ngIf="phone.invalid && phone.touched">
-                            Your phone number does not look right
-                        </span>
-                    </div>  
+                        <div class="form-group">
+                            <label for="firstname">First Name:</label>
+                            <input class="form-control" formControlName="firstname" placeholder="Enter Your Firstname Please">
+                            <span *ngIf="firstname.invalid && firstname.touched">
+                                Enter Your First Name
+                            </span>
+                        </div>
 
+                        <div class="form-group">
+                                <label for="lastname">Last Name:</label>
+                                <input class="form-control" formControlName="lastname" placeholder="Enter Your Lastname Please">
+                                <span *ngIf="lastname.invalid && lastname.touched">
+                                    Enter Your Last Name
+                                </span>
+                            </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input class="form-control" formControlName="email" placeholder="Enter Your Email Please">
+                            <span *ngIf="email.invalid && email.touched">
+                                Your email does not look right
+                            </span>
+                        </div>  
 
-                  
-                  
-                    <button [disabled]="myForm.invalid">Let's Do it!</button>
-                  
-            </form>
+                        <div class="form-group">
+                                <label for="phone">Phone:</label>
+                                <input class="form-control" formControlName="phone" placeholder="Enter Your Phone Number Please">
+                                <span *ngIf="phone.invalid && phone.touched">
+                                    Your phone number does not look right
+                                </span>
+                            </div>
+                        
+                            <button [disabled]="myForm.invalid" type="button" class="btn btn-primary">SUBMIT</button>
+                        
+                    </form>
+                </div>
+        </div>
+        
     </div>
-    
 </div>
 
 

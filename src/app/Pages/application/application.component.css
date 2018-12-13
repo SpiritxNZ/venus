@@ -8,3 +8,26 @@
 span{
     color: red;
 }
+input[type="radio"]{
+    display:none;
+}
+
+input[type="radio"] + label
+{
+    background: #999;
+    height: 16px;
+    width: 16px;
+    border: 1px solid transparent;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+input[type="radio"]:checked + label
+{
+    background-image: url("../../../assets/darkbackgroundimage.jpg");
+    height: 91px;
+    width: 134px;
+    border: 1px solid rgba(40, 140, 255, 0.712);
+    display:inline-block;
+    padding: 0 0 0 0px;
+}

@@ -31,7 +31,7 @@ export class ApplicationComponent implements OnInit {
         phone: ['', [
           Validators.required,
           Validators.minLength(7),
-          Validators.minLength(15)
+          Validators.maxLength(15)
         ]]
       });
     }
