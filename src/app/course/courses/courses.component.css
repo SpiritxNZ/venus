@@ -2,10 +2,7 @@
 .portrait {
     height: 80px;
     width: 80px;
-    background-image: url('https://2.bp.blogspot.com/-6KeAQAlUU5M/T0UMEDbH_QI/AAAAAAAACZU/lcKgZUENM7g/s1600/Calico_tabby_cat_-_Savannah.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    object-fit: cover;
     border-radius: 50%;
     margin-right: 20px;
 }
@@ -15,6 +12,11 @@
     margin-bottom: 20px;
 }
 
+/* main container */
+.container {
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
 
 /*video and list cards*/
 .card {
