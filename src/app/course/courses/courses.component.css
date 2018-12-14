@@ -15,6 +15,11 @@
     margin-bottom: 20px;
 }
 
+/* main container */
+.container {
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
 
 /*video and list cards*/
 .card {
