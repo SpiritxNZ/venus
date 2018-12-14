@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-declare var $
+import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-courses',
@@ -10,7 +10,7 @@ export class CoursesComponent implements OnInit {
 
   /**Test data for course ---------- */
   courseInfo = {
-    name: "Video Title", target: "University Level", video: "https://www.youtube.com/embed/4CbLXeGSDxg",
+    name: "Video Title", target: "University Level", 
     description: "Information about the video. Illo et et laborum maxime ut nam. Doloribus et enim voluptatem \
     quidem dignissimos et. Fuga vitae earum distinctio et officia dolor et aliquam. Ipsa odio unde velit similique. \
     Aut aperiam optio voluptate omnis veritatis. Officia nesciunt earum suscipit nesciunt quas et vel" }
@@ -40,7 +40,9 @@ export class CoursesComponent implements OnInit {
 
   /** End of test data -------------------------- */
 
-  constructor() { }
+  constructor(private sanitizer: DomSanitizer) { 
+    this.video = sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/4CbLXeGSDxg");
+  }
 
   ngOnInit() {
   }
