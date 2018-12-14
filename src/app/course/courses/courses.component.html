@@ -6,7 +6,7 @@
     </div>
 </header>
 <div class="container">
-    <h5 class="title l2">Video Title</h5>
+    <h5 class="title l2">{{courseInfo.name}}</h5>
     <div class="row">
       <!--video and info-->
       <div class="col-md-8">
@@ -14,7 +14,7 @@
           <!--video-->
           <div class="card-image">
             <div class="embed-responsive embed-responsive-16by9 video">
-              <iframe id="video" class="embed-responsive-item" src="https://www.youtube.com/embed/4CbLXeGSDxg"
+              <iframe id="video" class="embed-responsive-item" src="{{courseInfo.video}}"
                 frameborder="0" allowfullscreen></iframe>
             </div>
           </div>
@@ -23,15 +23,15 @@
             <div class="container head">
               <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12">
-                  <div class="portrait" style="float:left"></div>
-                  <h1 class="card-title m1">Edwin Zhu</h1>
-                  <h5 class="card-subtitle s1">Senior Lecturer</h5>
+                  <img class="portrait" style="float:left" src="{{courseLecturer.image}}">
+                  <h1 class="card-title m1">{{courseLecturer.name}}</h1>
+                  <h5 class="card-subtitle s1">{{courseLecturer.role}}</h5>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12">
                   <div class="card card-small">
                     <div class="card-body">
                       <h6 class="s2bold">Teaches</h6>
-                      <p class="s4">Backend development</p>
+                      <p class="s4">{{courseLecturer.subject}}</p>
                     </div>
                   </div>
                 </div>
@@ -39,7 +39,7 @@
                   <div class="card card-small">
                     <div class="card-body">
                       <h6 class="s2bold">Intended Learners</h6>
-                      <p class="s4">University Level</p>
+                      <p class="s4">{{courseInfo.target}}</p>
                     </div>
                   </div>
                 </div>
@@ -50,16 +50,10 @@
             <div class="info">
               <h5 class="info-head m2">Experience</h5>
               <ul>
-                <li class="s2">Graduated from such-and-such</li>
-                <li class="s2">4 years experience with blablabla</li>
-                <li class="s2">Bullet point</li>
+                <li class="s2" *ngFor="let expItem of courseLecturer.expList">{{expItem}}</li>
               </ul>
               <h5 class="info-head m2">Info</h5>
-              <p class="info-body s2">Information about the video. Illo et et laborum maxime ut nam.
-                Doloribus et enim voluptatem quidem dignissimos et. Fuga vitae earum distinctio et
-                officia dolor et aliquam. Ipsa odio unde velit similique. Aut aperiam optio voluptate
-                omnis veritatis. Officia nesciunt earum suscipit nesciunt quas et vel
-              </p>
+              <p class="info-body s2">{{courseInfo.description}}</p>
             </div>
           </div>
         </div>
@@ -71,15 +65,9 @@
             Lesson List
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item m3"><a href="#">1. Cras justo odio</a></li>
-            <li class="list-group-item m3"><a href="#">2. Dapibus ac facilisis in</a></li>
-            <li class="list-group-item m3"><a href="#">3. Vestibulum at eros</a></li>
-            <li class="list-group-item m3"><a href="#">4. Cras justo odio</a></li>
-            <li class="list-group-item m3"><a href="#">5. Dapibus ac facilisis in</a></li>
-            <li class="list-group-item m3"><a href="#">6. Vestibulum at eros</a></li>
-            <li class="list-group-item m3"><a href="#">7. Cras justo odio</a></li>
-            <li class="list-group-item m3"><a href="#">8. Dapibus ac facilisis in</a></li>
-            <li class="list-group-item m3"><a href="#">9. Vestibulum at eros</a></li>
+            <li class="list-group-item m3" *ngFor="let courseItem of courseList">
+              <a href="{{courseItem.link}}">{{courseItem.name}}</a>
+            </li>
           </ul>
         </div>
       </div>
