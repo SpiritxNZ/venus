@@ -1,3 +1,48 @@
+/*profile image of lecturer*/
+.portrait {
+    height: 80px;
+    width: 80px;
+    background-image: url('https://2.bp.blogspot.com/-6KeAQAlUU5M/T0UMEDbH_QI/AAAAAAAACZU/lcKgZUENM7g/s1600/Calico_tabby_cat_-_Savannah.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/*top part of the video card info*/
+.head {
+    margin-bottom: 20px;
+}
+
+
+/*video and list cards*/
+.card {
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.video {
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px;
+}
+
+/*lesson list*/
+.list-group-item {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/*video info layout*/
+.card-small .card-body {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.card-small h6, .card p {
+    margin:0;
+}
+.card-body .col-lg-3 {
+    padding:5px;
+}
 header{
     height:350px;
     background-image: url("/assets/index-header-pic.jpg");
@@ -12,44 +57,4 @@ header .jumbotron-fluid {
 header h2 {
     font-size: 26px;
     color:white;
-}
-/* remove underline from link */
-a {
-    text-decoration: none;
-}
-/* gaps between cards and card size */
-.card {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    max-width: 300px;
-    width: 100%;
-    transition: all .1s ease-in-out; 
-}
-/* image sizing */
-.card-img-top {
-    object-fit: cover;
-    height: 165px;
-}
-/* hover effect */
-.card:hover {
-    background-color: azure;
-}
-/* lecturer text positioning */
-.card-subtitle {
-    padding-top: 0px;
-    padding-bottom: 5px;
-    color: grey;
-}
-/* card description */
-.card p {
-    color: grey;
-    min-height: 42px;
-}
-/* top part of the card text */
-.top {
-    padding-bottom:0px;
-}
-/* bottom part of the card text */
-.bottom {
-    padding-top: 0px;
 }

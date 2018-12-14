@@ -11,27 +11,8 @@ import 'core-js/es7/reflect';
 export class ApplicationComponent implements OnInit {
 
   myForm: FormGroup;
-
-  ids: any[] = [
-    {
-      "id": "interest1"
-    },
-    {
-      "id": "interest2"
-    },
-    {
-      "id": "interest3"
-    },
-    {
-      "id": "interest4"
-    },
-    {
-      "id": "interest5"
-    },
-    {
-      "id": "interest6"
-    }
-  ];
+  divname: string;
+  
   constructor(
     private fb: FormBuilder
     ) {}
@@ -55,7 +36,16 @@ export class ApplicationComponent implements OnInit {
         ]]
       });
     }
-  
+    enterone()
+    {
+      this.divname=="one";
+      console.log("one");
+    }
+    entertwo()
+    {
+      this.divname=="two";
+      console.log("two");
+    }
     get email() {
       return this.myForm.get('email');
     }

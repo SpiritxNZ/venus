@@ -11,54 +11,104 @@ span{
 
 
 
-
 ul {
     list-style: none;
+    padding: 0px;
+    margin-top: 20px;
 }
 li {
+    padding-top :20px;
     display: inline-block;
-    margin-right: 15px;
 }
-input {
+.interestinput {
     visibility:hidden;
 }
-label {
+.interestlabel {
     cursor: pointer;
     text-align: center;
 }
 #div1
 {
     background-image: url("../../../assets/interest1.svg");
-    height: 90px;
+    height: 100px;
+    background-size: cover;
     width: 134px;
 }
-#div1
+#div2
 {
-    background-image: url("../../../assets/interest1.svg");
-    height: 90px;
+    background-image: url("../../../assets/interest2.svg");
+    height: 100px;
+    background-size: cover;
     width: 134px;
 }
-#div1
+#div3
 {
-    background-image: url("../../../assets/interest1.svg");
-    height: 90px;
+    background-image: url("../../../assets/interest3.svg");
+    height: 100px;
+    background-size: cover;
     width: 134px;
 }
-label {
-
-    height: 134px;
+#div4
+{
+    background-image: url("../../../assets/interest4.svg");
+    height: 100px;
+    background-size: cover;
+    width: 134px;
+}
+#div5
+{
+    background-image: url("../../../assets/interest5.svg");
+    height: 100px;
+    background-size: cover;
+    width: 134px;
+}
+#div6
+{
+    background-image: url("../../../assets/interest6.svg");
+    height: 100px;
+    background-size: cover;
+    width: 134px;
+}
+#showinterest
+{
+    height: 700px;
+    width: 100%;
+}
+.interestlabel {
+    height: 150px;
     width: 134px;
     border: 3px solid transparent;
     border-radius: 5px;
     padding: 0 0 0 0px;
 }
-input:checked + label {
-   
-    height: 134px;
+.interestinput:checked + .interestlabel {
+    height: 150px;
     width: 134px;
     border: 3px solid rgba(40, 140, 255, 0.712);
     border-radius: 5px;
     padding: 0 0 0 0px;
+}
+.interestinput:hover + .interestlabel {
+    transform: translateY(-1.25rem);
+    box-shadow: 0 2px 12px 3px hsla(0,0%,89%,.55);
+}
+#input1:hover + .interestimage {
+    display: none;
+}
+#input2:hover + .interestimage {
+    content: url("../../../assets/front1.jpg");
+}
+#input3:hover + .interestimage {
+    content: url("../../../assets/front2.jpg");
+}
+#input4:hover + .interestimage {
+    content: url("../../../assets/front5.jpg");
+}
+#input5:hover + .interestimage {
+    content: url("../../../assets/front1.jpg");
+}
+#input6:hover + .interestimage {
+    content: url("../../../assets/front2.jpg");
 }
 
 /* input + label

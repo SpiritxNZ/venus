@@ -4,8 +4,19 @@
 </section>
 <div class="container">
     <div class="row">
-        <div class="col-6">
-            <h2>IMAGES</h2>
+        <div class="col-6" style="overflow: hidden;" id="showinterest">
+                <div *ngIf="divname == 'one'; then styleone"></div>
+                <div *ngIf="divname == 'two'; then styletwo"></div>
+                <div *ngIf="divname == 'three'; then stylethree"></div>
+                <div *ngIf="divname == 'four'; then stylefour"></div>
+                <div *ngIf="divname == 'five'; then stylefive"></div>
+                <div *ngIf="divname == 'six'; then stylesix"></div>
+                <ng-template #styleone>
+                    <h1>styleone</h1>
+                </ng-template>
+                <ng-template #styletwo>
+                    <h1>styletwo</h1>
+                </ng-template>
         </div>
         <div class="col-6">
                 <h4 class="j1" style="color:black; font-size: 30px;" data-toggle="collapse" data-target="#interest">
@@ -17,32 +28,47 @@
                 <div id="interest" class="collapse hide">
                     <div class="row">
                             <ul>
-                                    <li  class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                        <input type='radio' name='interest' id='input1'/>
-                                        <label id='label1' for='input1'>
+                                    <li  class="col-xs-12 col-sm-6 col-md-4 col-lg-4" (mouseenter)="enterone()">
+                                        <input class="interestinput" type='radio' name='interest' id='input1'/>
+                                        <label class="interestlabel" id='label1' for='input1'>
                                             <div id="div1"></div>
                                             <h3>hello</h3>
                                         </label>
                                     </li>
-                                    <li class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                        <input type='radio' name='interest' id='input2'/>
-                                        <label id='label2' for='input2'>Value 1</label>
+                                    <li class="col-xs-12 col-sm-6 col-md-4 col-lg-4" (mouseenter)="entertwo()">
+                                        <input class="interestinput" type='radio' name='interest' id='input2'/>
+                                        <label class="interestlabel" id='label2' for='input2'>
+                                            <div id="div2"></div>
+                                            <h3>hello</h3>
+                                        </label>
                                     </li>
-                                    <li  class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                        <input type='radio' name='interest' id='input3'/>
-                                        <label id='label3' for='input3'>Value 1</label>
+                                    <li  class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                        <input class="interestinput" type='radio' name='interest' id='input3'/>
+                                        <label class="interestlabel" id='label3' for='input3'>
+                                            <div id="div3"></div>
+                                            <h3>hello</h3>
+                                        </label>
                                     </li>
-                                    <li class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                        <input type='radio' name='interest' id='input4'/>
-                                        <label id='label4' for='input4'>Value 1</label>
+                                    <li class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                        <input class="interestinput" type='radio' name='interest' id='input4'/>
+                                        <label class="interestlabel" id='label4' for='input4'>
+                                            <div id="div4"></div>
+                                            <h3>hello</h3>
+                                        </label>
                                     </li>
-                                    <li  class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                        <input type='radio' name='interest' id='input5'/>
-                                        <label id='label5' for='input5'>Value 1</label>
+                                    <li  class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                        <input class="interestinput" type='radio' name='interest' id='input5'/>
+                                        <label class="interestlabel" id='label5' for='input5'>
+                                            <div id="div5"></div>
+                                            <h3>hello</h3>
+                                        </label>
                                     </li>
-                                    <li class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                        <input type='radio' name='interest' id='input6'/>
-                                        <label id='label6' for='input6'>Value 1</label>
+                                    <li class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                        <input class="interestinput" type='radio' name='interest' id='input6'/>
+                                        <label class="interestlabel" id='label6' for='input6'>
+                                            <div id="div6"></div>
+                                            <h3>hello</h3>
+                                        </label>
                                     </li>
                             </ul>
 

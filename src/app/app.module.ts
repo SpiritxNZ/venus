@@ -11,7 +11,7 @@ import { BlogComponent } from './Pages/blog/blog.component';
 import { SuccesscasesComponent } from './successcases/successcases.component';
 import { AboutusComponent } from './Pages/aboutus/aboutus.component';
 import { ContactusComponent } from './Pages/contactus/contactus.component';
-import { CoursesComponent } from './course/courses/courses.component';
+import { CourseshomeComponent } from './course/courseshome/courseshome.component';
 import { ProgramComponent } from './programs/program/program.component';
 import { ApplicationComponent } from './Pages/application/application.component';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
@@ -19,6 +19,7 @@ import { MatChipsModule} from '@angular/material';
 import { MatFormFieldModule} from '@angular/material';
 import { MatCheckboxModule, MatSelectModule } from '@angular/material';
 import 'core-js/es7/reflect';
+import { CoursesComponent } from './course/courses/courses.component';
 
 const routes: Routes = [
   { path:'', component:HomeComponent },
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path:'successcases', component:SuccesscasesComponent },
   { path:'aboutus', component:AboutusComponent },
   { path:'contactus', component:ContactusComponent },
+  { path:'courseshome', component:CourseshomeComponent },
   { path:'courses', component:CoursesComponent },
   { path:'program', component:ProgramComponent },
   { path:'application', component:ApplicationComponent }
@@ -43,9 +45,10 @@ const routes: Routes = [
     SuccesscasesComponent,
     AboutusComponent,
     ContactusComponent,
-    CoursesComponent,
+    CourseshomeComponent,
     ProgramComponent,
-    ApplicationComponent
+    ApplicationComponent,
+    CoursesComponent
 
   ],
   imports: [
