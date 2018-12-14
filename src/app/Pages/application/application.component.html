@@ -3,73 +3,97 @@
   
 </section>
 <div class="container">
-    <div class="row">
+    <div class="row" id="section1row">
         <div class="col-6" style="overflow: hidden;" id="showinterest">
-                <div *ngIf="divname == 'one'; then styleone"></div>
-                <div *ngIf="divname == 'two'; then styletwo"></div>
-                <div *ngIf="divname == 'three'; then stylethree"></div>
-                <div *ngIf="divname == 'four'; then stylefour"></div>
-                <div *ngIf="divname == 'five'; then stylefive"></div>
-                <div *ngIf="divname == 'six'; then stylesix"></div>
-                <ng-template #styleone>
+                <div *ngIf="divname == '1'; then styleone"></div>
+                <div *ngIf="divname == '2'; then styletwo"></div>
+                <div *ngIf="divname == '3'; then stylethree"></div>
+                <div *ngIf="divname == '4'; then stylefour"></div>
+                <div *ngIf="divname == '5'; then stylefive"></div>
+                <div *ngIf="divname == '6'; then stylesix"></div>
+                <ng-template #styleone> <!--what you want to show on left div-->
                     <h1>styleone</h1>
+                    <img class="sectionimages" src="../../assets/front1.jpg">
                 </ng-template>
                 <ng-template #styletwo>
                     <h1>styletwo</h1>
+                    <img class="sectionimages" src="../../assets/front5.jpg">
+                </ng-template>
+                <ng-template #stylethree>
+                    <h1>stylethree</h1>
+                    <img class="sectionimages" src="../../assets/front4.jpg">
+                </ng-template>
+                <ng-template #stylefour>
+                    <h1>stylefour</h1>
+                    <img class="sectionimages" src="../../assets/front5.jpg">
+                </ng-template>
+                <ng-template #stylefive>
+                    <h1>stylefive</h1>
+                    <img class="sectionimages" src="../../assets/front4.jpg">
+                </ng-template>
+                <ng-template #stylesix>
+                    <h1>stylesix</h1>
+                    <img class="sectionimages" src="../../assets/front1.jpg">
                 </ng-template>
         </div>
         <div class="col-6">
-                <h4 class="j1" style="color:black; font-size: 30px;" data-toggle="collapse" data-target="#interest">
+                <h4 class="j1" style="color:black; font-size: 30px;" >
                     I'm interested in...
-                    <h4 class="j1" style="color:black; font-size: 20px;" data-toggle="collapse" data-target="#interest">
+                    <h4 class="j1" style="color:black; font-size: 20px;" >
                         What area are you interested in getting the most assistance with?
                     </h4>
                 </h4>
-                <div id="interest" class="collapse hide">
                     <div class="row">
                             <ul>
-                                    <li  class="col-xs-12 col-sm-6 col-md-4 col-lg-4" (mouseenter)="enterone()">
+                                    <li  class="col-xs-12 col-sm-6 col-md-4 col-lg-4"  *ngFor="let interest of interests" (mouseenter)="enter(interest.id)">
+                                        <input class="interestinput" type='radio' name='interest' id='{{interest.input}}' />
+                                        <label class="interestlabel"  for='{{interest.input}}'>
+                                            <img class="radiodiv" src="{{interest.backgroundimageurl}}" >
+                                            <h3>hello</h3>
+                                        </label>
+                                    </li>
+                                    <!-- <li  class="col-xs-12 col-sm-6 col-md-4 col-lg-4" (mouseenter)="enter(1)">
                                         <input class="interestinput" type='radio' name='interest' id='input1'/>
-                                        <label class="interestlabel" id='label1' for='input1'>
-                                            <div id="div1"></div>
+                                        <label class="interestlabel"  for='input1'>
+                                            <div class="radiodiv" id="div1"></div>
                                             <h3>hello</h3>
                                         </label>
                                     </li>
-                                    <li class="col-xs-12 col-sm-6 col-md-4 col-lg-4" (mouseenter)="entertwo()">
+                                    <li class="col-xs-12 col-sm-6 col-md-4 col-lg-4" (mouseenter)="enter(2)">
                                         <input class="interestinput" type='radio' name='interest' id='input2'/>
-                                        <label class="interestlabel" id='label2' for='input2'>
-                                            <div id="div2"></div>
+                                        <label class="interestlabel"  for='input2'>
+                                            <div class="radiodiv" id="div2"></div>
                                             <h3>hello</h3>
                                         </label>
                                     </li>
-                                    <li  class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                    <li  class="col-xs-12 col-sm-6 col-md-4 col-lg-4" (mouseenter)="enter(3)">
                                         <input class="interestinput" type='radio' name='interest' id='input3'/>
-                                        <label class="interestlabel" id='label3' for='input3'>
-                                            <div id="div3"></div>
+                                        <label class="interestlabel"  for='input3'>
+                                            <div class="radiodiv" id="div3"></div>
                                             <h3>hello</h3>
                                         </label>
                                     </li>
-                                    <li class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                    <li class="col-xs-12 col-sm-6 col-md-4 col-lg-4" (mouseenter)="enter(4)">
                                         <input class="interestinput" type='radio' name='interest' id='input4'/>
-                                        <label class="interestlabel" id='label4' for='input4'>
-                                            <div id="div4"></div>
+                                        <label class="interestlabel"  for='input4'>
+                                            <div class="radiodiv" id="div4"></div>
                                             <h3>hello</h3>
                                         </label>
                                     </li>
-                                    <li  class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                    <li  class="col-xs-12 col-sm-6 col-md-4 col-lg-4" (mouseenter)="enter(5)">
                                         <input class="interestinput" type='radio' name='interest' id='input5'/>
-                                        <label class="interestlabel" id='label5' for='input5'>
-                                            <div id="div5"></div>
+                                        <label class="interestlabel"  for='input5'>
+                                            <div class="radiodiv" id="div5"></div>
                                             <h3>hello</h3>
                                         </label>
                                     </li>
-                                    <li class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                    <li class="col-xs-12 col-sm-6 col-md-4 col-lg-4" (mouseenter)="enter(6)">
                                         <input class="interestinput" type='radio' name='interest' id='input6'/>
-                                        <label class="interestlabel" id='label6' for='input6'>
-                                            <div id="div6"></div>
+                                        <label class="interestlabel"  for='input6'>
+                                            <div class="radiodiv" id="div6"></div>
                                             <h3>hello</h3>
                                         </label>
-                                    </li>
+                                    </li> -->
                             </ul>
 
                         <!-- <ul action="" >
@@ -79,7 +103,6 @@
                             </li>
                         </ul> -->
                     </div>
-                </div>
                     <!-- <form action="">
                         <input type="radio" id="interest2" name="interest" />
                         <label for="interest2"></label>
@@ -102,10 +125,9 @@
                     </form> -->
                 
 
-                <h4 class="j1" style="color:black; font-size: 30px;" data-toggle="collapse" data-target="#contact">
+                <h4 class="j1" style="color:black; font-size: 30px;" >
                     My contact info is...
                 </h4>
-                <div id="contact" class="collapse hide">
                     <form [formGroup]="myForm">
 
                         <div class="form-group">
@@ -140,10 +162,9 @@
                                 </span>
                             </div>
                         
-                            <button [disabled]="myForm.invalid" type="button" class="btn btn-primary">SUBMIT</button>
+                            <button [disabled]="myForm.invalid" type="button" class="btn btn-primary" (click)="submit()">SUBMIT</button>
                         
                     </form>
-                </div>
         </div>
         
     </div>
