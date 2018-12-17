@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
 
+
 @Component({
   selector: 'app-courses',
   templateUrl: './courses.component.html',
   styleUrls: ['./courses.component.css']
 })
 export class CoursesComponent implements OnInit {
+
+  video:any;
 
   /**Test data for course ---------- */
   courseInfo = {
@@ -27,15 +30,15 @@ export class CoursesComponent implements OnInit {
   };
 
   courseList: any[] = [
-    { name: "Fidentus Omnium", link: "#" },
-    { name: "Magister Mentium", link: "#" },
-    { name: "Lorem Ipsum", link: "#" },
-    { name: "Fidentus Omnium", link: "#" },
-    { name: "Magister Mentium", link: "#" },
-    { name: "Lorem Ipsum", link: "#" },
-    { name: "Fidentus Omnium", link: "#" },
-    { name: "Magister Mentium", link: "#" },
-    { name: "Lorem Ipsum", link: "#" },
+    { name: "Fidentus Omnium", link: "/courses" },
+    { name: "Magister Mentium", link: "/courses" },
+    { name: "Lorem Ipsum", link: "/courses" },
+    { name: "Fidentus Omnium", link: "/courses" },
+    { name: "Magister Mentium", link: "/courses" },
+    { name: "Lorem Ipsum", link: "/courses" },
+    { name: "Fidentus Omnium", link: "/courses" },
+    { name: "Magister Mentium", link: "/courses" },
+    { name: "Lorem Ipsum", link: "/courses" },
   ];
 
   /** End of test data -------------------------- */
