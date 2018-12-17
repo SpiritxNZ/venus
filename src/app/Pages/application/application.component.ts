@@ -53,18 +53,23 @@ export class ApplicationComponent implements OnInit {
       this.myForm = this.fb.group({
         email: ['', [
           Validators.required,
+          Validators.minLength(6),
           Validators.email
         ]],
         firstname: ['', [
-          Validators.required
+          Validators.required,
+          Validators.minLength(2),
+          Validators.maxLength(20)
         ]],
         lastname: ['', [
-          Validators.required
+          Validators.required,
+          Validators.minLength(2),
+          Validators.maxLength(30)
         ]],
         phone: ['', [
           Validators.required,
-          Validators.minLength(7),
-          Validators.maxLength(15)
+          Validators.minLength(5),
+          Validators.maxLength(20)
         ]]
       });
     }
