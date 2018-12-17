@@ -9,9 +9,41 @@ import 'core-js/es7/reflect';
 })
 
 export class ApplicationComponent implements OnInit {
-
+  interests: any[] = [
+    {
+      "input":"input1",
+      "id": "1",
+      "backgroundimageurl":"../../../assets/interest1.svg"
+    },
+    {
+      "input":"input2",
+      "id": "2",
+      "backgroundimageurl":"../../../assets/interest2.svg"
+    },
+    {
+      "input":"input3",
+      "id": "3",
+      "backgroundimageurl":"../../../assets/interest3.svg"
+    },
+    {
+      "input":"input4",
+      "id": "4",
+      "backgroundimageurl":"../../../assets/interest4.svg"
+    },
+    {
+      "input":"input5",
+      "id": "5",
+      "backgroundimageurl":"../../../assets/interest5.svg"
+    },    {
+      "input":"input6",
+      "id": "6",
+      "backgroundimageurl":"../../../assets/interest6.svg"
+    }
+    
+  ];
+  id=1;
   myForm: FormGroup;
-  divname: string;
+  divname: any= 1;
   
   constructor(
     private fb: FormBuilder
@@ -36,24 +68,14 @@ export class ApplicationComponent implements OnInit {
         ]]
       });
     }
-    enterone()
+    enter(a)
     {
-      this.divname=="one";
-      console.log("one");
+      this.divname=a;
     }
-    entertwo()
-    {
-      this.divname=="two";
-      console.log("two");
-    }
+
     get email() {
       return this.myForm.get('email');
     }
-  
-    get password() {
-      return this.myForm.get('password');
-    }
-  
     get firstname() {
       return this.myForm.get('firstname');
     }
@@ -63,8 +85,12 @@ export class ApplicationComponent implements OnInit {
     get phone() {
       return this.myForm.get('phone');
     }
-  
-  
+    submit() {
+      console.log(this.email.value);
+      console.log(this.firstname.value);
+      console.log(this.lastname.value);
+      console.log(this.phone.value);
+    }
 }
 
 
