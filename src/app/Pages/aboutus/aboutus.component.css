@@ -5,23 +5,13 @@
     background-image: url("../../../assets/darkbackgroundimage.jpg");
     background-size: cover;
 }
-mat-form-field {
-    display: block;
+.sectionTitle{
+    font-size: 40px;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
-
-.mat-accent {
-    background-color: #42A948 !important;
-}
-
-.ng-valid[required],
-.ng-valid.required {
-    border-bottom: 5px solid #42A948;
-}
-
-ul {
-    text-align: left;
-}
-
-.ng-valid .mat-form-field-underline {
-    background-color: green;
+.sectionContent{
+    font-size: 18px;
+    
 }
