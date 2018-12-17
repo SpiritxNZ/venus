@@ -35,12 +35,22 @@
 }
 
 /*video info layout*/
+.head {
+    margin:0px
+}
+
+.card-small {
+    height: 100%;
+}
+
 .card-small .card-body {
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .card-small h6, .card p {
-    margin:0;
+    margin-bottom:5px;
 }
 .card-body .col-lg-3 {
     padding:5px;
@@ -59,4 +69,13 @@ header .jumbotron-fluid {
 header h2 {
     font-size: 26px;
     color:white;
+}
+
+@media(max-width:992px) {
+    .card p {
+        font-size: 16px;
+    }
+    .card-small p {
+        font-size: 11px;
+    }
 }
