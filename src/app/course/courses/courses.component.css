@@ -33,6 +33,9 @@
     padding-top: 15px;
     padding-bottom: 15px;
 }
+.list-group-item:hover {
+    background-color: aliceblue;
+}
 
 /*video info layout*/
 .head {

@@ -64,11 +64,12 @@
           <div class="card-header m1">
             Lesson List
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item m3" *ngFor="let courseItem of courseList">
-              <a href="{{courseItem.link}}">{{courseItem.name}}</a>
-            </li>
-          </ul>
+          <div class="list-group list-group-flush">
+            <a class="list-group-item m3" href="{{courseItem.link}}"
+              *ngFor="let courseItem of courseList">
+              {{courseItem.name}}
+            </a>
+          </div>
         </div>
       </div>
     </div>
