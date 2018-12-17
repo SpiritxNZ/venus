@@ -77,11 +77,11 @@ li {
 .interestinput:hover + .interestlabel {
     box-shadow: 0 2px 12px 3px hsla(0,0%,89%,.55);
 }
-#section1row
+#section2toprow
 {
     padding-top: 30px;
+    padding-bottom: 20px;
 }
-
 /* input + label
 {
     background-image: url("../../../assets/interest1.svg");
