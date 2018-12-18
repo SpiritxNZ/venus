@@ -71,6 +71,9 @@ export class ApplicationComponent implements OnInit {
           Validators.minLength(5),
           Validators.maxLength(20),
           Validators.pattern('[0-9]*')
+        ]],
+        message: ['', [
+          Validators.required
         ]]
       });
     }
@@ -90,6 +93,9 @@ export class ApplicationComponent implements OnInit {
     }
     get phone() {
       return this.myForm.get('phone');
+    }
+    get message() {
+      return this.myForm.get('message');
     }
     submit() {
       console.log(this.email.value);
