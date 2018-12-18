@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormControl, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 import 'core-js/es7/reflect';
 
 @Component({
@@ -46,8 +47,9 @@ export class ApplicationComponent implements OnInit {
   divname: any= 1;
   
   constructor(
-    private fb: FormBuilder
-    ) {}
+    private fb: FormBuilder,
+    // private http: HttpClient
+    ) { }
 
     ngOnInit() {
       this.myForm = this.fb.group({
@@ -102,14 +104,19 @@ export class ApplicationComponent implements OnInit {
     getFullName() {
       return this.firstname.value + " " + this.lastname.value;
     }
+    /**gets form input and returns object */
+    getDataObject() {
+      let data = {
+        name: this.getFullName(),
+        email: this.email.value,
+        phone: this.phone.value,
+        message: this.message.value
+      }
+      return data;
+    }
     submit() {
-      console.log(this.email.value);
-      console.log(this.firstname.value);
-      console.log(this.lastname.value);
-      console.log(this.getFullName())
-      console.log(this.phone.value);
-      console.log(this.message.value);
+      let data = this.getDataObject();
+      console.log(data);
+      // this.http.post('http://proprius.co.nz/testing/public/contacts', this.data);
     }
 }
-
-
