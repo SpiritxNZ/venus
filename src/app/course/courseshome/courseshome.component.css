@@ -32,7 +32,7 @@ a {
 }
 /* hover effect */
 .card:hover {
-    background-color: azure;
+    background-color: aliceblue;
 }
 /* lecturer text positioning */
 .card-subtitle {

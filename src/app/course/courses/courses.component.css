@@ -33,19 +33,23 @@
     padding-top: 15px;
     padding-bottom: 15px;
 }
+.list-group-item:hover {
+    background-color: aliceblue;
+}
 
 /*video info layout*/
 .head {
     margin:0px
 }
-
+.card-title {
+    margin-top: 10px;
+}
 .card-small {
     background-color: #f5f5f5;
     border: none;
     border-radius: 0;
     width:100%;
 }
-
 .card-small .card-body {
     padding-top: 10px;
     padding-bottom: 5px;
@@ -58,6 +62,7 @@
 .card-body .col-lg-3 {
     padding:5px;
 }
+/* Page Header */
 header{
     height:350px;
     background-image: url("/assets/index-header-pic.jpg");
@@ -74,15 +79,15 @@ header h2 {
     color:white;
 }
 
+/* Small screen */
 @media(max-width:768px) {
     .portrait {
         height: 70px;
         width: 70px;
-        object-fit: cover;
     }
-
     .card-title {
         font-size: 22px;
+        margin-top: 5px;
     }
     .card-subtitle {
         font-size: 16px;
