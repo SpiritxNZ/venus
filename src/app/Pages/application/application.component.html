@@ -168,6 +168,7 @@
                                         <div *ngIf="phone.errors.required">Phone number is required</div>
                                         <div *ngIf="phone.errors.minlength">Phone number must be at least 5 characters</div>
                                         <div *ngIf="phone.errors.maxlength">Phone number must be at most 20 characters</div>
+                                        <div *ngIf="phone.errors.pattern">Please enter a valid phone number</div>
                                     </span>
                                 </div>
                             
