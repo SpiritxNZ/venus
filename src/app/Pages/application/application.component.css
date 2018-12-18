@@ -63,6 +63,7 @@ li {
 {
     height: 700px;
     width: 100%;
+    box-shadow: 0 2px 12px 3px hsla(0,0%,89%,.55);
 }
 .interestlabel {
     height: 150px;
@@ -81,6 +82,35 @@ li {
 {
     padding-top: 30px;
     padding-bottom: 20px;
+}
+#sectionimage1
+{
+    width: 370px;
+    height: 150px;
+    background-size: cover;
+    border: 0px;
+    background-image: url('../../../assets/interest3large.svg');
+    display: inline-block;margin-top: 20px;
+}
+#showinterest
+{
+    overflow: hidden; 
+    text-align: center;
+}
+#detail
+{
+    font-size: 18px;
+    text-align: left;
+    line-height:25px;
+}
+#detailtitle
+{
+    color:black; 
+    font-size: 30px;
+}
+.col-xs-12.col-sm-6.col-md-4.col-lg-4
+{
+    text-align: center;
 }
 /* input + label
 {

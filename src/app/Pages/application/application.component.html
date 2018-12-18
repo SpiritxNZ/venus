@@ -5,39 +5,27 @@
 <section id="section2">
     <div class="container">
         <div class="row" id="section2toprow">
-            <div class="col-6" style="overflow: hidden;" id="showinterest">
-                    <div *ngIf="divname == '1'; then styleone"></div>
-                    <div *ngIf="divname == '2'; then styletwo"></div>
-                    <div *ngIf="divname == '3'; then stylethree"></div>
-                    <div *ngIf="divname == '4'; then stylefour"></div>
-                    <div *ngIf="divname == '5'; then stylefive"></div>
-                    <div *ngIf="divname == '6'; then stylesix"></div>
-                    <ng-template #styleone> <!--what you want to show on left div-->
-                        <h1>styleone</h1>
-                        <img class="sectionimages" src="../../assets/front1.jpg">
-                    </ng-template>
-                    <ng-template #styletwo>
-                        <h1>styletwo</h1>
-                        <img class="sectionimages" src="../../assets/front5.jpg">
-                    </ng-template>
-                    <ng-template #stylethree>
-                        <h1>stylethree</h1>
-                        <img class="sectionimages" src="../../assets/front4.jpg">
-                    </ng-template>
-                    <ng-template #stylefour>
-                        <h1>stylefour</h1>
-                        <img class="sectionimages" src="../../assets/front5.jpg">
-                    </ng-template>
-                    <ng-template #stylefive>
-                        <h1>stylefive</h1>
-                        <img class="sectionimages" src="../../assets/front4.jpg">
-                    </ng-template>
-                    <ng-template #stylesix>
-                        <h1>stylesix</h1>
-                        <img class="sectionimages" src="../../assets/front1.jpg">
-                    </ng-template>
+            <div class="col-6 d-none d-md-block"  id="showinterest">
+                <div class="sectionimages" id="sectionimage1">
+                </div>
+                <h4 class="j1" id="detailtitle" >University Admission Support</h4>
+                <div class="container">
+                    <h5 id="detail">
+                            Tap into an expert network of strategists, tutors and mentors who will guide you on best-fit universities and advise you on how to stand out as a top applicant. Typically, support will include:
+                            <br><br>
+                            Tailored team of tutors and mentors matched to your interests and goals
+                            <br><br>
+                            Personalised roadmap of milestones including key test dates and application tasks to tick off
+                            <br><br>
+                            Subject tutoring, standardised test support and application essay review
+                            <br><br>
+                            Extracurricular and Leadership advising that helps you stand out from the crowd
+                            <br><br>
+                            Strategic university application guidance, including financial aid and scholarship requests  
+                    </h5>
+                </div>
             </div>
-            <div class="col-6">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                     <h4 class="j1" style="color:black; font-size: 30px;" >
                         I'm interested in...
                         <h4 class="j1" style="color:black; font-size: 20px;" >
@@ -46,7 +34,7 @@
                     </h4>
                         <div class="row" >
                                 <ul>
-                                        <li  class="col-xs-12 col-sm-6 col-md-4 col-lg-4"  *ngFor="let interest of interests" (mouseenter)="enter(interest.id)">
+                                        <li  class="col-xs-12 col-sm-6 col-md-4 col-lg-4"  *ngFor="let interest of interests" (mouseenter)="showdetail(interest.id)">
                                             <input class="interestinput" type='radio' name='interest' id='{{interest.input}}' />
                                             <label class="interestlabel"  for='{{interest.input}}'>
                                                 <img class="radiodiv" src="{{interest.backgroundimageurl}}" >
@@ -173,6 +161,7 @@
                                 </div>
                             
                                 <button [disabled]="myForm.invalid" type="button" class="btn btn-primary" (click)="submit()">SUBMIT</button>
+                                <button class="btn btn-primary" (click)="showdetail(0)">for test</button>
                             
                         </form>
             </div>
