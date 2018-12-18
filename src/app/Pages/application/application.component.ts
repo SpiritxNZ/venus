@@ -48,7 +48,7 @@ export class ApplicationComponent implements OnInit {
   
   constructor(
     private fb: FormBuilder,
-    private http: HttpClient //this ruins the whole page for some reason
+    private http: HttpClient
     ) { }
 
     ngOnInit() {
