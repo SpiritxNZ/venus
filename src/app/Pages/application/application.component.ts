@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormControl, FormGroup, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
 import 'core-js/es7/reflect';
+import { ApiService } from './../../api.service';
 
 @Component({
   selector: 'app-application',
@@ -48,7 +48,7 @@ export class ApplicationComponent implements OnInit {
   
   constructor(
     private fb: FormBuilder,
-    private http: HttpClient
+    private apiService: ApiService
     ) { }
 
     ngOnInit() {
@@ -117,7 +117,7 @@ export class ApplicationComponent implements OnInit {
     /**Submits form data */
     submit() {
       let data = this.getDataObject();
-      console.log(data);
-      this.http.post('http://proprius.co.nz/testing/public/contacts', data);
+      this.apiService.addContactData(data)
+        .subscribe(res=>{console.log(res)});
     }
 }
