@@ -134,7 +134,7 @@
 
                     <div class="form-group">
                         <label for="firstname">First Name:</label>
-                        <input class="form-control" formControlName="firstname" placeholder="Enter Your First Name Please">
+                        <input class="form-control" formControlName="firstname" placeholder="Enter your first name please">
                         <span *ngIf="firstname.invalid && firstname.touched">
                             <div *ngIf="firstname.errors.required">First name is required</div>
                             <div *ngIf="firstname.errors.minlength">First name must be at least 2 characters</div>
@@ -144,7 +144,7 @@
 
                     <div class="form-group">
                         <label for="lastname">Last Name:</label>
-                        <input class="form-control" formControlName="lastname" placeholder="Enter Your Last Name Please">
+                        <input class="form-control" formControlName="lastname" placeholder="Enter your last name please">
                         <span *ngIf="lastname.invalid && lastname.touched">
                             <div *ngIf="lastname.errors.required">Last name is required</div>
                             <div *ngIf="lastname.errors.minlength">Last name must be at least 2 characters</div>
@@ -154,7 +154,7 @@
 
                     <div class="form-group">
                         <label for="email">Email Address:</label>
-                        <input class="form-control" formControlName="email" placeholder="Enter Your Email Address Please">
+                        <input class="form-control" formControlName="email" placeholder="Enter your email address please">
                         <span *ngIf="email.invalid && email.touched">
                             <div *ngIf="email.errors.required">Email address is required</div>
                             <div *ngIf="email.errors.minlength">Email address must be at least 6 characters</div>
@@ -164,7 +164,7 @@
 
                     <div class="form-group">
                         <label for="phone">Phone Number:</label>
-                        <input class="form-control" formControlName="phone" placeholder="Enter Your Phone Number Please">
+                        <input class="form-control" formControlName="phone" placeholder="Enter your phone number please">
                         <span *ngIf="phone.invalid && phone.touched">
                             <div *ngIf="phone.errors.required">Phone number is required</div>
                             <div *ngIf="phone.errors.minlength">Phone number must be at least 5 characters</div>
@@ -175,7 +175,7 @@
 
                     <div class="form-group">
                         <label for="message">Message:</label>
-                        <textarea class="form-control" formControlName="message" placeholder="Enter Your message" rows="5"></textarea>
+                        <textarea class="form-control" formControlName="message" placeholder="Enter your message please" rows="5"></textarea>
                         <span *ngIf="message.invalid && message.touched">
                             <div *ngIf="message.errors.required">Message is required</div>
                         </span>
