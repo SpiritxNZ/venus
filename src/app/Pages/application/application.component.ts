@@ -97,11 +97,18 @@ export class ApplicationComponent implements OnInit {
     get message() {
       return this.myForm.get('message');
     }
+
+    /**returns the full name */
+    getFullName() {
+      return this.firstname.value + " " + this.lastname.value;
+    }
     submit() {
       console.log(this.email.value);
       console.log(this.firstname.value);
       console.log(this.lastname.value);
+      console.log(this.getFullName())
       console.log(this.phone.value);
+      console.log(this.message.value);
     }
 }
 
