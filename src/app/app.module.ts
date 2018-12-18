@@ -20,6 +20,7 @@ import { MatFormFieldModule} from '@angular/material';
 import { MatCheckboxModule, MatSelectModule } from '@angular/material';
 import 'core-js/es7/reflect';
 import { CoursesComponent } from './course/courses/courses.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   { path:'', component:HomeComponent },
@@ -60,7 +61,8 @@ const routes: Routes = [
     MatFormFieldModule,
     MatCheckboxModule,
     MatSelectModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   exports:[RouterModule],
   providers: [],

@@ -48,7 +48,7 @@ export class ApplicationComponent implements OnInit {
   
   constructor(
     private fb: FormBuilder,
-    // private http: HttpClient
+    private http: HttpClient //this ruins the whole page for some reason
     ) { }
 
     ngOnInit() {
@@ -118,6 +118,6 @@ export class ApplicationComponent implements OnInit {
     submit() {
       let data = this.getDataObject();
       console.log(data);
-      // this.http.post('http://proprius.co.nz/testing/public/contacts', data);
+      this.http.post('http://proprius.co.nz/testing/public/contacts', data);
     }
 }
