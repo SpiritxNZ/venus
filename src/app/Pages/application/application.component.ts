@@ -114,9 +114,10 @@ export class ApplicationComponent implements OnInit {
       }
       return data;
     }
+    /**Submits form data */
     submit() {
       let data = this.getDataObject();
       console.log(data);
-      // this.http.post('http://proprius.co.nz/testing/public/contacts', this.data);
+      // this.http.post('http://proprius.co.nz/testing/public/contacts', data);
     }
 }
