@@ -65,7 +65,7 @@
             Lesson List
           </div>
           <div class="list-group list-group-flush">
-            <a class="list-group-item m3" href="{{courseItem.link}}"
+            <a class="list-group-item m3" routerLink="{{courseItem.link}}"
               *ngFor="let courseItem of courseList">
               {{courseItem.name}}
             </a>
