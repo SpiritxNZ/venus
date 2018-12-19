@@ -5,11 +5,14 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiService {
+  baseUrl = 'http://proprius.co.nz/testing/public'
 
   constructor(private http: HttpClient) { }
 
   /**Sends data from contact form */
   addContactData(data) {
-    return this.http.post('http://proprius.co.nz/testing/public/contacts', data)
+    return this.http.post(this.baseUrl+'/contacts', data)
   }
+
+  
 }
