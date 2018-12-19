@@ -1,0 +1,15 @@
+header {
+    height: 40vh;
+    width: 100%;
+    background-image: url("../../../assets/successcasesbg.jpg");
+    background-size: cover;
+    text-align:center;
+}
+header .jumbotron-fluid {
+    padding-top: 15vh;
+    color:white; 
+    background-color: transparent;
+}
+.container {
+    padding: 60px;
+}

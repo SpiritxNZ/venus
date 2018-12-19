@@ -1,3 +1,24 @@
-<p>
-  faq works!
-</p>
+<!-- header bit -->
+<header>
+  <div class="jumbotron-fluid">
+    <h1 class="j1">
+      FAQ
+    </h1>
+  </div>
+</header>
+
+<!-- accordion bit -->
+<div class="container">
+  <div id="accordion">
+      <div class="card" *ngFor='let question of questions; index as i'>
+        <div class="card-header">
+          <h5 class="mb-0">
+            <a class="btn btn-link" data-toggle="collapse" href="#collapse{{i}}">{{question.question}}</a>
+          </h5>
+      </div>
+        <div id="collapse{{i}}" class="collapse" data-parent="#accordion">
+          <div class="card-body">{{question.answer}}</div>
+        </div>
+    </div>
+  </div>
+</div>
