@@ -7,6 +7,10 @@
     width: 100%;
     background-image: url("../../assets/successcasesbg.jpg");
     background-size: cover;
+    text-align:center;
+}
+#section1 .jumbotron-fluid {
+    padding-top: 15vh;
 }
 #section2 {
     text-align: center;
