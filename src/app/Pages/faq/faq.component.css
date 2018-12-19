@@ -1,5 +1,5 @@
 header {
-    height: 40vh;
+    height: 50vh;
     width: 100%;
     background-image: url("../../../assets/successcasesbg.jpg");
     background-size: cover;
@@ -11,5 +11,21 @@ header .jumbotron-fluid {
     background-color: transparent;
 }
 .container {
-    padding: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    max-width: 800px;
+}
+.card {
+    border: none;
+    border-radius: 0;
+}
+.card-header {
+    background-color: transparent;
+}
+a {
+    color: black;
+}
+a:hover {
+    color: #0099FF;
+    text-decoration: none;
 }
