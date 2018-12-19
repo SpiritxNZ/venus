@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-successcases',
@@ -7,6 +8,32 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class SuccesscasesComponent implements OnInit {
+  video1:any;
+  video2:any;
+
+  videoPerson1 = {
+    name: 'Akemi Homura',
+    uni: 'Mitakihara High',
+    job: 'Chief Executive',
+    jobLoc: 'Pocket Dimension',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.\
+    Ut quam ante, varius id ultricies ut, mattis gravida dolor. Sed placerat\
+    ipsum lorem, a blandit erat aliquet in. In placerat sollicitudin metus\
+    id vestibulum. Vestibulum ut tempor ex. Donec eu velit consequat, pellentesque\
+    ipsum quis, laoreet turpis. Suspendisse potenti.'
+  }
+  videoPerson2 = {
+    name: 'Kaname Madoka',
+    uni: 'Redacted',
+    job: 'Arch-Mage of Redacted',
+    jobLoc: 'Japan',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.\
+    Ut quam ante, varius id ultricies ut, mattis gravida dolor. Sed placerat\
+    ipsum lorem, a blandit erat aliquet in. In placerat sollicitudin metus\
+    id vestibulum. Vestibulum ut tempor ex. Donec eu velit consequat, pellentesque\
+    ipsum quis, laoreet turpis. Suspendisse potenti.'
+  }
+
   successfulpeople: any[] = [
     {
       "image":"../../assets/successcasesimage1.jpg",
@@ -64,7 +91,10 @@ export class SuccesscasesComponent implements OnInit {
     }
   ];
   
-  constructor() { }
+  constructor(private sanitizer: DomSanitizer) { 
+    this.video1 = sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/4CbLXeGSDxg");
+    this.video2 = sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/4CbLXeGSDxg");
+  }
   ngOnInit() {
   }
 }
