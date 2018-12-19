@@ -10,6 +10,8 @@ import { ApiService } from '../../services/api.service';
 })
 
 export class ApplicationComponent implements OnInit {
+  errorMessage:string;
+  successMessage:string;
   interests: any[] = [
     {
       "input":"input1",
@@ -105,12 +107,16 @@ export class ApplicationComponent implements OnInit {
   }
   /**Submits form data */
   submit() {
-    if (this.myForm.value) {
+    // Check for if Form is dirty and that is valid
+    if (this.myForm.dirty && this.myForm.valid) {
       this.myForm['name'] = this.getFullName();
-      this.apiService.addContactData(this.myForm)
-        .subscribe((res) => { console.log("Data sent successfully" + res) },
+
+      this.apiService.addContactData(this.myForm.value).subscribe(
+          (res) => { this.successMessage = "Thank you, we'll be in touch shortly." },
+          // Return the error message in HTML
           (err) => {
-            console.log("There was an error: " + err.status);
+            console.warn(err);
+            this.errorMessage = 'Oops, there was an error.'
           });
     }
   }
