@@ -19,6 +19,10 @@ export class FaqComponent implements OnInit {
     {
       question: 'What is a famous restaurant in Japan?',
       answer: 'Kyubey.'
+    },
+    {
+      question: 'Big long question is very long and long and long and probably going to be too long?',
+      answer: 'Long question has a long, long answer. Something something lorem ipsum; this is a long answer as you can see. This is also a tautology but whatever.'
     }
   ];
 
