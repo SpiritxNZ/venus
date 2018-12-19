@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormControl, FormGroup, Validators } from '@angular/forms';
 import 'core-js/es7/reflect';
-import { ApiService } from './../../api.service';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-application',
@@ -83,7 +83,6 @@ export class ApplicationComponent implements OnInit {
     {
       this.divname=a;
     }
-
     get email() {
       return this.myForm.get('email');
     }
@@ -100,24 +99,19 @@ export class ApplicationComponent implements OnInit {
       return this.myForm.get('message');
     }
 
-    /**returns the full name */
-    getFullName() {
-      return this.firstname.value + " " + this.lastname.value;
+  /**returns the full name */
+  getFullName() {
+    return this.myForm.get('firstname') + " " + this.myForm.get('lastname');
+  }
+  /**Submits form data */
+  submit() {
+    if (this.myForm.value) {
+      this.myForm['name'] = this.getFullName();
+      this.apiService.addContactData(this.myForm)
+        .subscribe((res) => { console.log("Data sent successfully" + res) },
+          (err) => {
+            console.log("There was an error: " + err.status);
+          });
     }
-    /**gets form input and returns object */
-    getDataObject() {
-      let data = {
-        name: this.getFullName(),
-        email: this.email.value,
-        phone: this.phone.value,
-        message: this.message.value
-      }
-      return data;
-    }
-    /**Submits form data */
-    submit() {
-      let data = this.getDataObject();
-      this.apiService.addContactData(data)
-        .subscribe(res=>{console.log(res)});
-    }
+  }
 }
