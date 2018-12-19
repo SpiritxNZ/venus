@@ -79,27 +79,7 @@ export class ApplicationComponent implements OnInit {
         message: ['', [
           Validators.required
         ]],
-        name: ['']
       });
-    }
-    enter(a)
-    {
-      this.divname=a;
-    }
-    get email() {
-      return this.myForm.get('email');
-    }
-    get firstname() {
-      return this.myForm.get('firstname');
-    }
-    get lastname() {
-      return this.myForm.get('lastname');
-    }
-    get phone() {
-      return this.myForm.get('phone');
-    }
-    get message() {
-      return this.myForm.get('message');
     }
 
   /**returns the full name */
