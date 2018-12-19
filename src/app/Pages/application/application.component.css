@@ -103,3 +103,9 @@ input:checked + label
     border-radius: 5px;
     padding: 0 0 0 0px;
 } */
+
+/* sucess feedback text */
+.success-feedback {
+    font-size: 18px;
+    text-align:center;
+}

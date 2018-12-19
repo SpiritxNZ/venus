@@ -111,6 +111,7 @@ export class ApplicationComponent implements OnInit {
     // Check for if Form is dirty and that is valid
     if (this.myForm.dirty && this.myForm.valid) {
       this.myForm.value['name'] = this.getFullName();
+      
       this.apiService.addContactData(this.myForm.value).subscribe(
           (res) => { this.successMessage = "Thank you, we'll be in touch shortly." },
           // Return the error message in HTML
