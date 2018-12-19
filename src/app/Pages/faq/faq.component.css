@@ -29,3 +29,10 @@ a:hover {
     color: #0099FF;
     text-decoration: none;
 }
+/* icons */
+.fa:before {   
+    content: "\f068";
+}
+.collapsed .fa:before {
+    content: "\f067";
+}
