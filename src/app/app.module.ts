@@ -21,6 +21,7 @@ import { MatCheckboxModule, MatSelectModule } from '@angular/material';
 import 'core-js/es7/reflect';
 import { CoursesComponent } from './course/courses/courses.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FaqComponent } from './Pages/faq/faq.component';
 
 const routes: Routes = [
   { path:'', component:HomeComponent },
@@ -49,7 +50,8 @@ const routes: Routes = [
     CourseshomeComponent,
     ProgramComponent,
     ApplicationComponent,
-    CoursesComponent
+    CoursesComponent,
+    FaqComponent
 
   ],
   imports: [
