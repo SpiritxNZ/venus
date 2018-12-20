@@ -5,7 +5,7 @@
 <section id="section2">
     <div class="container">
         <div class="row" id="section2toprow">
-            <div class="col-6 d-none d-md-flex left-info" id="showinterest">
+            <div class="col-md-6 d-none d-md-flex left-info" id="showinterest">
                 <div *ngIf="divname == '1'; then styleone"></div>
                 <div *ngIf="divname == '2'; then styletwo"></div>
                 <div *ngIf="divname == '3'; then stylethree"></div>
@@ -57,7 +57,7 @@
                             <input class="interestinput" type='radio' name='interest' id='{{interest.input}}' />
                             <label class="interestlabel" for='{{interest.input}}'>
                                 <img class="radiodiv" src="{{interest.backgroundimageurl}}">
-                                <h3>hello</h3>
+                                <h3 class="m2">hello</h3>
                             </label>
                         </li>
                     </ul>

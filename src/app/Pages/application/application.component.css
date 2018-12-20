@@ -11,7 +11,6 @@
 ul {
     list-style: none;
     padding: 0px;
-    margin-top: 20px;
 }
 li {
         display: inline-block;
@@ -48,11 +47,10 @@ li {
     display: block;
 }
 .interestlabel {
-    height: 150px;
-    width: 134px;
+    width: 100%;
     border: 3px solid transparent;
     border-radius: 5px;
-    padding: 0 0 0 0px;
+    padding: 0;
     cursor: pointer;
     text-align: center;
 }
@@ -120,5 +118,13 @@ input:checked + label
 /* button */
 .btn-submit {
     font-size: 18px;
+    width: 100%;
+}
+
+.col-md-6 {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.interest-section {
     width: 100%;
 }
