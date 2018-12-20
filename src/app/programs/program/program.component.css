@@ -199,7 +199,6 @@ li.nav-item{
 }
 #applyButton:hover{
   background-color: #3768a8;
-  cursor: hand;
 }
 .course-info {
     text-align: justify;
