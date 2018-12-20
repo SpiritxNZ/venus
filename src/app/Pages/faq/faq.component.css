@@ -1,0 +1,41 @@
+/* header */
+header {
+    height: 50vh;
+    width: 100%;
+    background-image: url("../../../assets/successcasesbg.jpg");
+    background-size: cover;
+    text-align:center;
+}
+header .jumbotron-fluid {
+    padding-top: 20vh;
+    color:white; 
+    background-color: transparent;
+}
+/* main container */
+.container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    max-width: 800px;
+}
+.card {
+    border: none;
+    border-radius: 0;
+}
+/* question */
+.card-header {
+    background-color: transparent;
+}
+a {
+    color: black;
+}
+a:hover {
+    color: #0099FF;
+    text-decoration: none;
+}
+/* icons */
+.fa:before {   
+    content: "\f068";
+}
+.collapsed .fa:before {
+    content: "\f067";
+}

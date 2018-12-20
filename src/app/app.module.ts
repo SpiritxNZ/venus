@@ -21,6 +21,10 @@ import { MatCheckboxModule, MatSelectModule } from '@angular/material';
 import 'core-js/es7/reflect';
 import { CoursesComponent } from './course/courses/courses.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FaqComponent } from './Pages/faq/faq.component';
+import { ProgramTesterComponent } from './programs/program-tester/program-tester.component';
+import { ProgramDeveloperComponent } from './programs/program-developer/program-developer.component';
+import { ProgramDeveloperBeginnerComponent } from './programs/program-developer-beginner/program-developer-beginner.component';
 
 const routes: Routes = [
   { path:'', component:HomeComponent },
@@ -30,9 +34,10 @@ const routes: Routes = [
   { path:'aboutus', component:AboutusComponent },
   { path:'contactus', component:ContactusComponent },
   { path:'courseshome', component:CourseshomeComponent },
-  { path:'courses', component:CoursesComponent },
+  { path:'courses/:id', component:CoursesComponent },
   { path:'program', component:ProgramComponent },
-  { path:'application', component:ApplicationComponent }
+  { path:'application', component:ApplicationComponent },
+  { path:'faq', component:FaqComponent }
   ];
 
 @NgModule({
@@ -49,7 +54,11 @@ const routes: Routes = [
     CourseshomeComponent,
     ProgramComponent,
     ApplicationComponent,
-    CoursesComponent
+    CoursesComponent,
+    FaqComponent,
+    ProgramTesterComponent,
+    ProgramDeveloperComponent,
+    ProgramDeveloperBeginnerComponent
 
   ],
   imports: [

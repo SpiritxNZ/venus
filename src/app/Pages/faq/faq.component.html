@@ -1,0 +1,24 @@
+<!-- header bit -->
+<header>
+  <div class="jumbotron-fluid">
+    <h1 class="j1">Frequently Asked Questions</h1>
+  </div>
+</header>
+
+<!-- accordion bit -->
+<div class="container">
+  <div id="panel panel-default">
+      <div class="card" *ngFor='let question of questions; index as i'>
+        <div class="card-header">
+          <h5 class="mb-0">
+            <a class="s1 collapsed" data-toggle="collapse" href="#collapse{{i}}">
+              <i class="fa"></i> {{question.question}}
+            </a>
+          </h5>
+      </div>
+        <div id="collapse{{i}}" class="collapse">
+          <div class="card-body s2"><b>A.</b> {{question.answer}}</div>
+        </div>
+    </div>
+  </div>
+</div>

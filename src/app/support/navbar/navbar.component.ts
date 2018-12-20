@@ -15,10 +15,8 @@ export class NavbarComponent implements OnInit {
         document.getElementById('imnavbar').style.backgroundColor="white";
         document.getElementById('dropdown-menu').style.backgroundColor="white";
         document.getElementById('navitems1').style.color="black";
-        document.getElementById('navitems2').style.color="black";
         document.getElementById('navitems3').style.color="black";
         document.getElementById('navitems4').style.color="black";
-        document.getElementById('navitems5').style.color="black";
         document.getElementById('navitems6').style.color="black";
         document.getElementById('dropdown-item1').style.color="black";
         document.getElementById('dropdown-item2').style.color="black";
@@ -31,10 +29,8 @@ export class NavbarComponent implements OnInit {
         document.getElementById('imnavbar').style.backgroundColor="transparent";
         document.getElementById('dropdown-menu').style.backgroundColor="transparent";
         document.getElementById('navitems1').style.color="white";
-        document.getElementById('navitems2').style.color="white";
         document.getElementById('navitems3').style.color="white";
         document.getElementById('navitems4').style.color="white";
-        document.getElementById('navitems5').style.color="white";
         document.getElementById('navitems6').style.color="white";
         document.getElementById('dropdown-item1').style.color="white";
         document.getElementById('dropdown-item2').style.color="white";

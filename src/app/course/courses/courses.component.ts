@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
+import { ApiService } from '../../services/api.service';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -8,7 +10,7 @@ import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser
   styleUrls: ['./courses.component.css']
 })
 export class CoursesComponent implements OnInit {
-
+  courseId:any;
   video:any;
 
   /**Test data for course ---------- */
@@ -43,11 +45,23 @@ export class CoursesComponent implements OnInit {
 
   /** End of test data -------------------------- */
 
-  constructor(private sanitizer: DomSanitizer) { 
+  constructor(
+    public apiService: ApiService,
+    private route: ActivatedRoute,
+    private sanitizer: DomSanitizer
+  ) { 
     this.video = sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/4CbLXeGSDxg");
+    this.courseId = this.route.snapshot.params['id'];
+    
   }
 
   ngOnInit() {
+    // Get the course data from API
+    this.apiService.showCourse(this.courseId).subscribe(
+      (res)=>console.log(res),
+      (err)=>console.warn(err)
+    )
+
   }
 
 }
