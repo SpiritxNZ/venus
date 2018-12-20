@@ -35,7 +35,6 @@ const routes: Routes = [
   { path:'contactus', component:ContactusComponent },
   { path:'courseshome', component:CourseshomeComponent },
   { path:'courses/:id', component:CoursesComponent },
-  { path:'program', component:ProgramComponent },
   { path:'application', component:ApplicationComponent },
   { path:'faq', component:FaqComponent }
   ];
