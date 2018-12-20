@@ -9,8 +9,9 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  
   /**Sends data from contact form */
+
+
   addContactData(data) {
     return this.http.post(this.baseUrl+'/contacts', data)
   }

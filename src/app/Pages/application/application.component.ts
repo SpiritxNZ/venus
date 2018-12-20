@@ -82,10 +82,10 @@ export class ApplicationComponent implements OnInit {
     });
   }
 
-  // sets the displayed left item on hover
-  enter(a) {
-    this.divname = a;
-  }
+    // sets the displayed left item on hover
+    mouseHoverEnter(a) {
+      this.divname = a;
+    }
 
   // returns the full name
   getFullName() {

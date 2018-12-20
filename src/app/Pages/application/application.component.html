@@ -51,13 +51,16 @@
                     What area are you interested in getting the most assistance with?
                 </h4>
                 <div class="row interest-section">
-                    <div class="col-6 col-sm-4" *ngFor="let interest of interests" (mouseenter)="enter(interest.id)">
-                        <input class="interestinput" type='radio' name='interest' id='{{interest.input}}' />
-                        <label class="interestlabel" for='{{interest.input}}'>
-                            <img class="radiodiv" src="{{interest.backgroundimageurl}}">
-                            <h3 class="m2">hello</h3>
-                        </label>
-                    </div>
+                    <ul>
+                        <li class="col-6 col-sm-4" *ngFor="let interest of interests"
+                            (mouseenter)="mouseHoverEnter(interest.id)">
+                            <input class="interestinput" type='radio' name='interest' id='{{interest.input}}' />
+                            <label class="interestlabel" for='{{interest.input}}'>
+                                <img class="radiodiv" src="{{interest.backgroundimageurl}}">
+                                <h3 class="m2">hello</h3>
+                            </label>
+                        </li>
+                    </ul>
                 </div>
 
         <!-- the form -->
