@@ -1,18 +1,15 @@
-#section1
-{
-    height: 450px;
+#section1 {
+    height: 40vh;
     width: 100%;
     background-image: url("../../../assets/darkbackgroundimage.jpg");
     background-size: cover;
 }
-span{
-    color: red;
-}
-
-#showinterest
-{
+#showinterest {
     right: 50px;
     left: -50px;
+}
+.left-info {
+    overflow: hidden;
 }
 
 ul {
@@ -108,4 +105,13 @@ input:checked + label
 .success-feedback {
     font-size: 18px;
     text-align:center;
+    color: green;
+}
+/* error feedback */
+.invalid_feedback {
+    font-size: 14px;
+}
+/* button */
+.btn-submit {
+    font-size: 18px;
 }
