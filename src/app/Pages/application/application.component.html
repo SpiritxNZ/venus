@@ -38,14 +38,19 @@
                     <img class="sectionimages" src="../../assets/front1.jpg">
                 </ng-template>
             </div>
+
+            <!-- right side -->
             <div class="col-md-6 col-12">
-                <h4 class="j1" style="color:black; font-size: 30px;">
-                    I'm interested in...
-                    <h4 class="j1" style="color:black; font-size: 20px;">
-                        What area are you interested in getting the most assistance with?
-                    </h4>
+
+                <div class="error-feedback" *ngIf="errorMessage"><b>{{errorMessage}}</b></div>
+                <div class="success-feedback" *ngIf="successMessage"><b>{{successMessage}}</b></div>
+
+                <h4 class="l2">
+                    I'm interested in...</h4>
+                <h4 class="s1">
+                    What area are you interested in getting the most assistance with?
                 </h4>
-                <div class="row">
+                <div class="row interest-section">
                     <ul>
                         <li class="col-6 col-sm-4" *ngFor="let interest of interests"
                             (mouseenter)="enter(interest.id)">
@@ -59,13 +64,10 @@
                 </div>
 
         <!-- the form -->
-                <h4 class="j1" style="color:black; font-size: 30px;">
+                <h4 class="l2">
                     My contact info is...
                 </h4>
                 <form [formGroup]="myForm">
-                    <div class="error-feedback" *ngIf="errorMessage">{{errorMessage}}</div>
-                    <div class="success-feedback" *ngIf="successMessage">{{successMessage}}</div>
-
                     <div class="form-row">
                         <div class="col">
                             <div class="form-group">
@@ -132,8 +134,8 @@
                     </div>
 
                     <button [disabled]="myForm.invalid" type="button" class="btn btn-primary btn-submit" (click)="submit()">Submit</button>
-                    <div class="error-feedback" *ngIf="errorMessage">{{errorMessage}}</div>
-                    <div class="success-feedback" *ngIf="successMessage">{{successMessage}}</div>
+                    <div class="error-feedback" *ngIf="errorMessage"><b>{{errorMessage}}</b></div>
+                    <div class="success-feedback" *ngIf="successMessage"><b>{{successMessage}}</b></div>
                 </form>
             </div>
         </div>

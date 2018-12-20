@@ -4,10 +4,6 @@
     background-image: url("../../../assets/darkbackgroundimage.jpg");
     background-size: cover;
 }
-#showinterest {
-    right: 50px;
-    left: -50px;
-}
 .left-info {
     overflow: hidden;
 }
@@ -19,18 +15,6 @@ ul {
 }
 li {
         display: inline-block;
-}
-.interestinput {
-    visibility:hidden;
-}
-.interestlabel {
-    cursor: pointer;
-    text-align: center;
-}
-.radiodiv
-{
-    height: 100px;
-    width: 134px;
 }
 #div1
 {
@@ -56,10 +40,12 @@ li {
 {
     background-image: url("../../../assets/interest6.svg");
 }
-#showinterest
-{
-    height: 700px;
+#showinterest {
+    height: 400px;
+}
+#showinterest img {
     width: 100%;
+    display: block;
 }
 .interestlabel {
     height: 150px;
@@ -67,6 +53,11 @@ li {
     border: 3px solid transparent;
     border-radius: 5px;
     padding: 0 0 0 0px;
+    cursor: pointer;
+    text-align: center;
+}
+.interestinput {
+    visibility:hidden;
 }
 .interestinput:checked + .interestlabel {
     border: 3px solid rgba(40, 140, 255, 0.712);
@@ -114,4 +105,5 @@ input:checked + label
 /* button */
 .btn-submit {
     font-size: 18px;
+    width: 100%;
 }
