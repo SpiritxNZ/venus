@@ -106,7 +106,6 @@ input:checked + label
 }
 /* error feedback text */
 .error-feedback {
-    color: #b30000;
     border: 1px solid #b30000;
 }
 /* sucess feedback text */
