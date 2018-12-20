@@ -53,7 +53,7 @@
                 <div class="row interest-section">
                     <ul>
                         <li class="col-6 col-sm-4" *ngFor="let interest of interests"
-                            (mouseenter)="enter(interest.id)">
+                            (mouseenter)="mouseHoverEnter(interest.id)">
                             <input class="interestinput" type='radio' name='interest' id='{{interest.input}}' />
                             <label class="interestlabel" for='{{interest.input}}'>
                                 <img class="radiodiv" src="{{interest.backgroundimageurl}}">
