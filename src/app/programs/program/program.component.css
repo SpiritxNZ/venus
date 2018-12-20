@@ -66,11 +66,9 @@
     width: 100%;
     font-size: 17px;
 }
-.processdiv2
-{
-    width: 100%;
-    font-size: 12px;
-    color: rgb(178, 178, 178);
+.wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .wrapper .text-center:hover .num
 {
