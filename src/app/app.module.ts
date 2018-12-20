@@ -12,7 +12,6 @@ import { SuccesscasesComponent } from './successcases/successcases.component';
 import { AboutusComponent } from './Pages/aboutus/aboutus.component';
 import { ContactusComponent } from './Pages/contactus/contactus.component';
 import { CourseshomeComponent } from './course/courseshome/courseshome.component';
-import { ProgramComponent } from './programs/program/program.component';
 import { ApplicationComponent } from './Pages/application/application.component';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { MatChipsModule} from '@angular/material';
