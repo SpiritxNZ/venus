@@ -124,16 +124,38 @@ div.img-box
     padding-left: 20px;
     padding-top: 30px;
 }
+/* ------section 4------- */
 li.nav-item
 {
     width: 25%;
     background-color: #ebebeb;
 }
+#section4 {
+    width: 100%;
+    background-color: #f5f5f5;
+    padding-bottom: 20px;
+}
+.section4container {
+    position: relative;
+    background-color: white;
+    height: 250px;
+    width: 70%;
+    display: inline-block;
+    margin-bottom: 50px;
+    margin-top: 40px;
+}
+.tab-content {
+    text-align: left;
+}
+.container.tab-pane {
+    margin: 0px;
+}
+/* ----section5----- */
 #section5{
   width: 100%;
   padding-bottom: 20px;
 }
-.section5container, .section5button{
+.section5container {
   position: relative;
   height: 100%;
   width: 70%;
@@ -179,14 +201,23 @@ li.nav-item
 #applyButton:hover{
   background-color: #3768a8 ;
 }
+.course-info {
+    text-align: justify;
+}
+/* -------smal screen----- */
 @media only screen and (max-width: 768px){
+  .section4container {
+    position: relative;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    }
   .section5container{
     width: 100%;
     margin-bottom: 30px;
     margin-top: 20px;
   }
-}
-
-.course-info {
-    text-align: justify;
 }
