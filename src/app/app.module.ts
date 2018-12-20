@@ -51,7 +51,6 @@ const routes: Routes = [
     AboutusComponent,
     ContactusComponent,
     CourseshomeComponent,
-    ProgramComponent,
     ApplicationComponent,
     CoursesComponent,
     FaqComponent,
