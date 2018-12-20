@@ -42,8 +42,8 @@
             <!-- right side -->
             <div class="col-md-6 col-12">
 
-                <div class="error-feedback" *ngIf="errorMessage"><b>{{errorMessage}}</b></div>
-                <div class="success-feedback" *ngIf="successMessage"><b>{{successMessage}}</b></div>
+                <div class="feedback error-feedback" *ngIf="errorMessage && !successMessage"><b>{{errorMessage}}</b></div>
+                <div class="feedback success-feedback" *ngIf="successMessage"><b>{{successMessage}}</b></div>
 
                 <h4 class="l2">
                     I'm interested in...</h4>
@@ -75,12 +75,8 @@
                                 <input class="form-control" formControlName="firstname" placeholder="First Name">
                                 <span class="invalid_feedback" *ngIf="myForm.controls.firstname.invalid && myForm.controls.firstname.touched">
                                     <div *ngIf="myForm.controls.firstname.errors.required">First name is required</div>
-                                    <div *ngIf="myForm.controls.firstname.errors.minlength">First name must be at least
-                                        2
-                                        characters</div>
-                                    <div *ngIf="myForm.controls.firstname.errors.maxlength">First name must be at most
-                                        20
-                                        characters</div>
+                                    <div *ngIf="myForm.controls.firstname.errors.minlength">First name must be at least 2 characters</div>
+                                    <div *ngIf="myForm.controls.firstname.errors.maxlength">First name must be at most 20 characters</div>
                                 </span>
                             </div>
                         </div>
@@ -90,10 +86,8 @@
                                 <input class="form-control" formControlName="lastname" placeholder="Last Name">
                                 <span class="invalid_feedback" *ngIf="myForm.controls.lastname.invalid && myForm.controls.lastname.touched">
                                     <div *ngIf="myForm.controls.lastname.errors.required">Last name is required</div>
-                                    <div *ngIf="myForm.controls.lastname.errors.minlength">Last name must be at least 2
-                                        characters</div>
-                                    <div *ngIf="myForm.controls.lastname.errors.maxlength">Last name must be at most 30
-                                        characters</div>
+                                    <div *ngIf="myForm.controls.lastname.errors.minlength">Last name must be at least 2 characters</div>
+                                    <div *ngIf="myForm.controls.lastname.errors.maxlength">Last name must be at most 30 characters</div>
                                 </span>
                             </div>
                         </div>
@@ -104,10 +98,8 @@
                         <input class="form-control" formControlName="email" placeholder="example@example.com">
                         <span class="invalid_feedback" *ngIf="myForm.controls.email.invalid && myForm.controls.email.touched">
                             <div *ngIf="myForm.controls.email.errors.required">Email address is required</div>
-                            <div *ngIf="myForm.controls.email.errors.minlength">Email address must be at least 6
-                                characters</div>
-                            <div *ngIf="myForm.controls.email.errors.email">Email address must be a valid email
-                                address</div>
+                            <div *ngIf="myForm.controls.email.errors.minlength">Email address must be at least 6 characters</div>
+                            <div *ngIf="myForm.controls.email.errors.email">Email address must be a valid email address</div>
                         </span>
                     </div>
 
@@ -116,25 +108,22 @@
                         <input class="form-control" formControlName="phone" placeholder="Phone Number">
                         <span class="invalid_feedback" *ngIf="myForm.controls.phone.invalid && myForm.controls.phone.touched">
                             <div *ngIf="myForm.controls.phone.errors.required">Phone number is required</div>
-                            <div *ngIf="myForm.controls.phone.errors.minlength">Phone number must be at least 5
-                                characters</div>
-                            <div *ngIf="myForm.controls.phone.errors.maxlength">Phone number must be at most 20
-                                characters</div>
+                            <div *ngIf="myForm.controls.phone.errors.minlength">Phone number must be at least 5 characters</div>
+                            <div *ngIf="myForm.controls.phone.errors.maxlength">Phone number must be at most 20 characters</div>
                             <div *ngIf="myForm.controls.phone.errors.pattern">Please enter a valid phone number</div>
                         </span>
                     </div>
 
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea class="form-control" formControlName="message" placeholder="Your Message"
-                            rows="4"></textarea>
+                        <textarea class="form-control" formControlName="message" placeholder="Your Message" rows="4"></textarea>
                         <span class="invalid_feedback" *ngIf="myForm.controls.message.invalid && myForm.controls.message.touched">
                             <div>Message is required</div>
                         </span>
                     </div>
 
                     <button [disabled]="myForm.invalid" type="button" class="btn btn-primary btn-submit" (click)="submit()">Submit</button>
-                    <div class="feedback error-feedback" *ngIf="errorMessage"><b>{{errorMessage}}</b></div>
+                    <div class="feedback error-feedback" *ngIf="errorMessage && !successMessage"><b>{{errorMessage}}</b></div>
                     <div class="feedback success-feedback" *ngIf="successMessage"><b>{{successMessage}}</b></div>
                 </form>
             </div>

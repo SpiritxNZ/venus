@@ -94,17 +94,29 @@ input:checked + label
 
 /* feedback text */
 .feedback {
-    margin: 10px;
+    font-size: 18px;
+    text-align:center;
+    margin-top: 10px;
+    padding-top: 0.375rem;
+    padding-right: 0.75rem;
+    padding-bottom: 0.375rem;
+    padding-left: 0.75rem;
+    width: 100%;
+    border-radius: 0.25rem;
+}
+/* error feedback text */
+.error-feedback {
+    color: #b30000;
+    border: 1px solid #b30000;
 }
 /* sucess feedback text */
 .success-feedback {
-    font-size: 18px;
-    text-align:center;
     color: green;
+    border: 1px solid green;
 }
-/* error feedback */
+/* invalid field feedback */
 .invalid_feedback {
-    font-size: 14px;
+    font-size: 16px;
 }
 /* button */
 .btn-submit {
