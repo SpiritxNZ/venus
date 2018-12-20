@@ -101,7 +101,7 @@
 
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input class="form-control" formControlName="email" placeholder="Email Address">
+                        <input class="form-control" formControlName="email" placeholder="example@example.com">
                         <span class="invalid_feedback" *ngIf="myForm.controls.email.invalid && myForm.controls.email.touched">
                             <div *ngIf="myForm.controls.email.errors.required">Email address is required</div>
                             <div *ngIf="myForm.controls.email.errors.minlength">Email address must be at least 6
