@@ -5,7 +5,7 @@
     background-image: url("../../../assets/darkbackgroundimage.jpg");
     background-size: cover;
 }
-#section2,#section3,#section4
+#section2,#section3,#section4,#section5
 {
     padding-top: 20px;
     text-align: center;
@@ -129,11 +129,11 @@ li.nav-item
     width: 25%;
     background-color: #ebebeb;
 }
-#section4{
+#section5{
   width: 100%;
   padding-bottom: 20px;
 }
-.section4container, .sectiom4button{
+.section5container, .section5button{
   position: relative;
   height: 100%;
   width: 70%;
@@ -161,14 +161,11 @@ li.nav-item
   color: white;
   margin-bottom: 0.5rem;
 }
-.sectiom4button{
+.section5button{
   padding: 0;
   margin-top: 0;
 }
 #applyButton{
-  display: inline-block;
-  letter-spacing: 2px;
-  line-height: 0px;
   background-color: #5091e6;
   font-size: 2rem;
   font-weight: 500;
@@ -183,7 +180,7 @@ li.nav-item
   background-color: #3768a8 ;
 }
 @media only screen and (max-width: 768px){
-  .section4container{
+  .section5container{
     width: 100%;
     margin-bottom: 30px;
     margin-top: 20px;
