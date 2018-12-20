@@ -15,27 +15,27 @@
                 <ng-template #styleone>
                     <!--what you want to show on left div-->
                     <h1>styleone</h1>
-                    <img class="sectionimages" src="../../assets/front1.jpg">
+                    <div><img class="sectionimages" src="../../assets/front1.jpg"></div>
                 </ng-template>
                 <ng-template #styletwo>
                     <h1>styletwo</h1>
-                    <img class="sectionimages" src="../../assets/front5.jpg">
+                    <div><img class="sectionimages" src="../../assets/front5.jpg"></div>
                 </ng-template>
                 <ng-template #stylethree>
                     <h1>stylethree</h1>
-                    <img class="sectionimages" src="../../assets/front4.jpg">
+                    <div><img class="sectionimages" src="../../assets/front4.jpg"></div>
                 </ng-template>
                 <ng-template #stylefour>
                     <h1>stylefour</h1>
-                    <img class="sectionimages" src="../../assets/front5.jpg">
+                    <div><img class="sectionimages" src="../../assets/front5.jpg"></div>
                 </ng-template>
                 <ng-template #stylefive>
                     <h1>stylefive</h1>
-                    <img class="sectionimages" src="../../assets/front4.jpg">
+                    <div><img class="sectionimages" src="../../assets/front4.jpg"></div>
                 </ng-template>
                 <ng-template #stylesix>
                     <h1>stylesix</h1>
-                    <img class="sectionimages" src="../../assets/front1.jpg">
+                    <div><img class="sectionimages" src="../../assets/front1.jpg"></div>
                 </ng-template>
             </div>
 
@@ -51,16 +51,13 @@
                     What area are you interested in getting the most assistance with?
                 </h4>
                 <div class="row interest-section">
-                    <ul>
-                        <li class="col-6 col-sm-4" *ngFor="let interest of interests"
-                            (mouseenter)="enter(interest.id)">
-                            <input class="interestinput" type='radio' name='interest' id='{{interest.input}}' />
-                            <label class="interestlabel" for='{{interest.input}}'>
-                                <img class="radiodiv" src="{{interest.backgroundimageurl}}">
-                                <h3 class="m2">hello</h3>
-                            </label>
-                        </li>
-                    </ul>
+                    <div class="col-6 col-sm-4" *ngFor="let interest of interests" (mouseenter)="enter(interest.id)">
+                        <input class="interestinput" type='radio' name='interest' id='{{interest.input}}' />
+                        <label class="interestlabel" for='{{interest.input}}'>
+                            <img class="radiodiv" src="{{interest.backgroundimageurl}}">
+                            <h3 class="m2">hello</h3>
+                        </label>
+                    </div>
                 </div>
 
         <!-- the form -->

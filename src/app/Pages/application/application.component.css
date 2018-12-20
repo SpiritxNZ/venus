@@ -7,36 +7,22 @@
 .left-info {
     overflow: hidden;
 }
-
-ul {
-    list-style: none;
-    padding: 0px;
-}
-li {
-        display: inline-block;
-}
-#div1
-{
+#div1 {
     background-image: url("../../../assets/interest1.svg");
 }
-#div2
-{
+#div2 {
     background-image: url("../../../assets/interest2.svg");
 }
-#div3
-{
+#div3 {
     background-image: url("../../../assets/interest3.svg");
 }
-#div4
-{
+#div4 {
     background-image: url("../../../assets/interest4.svg");
 }
-#div5
-{
+#div5 {
     background-image: url("../../../assets/interest5.svg");
 }
-#div6
-{
+#div6 {
     background-image: url("../../../assets/interest6.svg");
 }
 #showinterest {
@@ -44,7 +30,6 @@ li {
 }
 #showinterest img {
     width: 100%;
-    display: block;
 }
 .interestlabel {
     width: 100%;
@@ -53,9 +38,15 @@ li {
     padding: 0;
     cursor: pointer;
     text-align: center;
+    background-color: white;
+}
+.interestlabel img {
+    max-width: 80px;
 }
 .interestinput {
     visibility:hidden;
+    height: 0px;
+    width: 0px;
 }
 .interestinput:checked + .interestlabel {
     border: 3px solid rgba(40, 140, 255, 0.712);
@@ -63,8 +54,7 @@ li {
 .interestinput:hover + .interestlabel {
     box-shadow: 0 2px 12px 3px hsla(0,0%,89%,.55);
 }
-#section2toprow
-{
+#section2toprow {
     padding-top: 30px;
     padding-bottom: 20px;
 }
@@ -95,21 +85,10 @@ input:checked + label
     font-size: 18px;
     text-align:center;
     margin-top: 10px;
-    padding-top: 0.375rem;
-    padding-right: 0.75rem;
-    padding-bottom: 0.375rem;
-    padding-left: 0.75rem;
-    width: 100%;
-    border-radius: 0.25rem;
-}
-/* error feedback text */
-.error-feedback {
-    border: 1px solid #b30000;
 }
 /* sucess feedback text */
 .success-feedback {
     color: green;
-    border: 1px solid green;
 }
 /* invalid field feedback */
 .invalid_feedback {
@@ -127,4 +106,7 @@ input:checked + label
 }
 .interest-section {
     width: 100%;
+}
+.interest-section .col-6 {
+    padding: 5px;
 }
