@@ -190,3 +190,7 @@ li.nav-item
     margin-top: 20px;
   }
 }
+
+.course-info {
+    text-align: justify;
+}
