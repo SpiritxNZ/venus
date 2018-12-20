@@ -134,8 +134,8 @@
                     </div>
 
                     <button [disabled]="myForm.invalid" type="button" class="btn btn-primary btn-submit" (click)="submit()">Submit</button>
-                    <div class="error-feedback" *ngIf="errorMessage"><b>{{errorMessage}}</b></div>
-                    <div class="success-feedback" *ngIf="successMessage"><b>{{successMessage}}</b></div>
+                    <div class="feedback error-feedback" *ngIf="errorMessage"><b>{{errorMessage}}</b></div>
+                    <div class="feedback success-feedback" *ngIf="successMessage"><b>{{successMessage}}</b></div>
                 </form>
             </div>
         </div>

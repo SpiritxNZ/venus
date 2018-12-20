@@ -92,6 +92,10 @@ input:checked + label
     padding: 0 0 0 0px;
 } */
 
+/* feedback text */
+.feedback {
+    margin: 10px;
+}
 /* sucess feedback text */
 .success-feedback {
     font-size: 18px;
