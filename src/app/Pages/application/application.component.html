@@ -5,7 +5,6 @@
 <section id="section2">
     <div class="container">
         <div class="row" id="section2toprow">
-<<<<<<< HEAD
             <div class="col-6 d-none d-md-block"  id="showinterest">
                 <div class="sectionimages" id="sectionimage1">
                 </div>
@@ -85,41 +84,6 @@
                                             </label>
                                         </li> -->
                                 </ul>
-=======
-            <div class="col-md-6 d-none d-md-flex left-info" id="showinterest">
-                <div *ngIf="divname == '1'; then styleone"></div>
-                <div *ngIf="divname == '2'; then styletwo"></div>
-                <div *ngIf="divname == '3'; then stylethree"></div>
-                <div *ngIf="divname == '4'; then stylefour"></div>
-                <div *ngIf="divname == '5'; then stylefive"></div>
-                <div *ngIf="divname == '6'; then stylesix"></div>
-                <ng-template #styleone>
-                    <!--what you want to show on left div-->
-                    <h1>styleone</h1>
-                    <div><img class="sectionimages" src="../../assets/front1.jpg"></div>
-                </ng-template>
-                <ng-template #styletwo>
-                    <h1>styletwo</h1>
-                    <div><img class="sectionimages" src="../../assets/front5.jpg"></div>
-                </ng-template>
-                <ng-template #stylethree>
-                    <h1>stylethree</h1>
-                    <div><img class="sectionimages" src="../../assets/front4.jpg"></div>
-                </ng-template>
-                <ng-template #stylefour>
-                    <h1>stylefour</h1>
-                    <div><img class="sectionimages" src="../../assets/front5.jpg"></div>
-                </ng-template>
-                <ng-template #stylefive>
-                    <h1>stylefive</h1>
-                    <div><img class="sectionimages" src="../../assets/front4.jpg"></div>
-                </ng-template>
-                <ng-template #stylesix>
-                    <h1>stylesix</h1>
-                    <div><img class="sectionimages" src="../../assets/front1.jpg"></div>
-                </ng-template>
-            </div>
->>>>>>> refs/remotes/origin/master
 
             <!-- right side -->
             <div class="col-md-6 col-12">
@@ -172,23 +136,6 @@
                         </div>
                     </div>
 
-<<<<<<< HEAD
-                            <div class="form-group">
-                                    <label for="phone">Phone Number:</label>
-                                    <input class="form-control" formControlName="phone" placeholder="Enter Your Phone Number Please">
-                                    <span *ngIf="phone.invalid && phone.touched">
-                                        <div *ngIf="phone.errors.required">Phone number is required</div>
-                                        <div *ngIf="phone.errors.minlength">Phone number must be at least 5 characters</div>
-                                        <div *ngIf="phone.errors.maxlength">Phone number must be at most 20 characters</div>
-                                        <div *ngIf="phone.errors.pattern">Please enter a valid phone number</div>
-                                    </span>
-                                </div>
-                            
-                                <button [disabled]="myForm.invalid" type="button" class="btn btn-primary" (click)="submit()">SUBMIT</button>
-                                <button class="btn btn-primary" (click)="showdetail(0)">for test</button>
-                            
-                        </form>
-=======
                     <div class="form-group">
                         <label for="email">Email Address</label>
                         <input class="form-control" formControlName="email" placeholder="example@example.com">
@@ -222,7 +169,6 @@
                     <div class="feedback error-feedback" *ngIf="errorMessage && !successMessage"><b>{{errorMessage}}</b></div>
                     <div class="feedback success-feedback" *ngIf="successMessage"><b>{{successMessage}}</b></div>
                 </form>
->>>>>>> refs/remotes/origin/master
             </div>
         </div>
     </div>
