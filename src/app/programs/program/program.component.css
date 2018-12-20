@@ -186,23 +186,20 @@ li.nav-item{
   color: white;
   margin-bottom: 0.5rem;
 }
-.section5button{
-  padding: 0;
-  margin-top: 0;
-}
 #applyButton{
   background-color: #5091e6;
-  font-size: 2rem;
-  font-weight: 500;
   color: white;
   border: none;
-  padding: 0 1.3rem .6rem 1.3rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   border-radius: 4rem;
   outline:none;
-  line-height: 40px;
 }
 #applyButton:hover{
-  background-color: #3768a8 ;
+  background-color: #3768a8;
+  cursor: hand;
 }
 .course-info {
     text-align: justify;
