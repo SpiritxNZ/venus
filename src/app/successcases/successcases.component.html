@@ -1,35 +1,71 @@
-<section id="section1">
-  
-</section>
-<!----------------------------------------------------------------------------------------------------------------------------------------->
-<section id="section2">
+<div class="background">
+  <section id="section1">
+      <div class="jumbotron-fluid">
+          <h1 class="j1" style="color:white; background-color: transparent">
+            Our Success Cases
+          </h1>
+      </div>
+  </section>
+
+  <section id="section3">
     <div class="container">
-        <h1 class="j1" style="color:black;">Look at our successful cases</h1>
-        <h2 class="mid1Content">successful cases successful cases successful</h2>
-        <div class="row">
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4"  *ngFor="let person of successfulpeople">
-            <div class="successcasescontainer">
-              <div class="praise-card" >
-                <img class="successcasesimage" src="{{ person.image }}" alt="img" >
-                  <div class="div1" >
-                    <h3 class="h3" >
-                        {{ person.name }}&nbsp;|&nbsp;{{ person.university }}
-                    </h3>
-                      <div class="div2" >
-                        <div class="div3" >
-                        Offer：{{ person.offerlocation }}，{{ person.offerposition }}
-                        </div>
-                      <div class="div3" >courses: {{ person.courses }}
-                    </div>
+      <div class="card video-card">
+        <div class="row video-row">
+          <div class="col-lg-5 col-md-6">
+            <div class="embed-responsive embed-responsive-16by9 video">
+              <iframe class="embed-responsive-item" [src]="video1" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-lg-7 col-md-6">
+            <h3 class="s1">{{videoPerson1.name}} | {{videoPerson1.uni}}</h3>
+            <h3 class="s2 div2">Offer: {{videoPerson1.jobLoc}}, {{videoPerson1.job}}</h3>
+            <p class="s2 description">{{videoPerson1.description}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="card video-card">
+        <div class="row video-row">
+          <div class="col-lg-7 col-md-6">
+            <h3 class="s1">{{videoPerson2.name}} | {{videoPerson2.uni}}</h3>
+            <h3 class="s2 div2">Offer: {{videoPerson2.jobLoc}}, {{videoPerson2.job}}</h3>
+            <p class="s2 description">{{videoPerson2.description}}</p>
+          </div>
+          <div class="col-lg-5 col-md-6">
+            <div class="embed-responsive embed-responsive-16by9 video">
+              <iframe class="embed-responsive-item" [src]="video2" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section2">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4" *ngFor="let person of successfulpeople">
+          <div class="successcasescontainer">
+            <div class="praise-card">
+              <img class="successcasesimage" src="{{ person.image }}" alt="img">
+              <div class="div1">
+                <h3 class="h3">
+                  {{ person.name }}&nbsp;|&nbsp;{{ person.university }}
+                </h3>
+                <div class="div2">
+                  <div class="div3">
+                    Offer: {{ person.offerlocation }}, {{ person.offerposition }}
+                  </div>
+                  <div class="div3">courses: {{ person.courses }}
                   </div>
                 </div>
-                <div class="div4"  >
-                    {{ person.details |  slice: 0:210}}
-                </div>
+              </div>
+              <div class="div4">
+                {{ person.details | slice: 0:210}}
               </div>
             </div>
           </div>
         </div>
+      </div>
     </div>
-</section>
-      
+  </section>
+</div>

@@ -5,7 +5,7 @@
     background-image: url("../../../assets/darkbackgroundimage.jpg");
     background-size: cover;
 }
-#section2,#section3,#section4
+#section2,#section3,#section4,#section5
 {
     padding-top: 20px;
     text-align: center;
@@ -16,61 +16,59 @@
 }
 .coursescontainer
 {
-    margin-top: 60px; 
-    text-align: center; 
+    margin-top: 60px;
+    text-align: center;
     display: inline-block;
 }
 .coursesdiv1
 {
-    line-height: 80px; 
-    font-size: 20px; 
+    line-height: 80px;
+    font-size: 20px;
     color: rgb(53, 53, 53);
 }
 .coursesdiv2
 {
-    width: 100%; 
-    line-height: 34px; 
-    font-size: 17px; 
+    width: 100%;
+    line-height: 34px;
+    font-size: 17px;
     color: rgb(136, 136, 136);
 }
 .processdiv1
 {
-    display: inline-block; 
-    position: relative; 
+    display: inline-block;
+    position: relative;
     width: 100%;
 }
 .text-center
 {
-    display: inline-block; 
-    width: 100%; 
-    position: relative; 
+    display: inline-block;
+    width: 100%;
+    position: relative;
     font-size: 16px;
     padding-bottom: 40px;
 }
 .block
 {
-    height: 45px; 
-    width: 45px; 
+    height: 45px;
+    width: 45px;
     position: relative;
 }
 .none
 {
-    height: 45px; 
-    width: 45px; 
+    height: 45px;
+    width: 45px;
     position: relative;
 }
 .processh4
 {
-    position: absolute; 
-    top: 130px; 
-    width: 100%; 
+    position: absolute;
+    top: 130px;
+    width: 100%;
     font-size: 17px;
 }
-.processdiv2
-{
-    width: 100%; 
-    font-size: 12px; 
-    color: rgb(178, 178, 178);
+.wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .wrapper .text-center:hover .num
 {
@@ -99,19 +97,15 @@
 .wrapper .contentdec{padding-bottom: 8px;}
 hr
 {
-    position: absolute; 
-    left: 61%; 
-    top: 0px; 
-    border-top: 2px dashed rgb(80, 145, 230); 
-    color: rgb(255, 255, 255); 
-    background-color: rgb(255, 255, 255); 
-    height: 1px; 
+    position: absolute;
+    left: 61%;
+    top: 0px;
+    border-top: 2px dashed rgb(80, 145, 230);
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    height: 1px;
     width: 77%;
     padding-left: 5px;
-}
-#section4
-{
-    width: 100%;
 }
 
 .col-xs-12.col-sm-12.col-md-2.col-lg-2
@@ -128,46 +122,71 @@ div.img-box
 {
     width: 95%;
     padding-left: 20px;
+    padding-top: 30px;
 }
 li.nav-item
 {
     width: 25%;
     background-color: #ebebeb;
 }
-#section4
-{
-    background-color: #f5f5f5;
-    padding-bottom: 20px;
+#section5{
+  width: 100%;
+  padding-bottom: 20px;
 }
-.section4container
-{
-    position: relative;
-    background-color: white;
-    height: 100%;
-    width: 70%;
-    display: inline-block;
-    margin-bottom: 50px;
-    margin-top: 40px;
+.section5container, .section5button{
+  position: relative;
+  height: 100%;
+  width: 70%;
+  display: inline-block;
+  margin: 2rem 0;
+  text-align: center;
+  padding: 2rem;
 }
-.tab-content
-{
+.box{
+  margin-top: 0.5rem;
+  padding: 1rem;
+}
+.l1{
+  margin-bottom: 0.5rem;
+}
+.l2{
+  color: #5091e6;
+}
+.s2{
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+}
+.s3 p{
+  color: white;
+  margin-bottom: 0.5rem;
+}
+.section5button{
+  padding: 0;
+  margin-top: 0;
+}
+#applyButton{
+  background-color: #5091e6;
+  font-size: 2rem;
+  font-weight: 500;
+  color: white;
+  border: none;
+  padding: 0 1.3rem .6rem 1.3rem;
+  border-radius: 4rem;
+  outline:none;
+  line-height: 40px;
+}
+#applyButton:hover{
+  background-color: #3768a8 ;
+}
+@media only screen and (max-width: 768px){
+  .section5container{
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+}
 
-    text-align: left;
-}
-.container.tab-pane
-{
-    margin: 0px;
-}
-@media only screen and (max-width: 768px) 
-{
-    .section4container
-    {
-        position: relative;
-        background-color: white;
-        height: 100%;
-        width: 100%;
-        display: inline-block;
-        margin-bottom: 30px;
-        margin-top: 20px;
-    }
+.course-info {
+    text-align: justify;
 }

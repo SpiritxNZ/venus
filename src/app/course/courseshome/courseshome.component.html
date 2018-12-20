@@ -11,7 +11,7 @@
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch" *ngFor="let course of courses">
             <div class="card mx-auto">
                 <!-- link to course page -->
-                <a href="{{course.link}}">
+                <a routerLink="{{course.link}}">
                     <!--image-->
                     <img class="card-img-top" src="{{course.thumbnail}}">
                     <!--course title, lecturer, description-->

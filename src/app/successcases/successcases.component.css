@@ -1,20 +1,25 @@
+.background {
+    background-color: #f4f4f4
+}
 #section1
 {
-    height: 450px;
+    height: 40vh;
     width: 100%;
     background-image: url("../../assets/successcasesbg.jpg");
     background-size: cover;
+    text-align:center;
 }
-#section2,#section3
-{
-    background-color: #f4f4f4;
+#section1 .jumbotron-fluid {
+    padding-top: 15vh;
+}
+#section2 {
     text-align: center;
 }
 .card-header
 {
     background-color: white;
 }
-.row
+#section2 .row
 {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -88,4 +93,34 @@
     color: rgb(53, 53, 53); 
     font-weight: 300; 
     margin: 0px 0px 7px;
+}
+
+/* row holding one of the videos */
+.video-row {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.video {
+    height: 50vh;
+    border-radius: 2px;
+}
+.video-card {
+    width: 100%;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 2px 0px;
+}
+#section3 .col-lg-7 {
+    padding-top: 10px;
+}
+#section3 .div2 {
+    font-size: 16px;
+}
+#section3 .description {
+    color: grey;
+    text-align: justify;
+    font-weight: 200; 
 }

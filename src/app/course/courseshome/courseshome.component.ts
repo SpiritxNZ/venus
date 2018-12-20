@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-courseshome',
@@ -17,45 +18,24 @@ export class CourseshomeComponent implements OnInit {
   */
  courses: any [] = [
   {
-    name: "Course 1", lecturer: "Jon Smith", desc: "Some summary of the course. The course is about",
+    name: "Course 3", lecturer: "Jon Smith", desc: "Some summary of the course. The course is about",
     thumbnail: "/assets/40ceae84961e343ddf7747cb28fc347f.card-korean.jpg",
-    link: "/courses", freetrial: false
-  },
-  {
-    name: "Course 2", lecturer: "Leon Parris", desc: "Another summary in which information about the course is written.",
-    thumbnail: "/assets/40ceae84961e343ddf7747cb28fc347f.card-korean.jpg", 
-    link: "/courses", freetrial: false
-  },
-  {
-    name: "Another course", lecturer: "Frank Wildhorn", desc: "Summary that is shorter.",
-    thumbnail: "/assets/40ceae84961e343ddf7747cb28fc347f.card-korean.jpg",
-    link: "/courses", freetrial: true
-  },
-  {
-    name: "Varialchemy 101", lecturer: "Varian", desc: "Learn to make purple (or blue) alchemy balls just like Varian!",
-    thumbnail: "/assets/40ceae84961e343ddf7747cb28fc347f.card-korean.jpg",
-    link: "/courses", freetrial: true
-  },
-  {
-    name: "This is a course", lecturer: "Eugenie Danglars", desc: "And this is a summary of the course.",
-    thumbnail: "/assets/40ceae84961e343ddf7747cb28fc347f.card-korean.jpg",
-    link: "/courses", freetrial: false
-  },
-  {
-    name: "How to make cheese", lecturer: "Sir Kaze", desc: "This course is about cheese and the many different ways of making it.",
-    thumbnail: "/assets/40ceae84961e343ddf7747cb28fc347f.card-korean.jpg",
-    link: "/courses", freetrial: true
-  },
-  {
-    name: "Something or another", lecturer: "Albert de Morcef", desc: "Things should be written here. This course is about something and is recommended for people.",
-    thumbnail: "/assets/40ceae84961e343ddf7747cb28fc347f.card-korean.jpg",
-    link: "/courses", freetrial: false
-  },
+    link: "/courses/3", freetrial: false
+  }
+
 ];
   
-  constructor() { }
+  constructor(
+    public apiService: ApiService
+  ) { }
 
   ngOnInit() {
+    // Gets list of courses from API 
+    this.apiService.getAllCourses().subscribe(
+      (res)=>console.log(res),
+      // Needs to return error message to the user
+      (err)=>console.warn(err)
+    )
   }
 
 }

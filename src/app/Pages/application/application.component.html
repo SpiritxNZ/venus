@@ -1,10 +1,11 @@
-
 <section id="section1">
-  
+
 </section>
+
 <section id="section2">
     <div class="container">
         <div class="row" id="section2toprow">
+<<<<<<< HEAD
             <div class="col-6 d-none d-md-block"  id="showinterest">
                 <div class="sectionimages" id="sectionimage1">
                 </div>
@@ -84,71 +85,94 @@
                                             </label>
                                         </li> -->
                                 </ul>
+=======
+            <div class="col-md-6 d-none d-md-flex left-info" id="showinterest">
+                <div *ngIf="divname == '1'; then styleone"></div>
+                <div *ngIf="divname == '2'; then styletwo"></div>
+                <div *ngIf="divname == '3'; then stylethree"></div>
+                <div *ngIf="divname == '4'; then stylefour"></div>
+                <div *ngIf="divname == '5'; then stylefive"></div>
+                <div *ngIf="divname == '6'; then stylesix"></div>
+                <ng-template #styleone>
+                    <!--what you want to show on left div-->
+                    <h1>styleone</h1>
+                    <div><img class="sectionimages" src="../../assets/front1.jpg"></div>
+                </ng-template>
+                <ng-template #styletwo>
+                    <h1>styletwo</h1>
+                    <div><img class="sectionimages" src="../../assets/front5.jpg"></div>
+                </ng-template>
+                <ng-template #stylethree>
+                    <h1>stylethree</h1>
+                    <div><img class="sectionimages" src="../../assets/front4.jpg"></div>
+                </ng-template>
+                <ng-template #stylefour>
+                    <h1>stylefour</h1>
+                    <div><img class="sectionimages" src="../../assets/front5.jpg"></div>
+                </ng-template>
+                <ng-template #stylefive>
+                    <h1>stylefive</h1>
+                    <div><img class="sectionimages" src="../../assets/front4.jpg"></div>
+                </ng-template>
+                <ng-template #stylesix>
+                    <h1>stylesix</h1>
+                    <div><img class="sectionimages" src="../../assets/front1.jpg"></div>
+                </ng-template>
+            </div>
+>>>>>>> refs/remotes/origin/master
 
-                            <!-- <ul action="" >
-                                <li *ngFor="let id of ids" class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                    <input type="radio" id="{{id}}" name="interest" />
-                                    <label for="{{id}}"></label>
-                                </li>
-                            </ul> -->
-                        </div>
-                        <!-- <form action="">
-                            <input type="radio" id="interest2" name="interest" />
-                            <label for="interest2"></label>
-                        </form>
-                        <form action="">
-                            <input type="radio" id="interest3" name="interest" />
-                            <label for="interest3"></label>
-                        </form>
-                        <form action="">
-                            <input type="radio" id="interest4" name="interest" />
-                            <label for="interest4"></label>
-                        </form>
-                        <form action="">
-                            <input type="radio" id="interest5" name="interest" />
-                            <label for="interest5"></label>
-                        </form>
-                        <form action="">
-                            <input type="radio" id="interest6" name="interest" />
-                            <label for="interest6"></label>
-                        </form> -->
-                    
+            <!-- right side -->
+            <div class="col-md-6 col-12">
 
-                    <h4 class="j1" style="color:black; font-size: 30px;" >
-                        My contact info is...
-                    </h4>
-                        <form [formGroup]="myForm">
+                <div class="feedback error-feedback" *ngIf="errorMessage && !successMessage"><b>{{errorMessage}}</b></div>
+                <div class="feedback success-feedback" *ngIf="successMessage"><b>{{successMessage}}</b></div>
 
+                <h4 class="l2">
+                    I'm interested in...</h4>
+                <h4 class="s1">
+                    What area are you interested in getting the most assistance with?
+                </h4>
+                <div class="row interest-section">
+                    <div class="col-6 col-sm-4" *ngFor="let interest of interests" (mouseenter)="mouseHoverEnter(interest.id)">
+                        <input class="interestinput" type='radio' name='interest' id='{{interest.input}}' />
+                        <label class="interestlabel" for='{{interest.input}}'>
+                            <img class="radiodiv" src="{{interest.backgroundimageurl}}">
+                            <h3 class="m2">hello</h3>
+                        </label>
+                    </div>
+                </div>
+
+        <!-- the form -->
+                <h4 class="l2">
+                    My contact info is...
+                </h4>
+                <form [formGroup]="myForm">
+                    <div class="form-row">
+                        <div class="col">
                             <div class="form-group">
-                                <label for="firstname">First Name:</label>
-                                <input class="form-control" formControlName="firstname" placeholder="Enter Your First Name Please">
-                                <span *ngIf="firstname.invalid && firstname.touched">
-                                    <div *ngIf="firstname.errors.required">First name is required</div>
-                                    <div *ngIf="firstname.errors.minlength">First name must be at least 2 characters</div>
-                                    <div *ngIf="firstname.errors.maxlength">First name must be at most 20 characters</div>
+                                <label for="firstname">First Name</label>
+                                <input class="form-control" formControlName="firstname" placeholder="First Name">
+                                <span class="invalid_feedback" *ngIf="myForm.controls.firstname.invalid && myForm.controls.firstname.touched">
+                                    <div *ngIf="myForm.controls.firstname.errors.required">First name is required</div>
+                                    <div *ngIf="myForm.controls.firstname.errors.minlength">First name must be at least 2 characters</div>
+                                    <div *ngIf="myForm.controls.firstname.errors.maxlength">First name must be at most 20 characters</div>
                                 </span>
                             </div>
-
+                        </div>
+                        <div class="col">
                             <div class="form-group">
-                                <label for="lastname">Last Name:</label>
-                                <input class="form-control" formControlName="lastname" placeholder="Enter Your Last Name Please">
-                                <span *ngIf="lastname.invalid && lastname.touched">
-                                    <div *ngIf="lastname.errors.required">Last name is required</div>
-                                    <div *ngIf="lastname.errors.minlength">Last name must be at least 2 characters</div>
-                                    <div *ngIf="lastname.errors.maxlength">Last name must be at most 30 characters</div>
+                                <label for="lastname">Last Name</label>
+                                <input class="form-control" formControlName="lastname" placeholder="Last Name">
+                                <span class="invalid_feedback" *ngIf="myForm.controls.lastname.invalid && myForm.controls.lastname.touched">
+                                    <div *ngIf="myForm.controls.lastname.errors.required">Last name is required</div>
+                                    <div *ngIf="myForm.controls.lastname.errors.minlength">Last name must be at least 2 characters</div>
+                                    <div *ngIf="myForm.controls.lastname.errors.maxlength">Last name must be at most 30 characters</div>
                                 </span>
-                                </div>
-                            
-                            <div class="form-group">
-                                <label for="email">Email Address:</label>
-                                <input class="form-control" formControlName="email" placeholder="Enter Your Email Address Please">
-                                <span *ngIf="email.invalid && email.touched">
-                                    <div *ngIf="email.errors.required">Email address is required</div>
-                                    <div *ngIf="email.errors.minlength">Email address must be at least 6 characters</div>
-                                    <div *ngIf="email.errors.email">Email address must be a valid email address</div>
-                                </span>
-                            </div>  
+                            </div>
+                        </div>
+                    </div>
 
+<<<<<<< HEAD
                             <div class="form-group">
                                     <label for="phone">Phone Number:</label>
                                     <input class="form-control" formControlName="phone" placeholder="Enter Your Phone Number Please">
@@ -164,11 +188,42 @@
                                 <button class="btn btn-primary" (click)="showdetail(0)">for test</button>
                             
                         </form>
+=======
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input class="form-control" formControlName="email" placeholder="example@example.com">
+                        <span class="invalid_feedback" *ngIf="myForm.controls.email.invalid && myForm.controls.email.touched">
+                            <div *ngIf="myForm.controls.email.errors.required">Email address is required</div>
+                            <div *ngIf="myForm.controls.email.errors.minlength">Email address must be at least 6 characters</div>
+                            <div *ngIf="myForm.controls.email.errors.email">Email address must be a valid email address</div>
+                        </span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input class="form-control" formControlName="phone" placeholder="Phone Number">
+                        <span class="invalid_feedback" *ngIf="myForm.controls.phone.invalid && myForm.controls.phone.touched">
+                            <div *ngIf="myForm.controls.phone.errors.required">Phone number is required</div>
+                            <div *ngIf="myForm.controls.phone.errors.minlength">Phone number must be at least 5 characters</div>
+                            <div *ngIf="myForm.controls.phone.errors.maxlength">Phone number must be at most 20 characters</div>
+                            <div *ngIf="myForm.controls.phone.errors.pattern">Please enter a valid phone number</div>
+                        </span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" formControlName="message" placeholder="Your Message" rows="4"></textarea>
+                        <span class="invalid_feedback" *ngIf="myForm.controls.message.invalid && myForm.controls.message.touched">
+                            <div>Message is required</div>
+                        </span>
+                    </div>
+
+                    <button [disabled]="myForm.invalid" type="button" class="btn btn-primary btn-submit" (click)="submit()">Submit</button>
+                    <div class="feedback error-feedback" *ngIf="errorMessage && !successMessage"><b>{{errorMessage}}</b></div>
+                    <div class="feedback success-feedback" *ngIf="successMessage"><b>{{successMessage}}</b></div>
+                </form>
+>>>>>>> refs/remotes/origin/master
             </div>
-            
         </div>
     </div>
-
-
-        
 </section>
