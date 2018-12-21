@@ -48,6 +48,7 @@ div.col-md-4.program
     box-shadow: none;
     transition: transform .3s ease;
     cursor: pointer;
+    outline: 0;
 }
 .card.container,.card-header,.card-body
 {
