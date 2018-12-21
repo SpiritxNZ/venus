@@ -23,14 +23,13 @@ header{
 {
     border-radius: 8px;
     text-align: center;
-    padding: 20px;
 }
 .col-4
 {
     border-radius: 8px;
     text-align: center;
 }
-span.col-md-4:hover
+div.col-md-4.program:hover
 {
     transform: translateY(-1.25rem);
     box-shadow: 0 2px 12px 3px hsla(0,0%,89%,.55);
@@ -43,7 +42,7 @@ span.col-md-4:hover
     height: 80px;
     border-radius: 40px;
 }
-span.col-md-4
+div.col-md-4.program
 {
     padding: 20px;
     box-shadow: none;
@@ -54,7 +53,7 @@ span.col-md-4
 {
     padding: 0;
 }
-span.card.card.container
+div.card.card.container
 {
    width: 25%;
    text-align: center;
@@ -73,6 +72,7 @@ span.card.card.container
 .row
 {
     padding-top: 20px;
+    margin: 0px;
 }
 
 h3.j3
@@ -96,7 +96,6 @@ h3.j3
     background-color: rgba(182, 182, 182, 0.55);
     border:2px solid rgba(109, 109, 109, 0.55);
     height: 150px;
-    
     width: 240px;
     padding-left: 32px;
 
@@ -115,4 +114,35 @@ h3.j3
     width: 240px;
     height: 40px;
     font-size: 20px;
+}
+.custom-control-label
+{
+    cursor: pointer;
+}
+div.coursescontainer
+{
+    padding-bottom: 20px;
+}
+.s2{
+    padding-top:10px;
+}
+@media(max-width:576px) {
+    .row {
+       display: inline-block;
+    }
+    .custom-control.custom-checkbox
+    {
+        margin-bottom: 20px;
+        height: 150px;
+        width: 180px;
+        padding-left: 0px;
+    }
+    .custom-control-label
+    {
+        margin-left:40px;
+    }
+    .custom-control.btn.btn-light.custom-checkbox.col-xs-12.col-sm-6.col-md-4.offset-md-2
+    {
+        left: 0px !important;
+    }
 }
