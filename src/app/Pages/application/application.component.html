@@ -5,85 +5,29 @@
 <section id="section2">
     <div class="container">
         <div class="row" id="section2toprow">
-            <div class="col-6 d-none d-md-block"  id="showinterest">
+            <div class="col-6 d-none d-md-block" id="showinterest">
                 <div class="sectionimages" id="sectionimage1">
                 </div>
-                <h4 class="j1" id="detailtitle" >University Admission Support</h4>
+                <h4 class="j1" id="detailtitle">University Admission Support</h4>
                 <div class="container">
                     <h5 id="detail">
-                            Tap into an expert network of strategists, tutors and mentors who will guide you on best-fit universities and advise you on how to stand out as a top applicant. Typically, support will include:
-                            <br><br>
-                            Tailored team of tutors and mentors matched to your interests and goals
-                            <br><br>
-                            Personalised roadmap of milestones including key test dates and application tasks to tick off
-                            <br><br>
-                            Subject tutoring, standardised test support and application essay review
-                            <br><br>
-                            Extracurricular and Leadership advising that helps you stand out from the crowd
-                            <br><br>
-                            Strategic university application guidance, including financial aid and scholarship requests  
+                        Tap into an expert network of strategists, tutors and mentors who will guide you on best-fit
+                        universities and advise you on how to stand out as a top applicant. Typically, support will
+                        include:
+                        <br><br>
+                        Tailored team of tutors and mentors matched to your interests and goals
+                        <br><br>
+                        Personalised roadmap of milestones including key test dates and application tasks to tick off
+                        <br><br>
+                        Subject tutoring, standardised test support and application essay review
+                        <br><br>
+                        Extracurricular and Leadership advising that helps you stand out from the crowd
+                        <br><br>
+                        Strategic university application guidance, including financial aid and scholarship requests
                     </h5>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <h4 class="j1" style="color:black; font-size: 30px;" >
-                        I'm interested in...
-                        <h4 class="j1" style="color:black; font-size: 20px;" >
-                            What area are you interested in getting the most assistance with?
-                        </h4>
-                    </h4>
-                        <div class="row" >
-                                <ul>
-                                        <li  class="col-xs-12 col-sm-6 col-md-4 col-lg-4"  *ngFor="let interest of interests" (mouseenter)="showdetail(interest.id)">
-                                            <input class="interestinput" type='radio' name='interest' id='{{interest.input}}' />
-                                            <label class="interestlabel"  for='{{interest.input}}'>
-                                                <img class="radiodiv" src="{{interest.backgroundimageurl}}" >
-                                                <h3>hello</h3>
-                                            </label>
-                                        </li>
-                                        <!-- <li  class="col-xs-12 col-sm-6 col-md-4 col-lg-4" (mouseenter)="enter(1)">
-                                            <input class="interestinput" type='radio' name='interest' id='input1'/>
-                                            <label class="interestlabel"  for='input1'>
-                                                <div class="radiodiv" id="div1"></div>
-                                                <h3>hello</h3>
-                                            </label>
-                                        </li>
-                                        <li class="col-xs-12 col-sm-6 col-md-4 col-lg-4" (mouseenter)="enter(2)">
-                                            <input class="interestinput" type='radio' name='interest' id='input2'/>
-                                            <label class="interestlabel"  for='input2'>
-                                                <div class="radiodiv" id="div2"></div>
-                                                <h3>hello</h3>
-                                            </label>
-                                        </li>
-                                        <li  class="col-xs-12 col-sm-6 col-md-4 col-lg-4" (mouseenter)="enter(3)">
-                                            <input class="interestinput" type='radio' name='interest' id='input3'/>
-                                            <label class="interestlabel"  for='input3'>
-                                                <div class="radiodiv" id="div3"></div>
-                                                <h3>hello</h3>
-                                            </label>
-                                        </li>
-                                        <li class="col-xs-12 col-sm-6 col-md-4 col-lg-4" (mouseenter)="enter(4)">
-                                            <input class="interestinput" type='radio' name='interest' id='input4'/>
-                                            <label class="interestlabel"  for='input4'>
-                                                <div class="radiodiv" id="div4"></div>
-                                                <h3>hello</h3>
-                                            </label>
-                                        </li>
-                                        <li  class="col-xs-12 col-sm-6 col-md-4 col-lg-4" (mouseenter)="enter(5)">
-                                            <input class="interestinput" type='radio' name='interest' id='input5'/>
-                                            <label class="interestlabel"  for='input5'>
-                                                <div class="radiodiv" id="div5"></div>
-                                                <h3>hello</h3>
-                                            </label>
-                                        </li>
-                                        <li class="col-xs-12 col-sm-6 col-md-4 col-lg-4" (mouseenter)="enter(6)">
-                                            <input class="interestinput" type='radio' name='interest' id='input6'/>
-                                            <label class="interestlabel"  for='input6'>
-                                                <div class="radiodiv" id="div6"></div>
-                                                <h3>hello</h3>
-                                            </label>
-                                        </li> -->
-                                </ul>
+
 
             <!-- right side -->
             <div class="col-md-6 col-12">
@@ -106,7 +50,7 @@
                     </div>
                 </div>
 
-        <!-- the form -->
+                <!-- the form -->
                 <h4 class="l2">
                     My contact info is...
                 </h4>
@@ -117,9 +61,12 @@
                                 <label for="firstname">First Name</label>
                                 <input class="form-control" formControlName="firstname" placeholder="First Name">
                                 <span class="invalid_feedback" *ngIf="myForm.controls.firstname.invalid && myForm.controls.firstname.touched">
-                                    <div *ngIf="myForm.controls.firstname.errors.required">First name is required</div>
-                                    <div *ngIf="myForm.controls.firstname.errors.minlength">First name must be at least 2 characters</div>
-                                    <div *ngIf="myForm.controls.firstname.errors.maxlength">First name must be at most 20 characters</div>
+                                    <div *ngIf="myForm.controls.firstname.errors.required">First name is
+                                        required</div>
+                                    <div *ngIf="myForm.controls.firstname.errors.minlength">First name must be
+                                        at least 2 characters</div>
+                                    <div *ngIf="myForm.controls.firstname.errors.maxlength">First name must be
+                                        at most 20 characters</div>
                                 </span>
                             </div>
                         </div>
@@ -129,8 +76,10 @@
                                 <input class="form-control" formControlName="lastname" placeholder="Last Name">
                                 <span class="invalid_feedback" *ngIf="myForm.controls.lastname.invalid && myForm.controls.lastname.touched">
                                     <div *ngIf="myForm.controls.lastname.errors.required">Last name is required</div>
-                                    <div *ngIf="myForm.controls.lastname.errors.minlength">Last name must be at least 2 characters</div>
-                                    <div *ngIf="myForm.controls.lastname.errors.maxlength">Last name must be at most 30 characters</div>
+                                    <div *ngIf="myForm.controls.lastname.errors.minlength">Last name must be at
+                                        least 2 characters</div>
+                                    <div *ngIf="myForm.controls.lastname.errors.maxlength">Last name must be at
+                                        most 30 characters</div>
                                 </span>
                             </div>
                         </div>
@@ -141,8 +90,10 @@
                         <input class="form-control" formControlName="email" placeholder="example@example.com">
                         <span class="invalid_feedback" *ngIf="myForm.controls.email.invalid && myForm.controls.email.touched">
                             <div *ngIf="myForm.controls.email.errors.required">Email address is required</div>
-                            <div *ngIf="myForm.controls.email.errors.minlength">Email address must be at least 6 characters</div>
-                            <div *ngIf="myForm.controls.email.errors.email">Email address must be a valid email address</div>
+                            <div *ngIf="myForm.controls.email.errors.minlength">Email address must be at least
+                                6 characters</div>
+                            <div *ngIf="myForm.controls.email.errors.email">Email address must be a valid email
+                                address</div>
                         </span>
                     </div>
 
@@ -151,8 +102,10 @@
                         <input class="form-control" formControlName="phone" placeholder="Phone Number">
                         <span class="invalid_feedback" *ngIf="myForm.controls.phone.invalid && myForm.controls.phone.touched">
                             <div *ngIf="myForm.controls.phone.errors.required">Phone number is required</div>
-                            <div *ngIf="myForm.controls.phone.errors.minlength">Phone number must be at least 5 characters</div>
-                            <div *ngIf="myForm.controls.phone.errors.maxlength">Phone number must be at most 20 characters</div>
+                            <div *ngIf="myForm.controls.phone.errors.minlength">Phone number must be at least 5
+                                characters</div>
+                            <div *ngIf="myForm.controls.phone.errors.maxlength">Phone number must be at most 20
+                                characters</div>
                             <div *ngIf="myForm.controls.phone.errors.pattern">Please enter a valid phone number</div>
                         </span>
                     </div>
