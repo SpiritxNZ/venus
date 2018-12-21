@@ -75,7 +75,11 @@ div.card.card.container
     padding-top: 20px;
     margin: 0px;
 }
-
+.m1{
+    font-size: 20px;
+    color: rgb(53, 53, 53);
+    padding-bottom: 10px;
+}
 h3.j3
 {
     margin-top: 20px;
@@ -125,7 +129,10 @@ div.coursescontainer
     padding-bottom: 20px;
 }
 .s2{
-    padding-top:10px;
+    width: 100%;
+    line-height: 34px;
+    font-size: 17px;
+    color: rgb(136, 136, 136);
 }
 @media(max-width:576px) {
     .row {
