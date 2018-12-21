@@ -36,3 +36,7 @@ a.nav-link
         border-radius: 0;
     }
 }
+#logoimage 
+{
+    outline: 0;
+}

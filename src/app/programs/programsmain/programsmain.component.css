@@ -45,7 +45,7 @@ span.col-md-4:hover
 }
 span.col-md-4
 {
-    padding: 4rem .5rem 1rem;
+    padding: 20px;
     box-shadow: none;
     transition: transform .3s ease;
     cursor: pointer;
