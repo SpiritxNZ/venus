@@ -1,21 +1,20 @@
-a.nav-link
-{
-    color: white;
-}
-.mathicon
-{
-    background-image: url("../../../assets/math.png");
-    background-position: left center;
-    background-size: 25px;
-    background-repeat: no-repeat;
-}
-.englishicon
-{
-    background-image: url("../../../assets/english.png");
-    background-position: left center;
-    background-size: 25px;
-    background-repeat: no-repeat;
-}
+.whiteB{background-color: white;}
+.blackB{background-color: black;}
+.transB{background-color: transparent;}
+.transB1{background-color: rgba(0,0,0,0.2);}
+.whiteF{color: white;}
+.blackF{color: black;}
+
+
+
+
+.backgColor2{background-color: transparent;}
+.borderColor1{border: 1px solid #cccccc;}
+.borderColor2{border: 0;}
+.fontColor1{color: #0099FF;}
+.fontColor2{color: white;}
+.fontColor3{color: #424242;}
+
 .coursesicon
 {
     background-image: url("../../../assets/shejiyeiconmsafb3bnqs1.png");
@@ -35,8 +34,4 @@ a.nav-link
         border:none;
         border-radius: 0;
     }
-}
-#logoimage 
-{
-    outline: 0;
 }
