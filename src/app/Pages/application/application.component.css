@@ -4,9 +4,6 @@
     background-image: url("../../../assets/darkbackgroundimage.jpg");
     background-size: cover;
 }
-.left-info {
-    overflow: hidden;
-}
 #div1 {
     background-image: url("../../../assets/interest1.svg");
 }
@@ -24,13 +21,6 @@
 }
 #div6 {
     background-image: url("../../../assets/interest6.svg");
-}
-#showinterest {
-    height: 400px;
-}
-#showinterest img {
-    width: 100%;
-    box-shadow: 0 2px 12px 3px hsla(0,0%,89%,.55);
 }
 .interestlabel {
     width: 100%;
