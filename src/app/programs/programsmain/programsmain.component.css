@@ -17,39 +17,47 @@ header{
     color:white;
     font-size: 20px;
 }
-#servicesection2
-{
-    width: 100%;
-    display: inline-block;
-    text-align:center;
-    height: 300px;
-}
-.servicecontainer1
-{
-    background-size: 100%;
-    background-position: 50%;
-    height: 50px;
-    background-color: white;
-    transform: rotate(-3deg);
-    z-index: -1;
-}
+
+
 .col-md-4
 {
     border-radius: 8px;
     text-align: center;
     padding: 20px;
 }
-span:hover
+.col-4
+{
+    border-radius: 8px;
+    text-align: center;
+}
+span.col-md-4:hover
 {
     transform: translateY(-1.25rem);
     box-shadow: 0 2px 12px 3px hsla(0,0%,89%,.55);
+    
 
 }
-span
+#getstartbtn
+{
+    width: 150px;
+    height: 80px;
+    border-radius: 40px;
+}
+span.col-md-4
 {
     padding: 4rem .5rem 1rem;
     box-shadow: none;
     transition: transform .3s ease;
+    cursor: pointer;
+}
+.card.container,.card-header,.card-body
+{
+    padding: 0;
+}
+span.card.card.container
+{
+   width: 25%;
+   text-align: center;
 }
 .serviceimages
 {
@@ -65,4 +73,46 @@ span
 .row
 {
     padding-top: 20px;
+}
+
+h3.j3
+{
+    margin-top: 20px;
+}
+
+.custom-control-label
+{
+    float: left;
+}
+
+
+#section3
+{
+    text-align: center;
+    display: inline-block;
+}
+.custom-control.custom-checkbox
+{
+    background-color: rgba(182, 182, 182, 0.55);
+    border:2px solid rgba(109, 109, 109, 0.55);
+    height: 150px;
+    
+    width: 240px;
+    padding-left: 32px;
+
+}
+
+#section4
+{
+    padding-bottom: 40px;
+}
+.custom-control.btn.btn-light:focus
+{
+    background-color: white;
+}
+#getstartbtn
+{
+    width: 240px;
+    height: 40px;
+    font-size: 20px;
 }
