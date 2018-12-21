@@ -55,14 +55,31 @@
     padding-top: 30px;
     padding-bottom: 20px;
 }
-#sectionimage1
-{
+/* left side images */
+.sectionimages {
     width: 370px;
     height: 150px;
     background-size: cover;
     border: 0px;
-    background-image: url('../../../assets/interest3large.svg');
     display: inline-block;margin-top: 20px;
+}
+#sectionimage1 {
+    background-image: url('../../../assets/interest3large.svg');
+}
+#sectionimage2 {
+    background-image: url('../../../assets/interest1large.svg');
+}
+#sectionimage3 {
+    background-image: url('../../../assets/interest2large.svg');
+}
+#sectionimage4 {
+    background-image: url('../../../assets/interest4large.svg');
+}
+#sectionimage5 {
+    background-image: url('../../../assets/interest5large.svg');
+}
+#sectionimage6 {
+    background-image: url('../../../assets/interest6large.svg');
 }
 #showinterest
 {
