@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Learnspace-e2e": {
+    "Gradspace-e2e": {
       "root": "",
       "sourceRoot": "e2e",
       "projectType": "application",
@@ -12,7 +12,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "Learnspace:serve"
+            "devServerTarget": "Gradspace:serve"
           }
         },
         "lint": {
@@ -28,7 +28,7 @@
         }
       }
     },
-    "Learnspace": {
+    "Gradspace": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -80,18 +80,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Learnspace:build"
+            "browserTarget": "Gradspace:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Learnspace:build:production"
+              "browserTarget": "Gradspace:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Learnspace:build"
+            "browserTarget": "Gradspace:build"
           }
         },
         "test": {
@@ -105,8 +105,7 @@
               "node_modules/jquery/dist/jquery.js",
               "node_modules/popper.js/dist/umd/popper.js",
               "node_modules/bootstrap/dist/js/bootstrap.js",
-              "node_modules/moment/min/moment.min.js",
-              "node_modules/fullcalendar/dist/fullcalendar.min.js"
+              "node_modules/moment/min/moment.min.js"
             ],
             "styles": [
               "src/styles.css",
@@ -137,12 +136,22 @@
             "outputPath": "dist/server",
             "main": "src/main.server.ts",
             "tsConfig": "src/tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
+            }
           }
         }
       }
     }
   },
-  "defaultProject": "Learnspace",
+  "defaultProject": "Gradspace",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",

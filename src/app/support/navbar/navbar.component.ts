@@ -1,4 +1,5 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import * as $ from 'jquery';
 
 @Component({
@@ -10,15 +11,23 @@ export class NavbarComponent implements OnInit {
   navStatus = false;
   collapseStatus = false;
   screenStatus = false;
+  isBrowser=false
 
 
   constructor(
+    @Inject(PLATFORM_ID) private platformId,
     private elem: ElementRef,
 
-  ) { }
+  ) {
+    if (isPlatformBrowser(this.platformId)) {
+      this.isBrowser = true
+    }
+   }
 
   ngOnInit() {
-
+    if(!this.isBrowser){
+      return ;
+    }
     $(window).resize(() => {
       console.log(window.innerWidth)
       if (window.innerWidth <= 768) {
@@ -35,34 +44,6 @@ export class NavbarComponent implements OnInit {
       } else {
         this.navStatus = false;
       }
-
-      // if (window.scrollY !== 0) {
-      //   document.getElementById('imnavbar').style.backgroundColor = "white";
-      //   document.getElementById('dropdown-menu').style.backgroundColor = "white";
-      //   document.getElementById('navitems1').style.color = "black";
-      //   document.getElementById('navitems3').style.color = "black";
-      //   document.getElementById('navitems4').style.color = "black";
-      //   document.getElementById('navitems6').style.color = "black";
-      //   //document.getElementById('dropdown-item1').style.color="black";
-      //   document.getElementById('dropdown-item2').style.color = "black";
-      //   document.getElementById('dropdown-item3').style.color = "black";
-      //   //document.getElementById('navhr').style.borderTop="1px solid rgba(0, 0, 0, 0.15)";
-      //   document.getElementById('dropdown-menu').style.border = "1px solid rgba(0, 0, 0, 0.15)";
-
-      // }
-      // else if (window.scrollY == 0) {
-      //   document.getElementById('imnavbar').style.backgroundColor = "transparent";
-      //   document.getElementById('dropdown-menu').style.backgroundColor = "transparent";
-      //   document.getElementById('navitems1').style.color = "white";
-      //   document.getElementById('navitems3').style.color = "white";
-      //   document.getElementById('navitems4').style.color = "white";
-      //   document.getElementById('navitems6').style.color = "white";
-      //   //document.getElementById('dropdown-item1').style.color="white";
-      //   document.getElementById('dropdown-item2').style.color = "white";
-      //   document.getElementById('dropdown-item3').style.color = "white";
-      //   //document.getElementById('navhr').style.borderTop="1px solid white";
-      //   document.getElementById('dropdown-menu').style.border = "1px solid white";
-      // }
     })
   }
 

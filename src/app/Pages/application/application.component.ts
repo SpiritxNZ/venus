@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, Inject, PLATFORM_ID } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { isPlatformBrowser } from '@angular/common';
 import 'core-js/es7/reflect';
 import { ApiService } from '../../services/api.service';
 
@@ -16,6 +17,7 @@ export interface showlist {
 })
 
 export class ApplicationComponent implements OnInit {
+  isBrowser=false
   errorMessage: string;
   successMessage: string;
   interests: any[] = [
@@ -55,11 +57,20 @@ export class ApplicationComponent implements OnInit {
   divname: any = 1;
 
   constructor(
+    @Inject(PLATFORM_ID) private platformId,
     private fb: FormBuilder,
-    private apiService: ApiService
-  ) { }
+    private apiService: ApiService,
+
+  ) {
+    if (isPlatformBrowser(this.platformId)) {
+      this.isBrowser = true
+    }
+  }
 
   ngOnInit() {
+    if (!this.isBrowser){
+      return;
+    }
     this.myForm = this.fb.group({
       email: ['', [
         Validators.required,

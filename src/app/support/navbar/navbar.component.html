@@ -8,9 +8,9 @@
   </button>
   <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
     <ul class="navbar-nav ">
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link navLink" routerLink='/courseshome' [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">Courses</a>
-      </li>
+      </li> -->
 
       <li class="nav-item dropdown">
         <a class="nav-link navLink dropdown-toggle" href="#" role="button" data-toggle="dropdown" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">Services
@@ -19,21 +19,21 @@
         <ul class="dropdown-menu" id="dropdown-menu" aria-labelledby="navbarDropdown" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)?'whiteB borderColor1':'transB1 borderColor2'">
 
           <!-- <hr id="navhr" style=" border-top: 1px solid white;"> -->
-          <li class="coursesdropdown">
+          <!-- <li class="coursesdropdown">
             <a class="dropdown-item " routerLink='/programsmain' [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">Programs Menu</a>
-          </li>
+          </li> -->
 
           <li class="coursesdropdown">
             <a class="dropdown-item" routerLink='/program-developer' [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">Developer</a>
           </li>
 
-          <li class="coursesdropdown">
-              <a class="dropdown-item" routerLink='/program-developer-beginner' [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">Developer-Beginner</a>
-            </li>
+          <!-- <li class="coursesdropdown">
+            <a class="dropdown-item" routerLink='/program-developer-beginner' [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">Developer-Beginner</a>
+          </li> -->
 
-            <li class="coursesdropdown">
-                <a class="dropdown-item" routerLink='/program-tester' [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">Tester</a>
-              </li>
+          <li class="coursesdropdown">
+            <a class="dropdown-item" routerLink='/program-tester' [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">Tester</a>
+          </li>
 
         </ul>
       </li>

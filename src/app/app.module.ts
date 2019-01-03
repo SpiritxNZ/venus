@@ -65,7 +65,7 @@ const routes: Routes = [
   ],
   imports: [
     RouterModule.forRoot(routes),
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     ReactiveFormsModule,
     MatChipsModule,

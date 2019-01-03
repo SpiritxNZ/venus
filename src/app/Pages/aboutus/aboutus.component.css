@@ -1,17 +1,8 @@
 #section1
 {
-    height: 450px;
+    height: 320px;
     width: 100%;
     background-image: url("../../../assets/darkbackgroundimage.jpg");
     background-size: cover;
 }
-.sectionTitle{
-    font-size: 40px;
-    font-weight: bold;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-.sectionContent{
-    font-size: 18px;
-    
-}
+
