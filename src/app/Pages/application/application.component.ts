@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { isPlatformBrowser } from '@angular/common';
 import 'core-js/es7/reflect';
 import { ApiService } from '../../services/api.service';
+import { Meta, Title } from '@angular/platform-browser';
 
 export interface showlist {
   imageurl: string;
@@ -58,10 +59,18 @@ export class ApplicationComponent implements OnInit {
 
   constructor(
     @Inject(PLATFORM_ID) private platformId,
+    private meta: Meta,
+    private titleService: Title,
     private fb: FormBuilder,
     private apiService: ApiService,
 
   ) {
+    this.meta.addTags([
+      { name: 'keywords', content: 'IT training, IT graduates, IT jobs, software developer training, software graduates, web developer training, web dev study, web dev jobs, web developer jobs, web developer graduate, front end graduate'},
+      { name: 'description', content: 'Gradspace About us' }
+    ])
+    this.titleService.setTitle('Gradspace | About ');
+
     if (isPlatformBrowser(this.platformId)) {
       this.isBrowser = true
     }
