@@ -26,15 +26,9 @@ export class ProgramTesterComponent implements OnInit {
   }
 
   ngOnInit() {
-<<<<<<< HEAD
-    if(!this.isBrowser){
-      return ;
-    }
-=======
     // if(!this.isBrowser){
     //   return ;
     // }
->>>>>>> 306519870a8556a13d915e2c3b44724676376e03
   }
 
 }
