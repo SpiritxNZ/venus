@@ -156,8 +156,8 @@ input:checked + label
 }
 .interest-section {
     max-width: 480px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 .interest-section .col-6 {
     padding: 10px;
@@ -174,7 +174,7 @@ input:checked + label
 }
 @media (max-width: 768px){
     .interest-section {
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 }
