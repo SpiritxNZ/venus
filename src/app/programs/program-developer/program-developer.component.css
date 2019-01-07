@@ -1,3 +1,4 @@
+/* section1--------------------------------------------------------------------------------------------------------------------- */
 #section1
 {
     height: 50vh;
@@ -5,14 +6,11 @@
     background-image: url("../../../assets/darkbackgroundimage.jpg");
     background-size: cover;
 }
-#section2,#section3,#section4,#section5
+/* section2--------------------------------------------------------------------------------------------------------------------- */
+#section2
 {
     padding-top: 20px;
     text-align: center;
-}
-#section3
-{
-    margin-bottom: 40px;
 }
 #section2 .container {
     padding: 50px;
@@ -23,82 +21,13 @@
     text-align: center;
     display: inline-block;
 }
-
-
-.processdiv1
+/* section3--------------------------------------------------------------------------------------------------------------------- */
+#section3
 {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-}
-.text-center
-{
-    display: inline-block;
-    width: 100%;
-    position: relative;
-    font-size: 16px;
-    padding-bottom: 40px;
-}
-.block
-{
-    height: 45px;
-    width: 45px;
-    position: relative;
-}
-.none
-{
-    height: 45px;
-    width: 45px;
-    position: relative;
-}
-.processh4
-{
-    position: absolute;
-    top: 130px;
-    width: 100%;
-}
-.wrapper {
-    padding-left: 10px;
-    padding-right: 10px;
-}
-.wrapper .text-center:hover .num
-{
-    background: #5091e6;color: #fff;
-}
-.wrapper .num
-{
-    display: inline-block;
-    box-sizing: content-box;
-    font-weight: 700;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
+    padding-top: 20px;
     text-align: center;
-    border: 2px solid #5091e6;
-    border-radius: 100%;
-    font-size: 1.125em;
-    color: #5091e6;
+    margin-bottom: 40px;
 }
-.wrapper .img-box{margin: 37px auto;}
-.wrapper .img-box .none{display: none;}
-.wrapper h4{font-size: 17px;color: #B2B2B2;}
-.wrapper .text-center:hover h4{color: #353535;}
-.wrapper .text-center:hover .img-box .block{display: none;}
-.wrapper .text-center:hover .img-box .none{display: inline-block;}
-.wrapper .contentdec{padding-bottom: 8px;}
-hr
-{
-    position: absolute;
-    left: 61%;
-    top: 0px;
-    border-top: 2px dashed rgb(80, 145, 230);
-    color: rgb(255, 255, 255);
-    background-color: rgb(255, 255, 255);
-    height: 1px;
-    width: 77%;
-    padding-left: 5px;
-}
-
 .col-xs-12.col-sm-12.col-md-2.col-lg-2
 {
     padding-bottom: 30px;
@@ -115,20 +44,107 @@ div.img-box
     padding-left: 20px;
     padding-top: 30px;
 }
-/* ------section 4------- */
-li.nav-item{
-    width: 25%;
-    background-color: #ebebeb;
+.processdiv1
+{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+.wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.wrapper .text-center:hover .num
+{
+    background: #5091e6;color: #fff;
+}
+/* Process specific css */
+.wrapper .num
+{
+    display: inline-block;
+    box-sizing: content-box;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 2px solid #5091e6;
+    border-radius: 100%;
     color: #5091e6;
-    border-radius: 0;
 }
-.nav-link.active {
-    border-radius: 0;
+.wrapper .img-box{margin: 37px auto;}
+.wrapper .img-box .none{display: none;}
+.wrapper h4{color: #B2B2B2;}
+.wrapper .text-center:hover h4{color: #353535;}
+.wrapper .text-center:hover .img-box .block{display: none;}
+.wrapper .text-center:hover .img-box .none{display: inline-block;}
+.wrapper .contentdec{padding-bottom: 8px;}
+.text-center
+{
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    font-size: 16px;
+    padding-bottom: 40px;
 }
-#section4 {
+.processh4
+{
+    position: absolute;
+    top: 130px;
+    width: 100%;
+}
+hr
+{
+    position: absolute;
+    left: 61%;
+    top: 0px;
+    border-top: 2px dashed rgb(80, 145, 230);
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    height: 1px;
+    width: 75%;
+    padding-left: 5px;
+}
+.block
+{
+    height: 45px;
+    width: 45px;
+    position: relative;
+}
+.none
+{
+    height: 45px;
+    width: 45px;
+    position: relative;
+}
+@media only screen and (max-width: 768px){
+    hr
+    {
+         width: 70%;
+         width: 70%;
+    }
+  }
+@media screen and (min-width:960px) and (max-width:1200px){
+    hr
+    {
+        width: 65%;
+        left: 65%;
+    }
+}
+@media screen and (min-width:720px) and (max-width:992px){
+   hr
+   {
+        width: 50%;
+        left: 72%;
+   }
+}
+/* section4--------------------------------------------------------------------------------------------------------------------- */
+#section4
+{   
     width: 100%;
     background-color: #f5f5f5;
     padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
 }
 .section4container {
     position: relative;
@@ -139,19 +155,46 @@ li.nav-item{
     margin-bottom: 50px;
     margin-top: 40px;
 }
+li.nav-item{
+    width: 25%;
+    background-color: #ebebeb;
+    color: #5091e6;
+    border-radius: 0;
+}
+.nav-link.active {
+    border-radius: 0;
+}
+.nav-link
+{
+    height:100%;
+}
 .tab-content {
     text-align: left;
 }
 .container.tab-pane {
     margin: 0px;
+    background-color:white;
+    padding-bottom: 10px;
 }
-
-/* ----section5----- */
-#section5{
-  width: 100%;
-  padding-bottom: 20px;
+@media only screen and (max-width: 768px){
+    .section4container {
+      position: relative;
+      background-color: white;
+      height: 100%;
+      width: 100%;
+      display: inline-block;
+      margin-bottom: 30px;
+      margin-top: 20px;
+      }
+    }
+/* section5--------------------------------------------------------------------------------------------------------------------- */
+#section5
+{
+    padding-top: 20px;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 20px;
 }
-
 .section5container {
   position: relative;
   height: 100%;
@@ -200,20 +243,10 @@ li.nav-item{
 .course-info {
     text-align: justify;
 }
-/* -------smal screen----- */
 @media only screen and (max-width: 768px){
-  .section4container {
-    position: relative;
-    background-color: white;
-    height: 100%;
-    width: 100%;
-    display: inline-block;
-    margin-bottom: 30px;
-    margin-top: 20px;
+    .section5container{
+      width: 100%;
+      margin-bottom: 30px;
+      margin-top: 20px;
     }
-  .section5container{
-    width: 100%;
-    margin-bottom: 30px;
-    margin-top: 20px;
-  }
 }

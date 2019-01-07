@@ -3,7 +3,13 @@
       <h1 class="j1">Get Into Your Dream I.T Job</h1>
       <h2 class="mid1Content">Access the brightest minds with one-on-one online education</h2>
       <br>
-      <button type="button" class="btn btn-primary" style="width:150px;" routerLink="/application">Get Start</button>
+    <div class="section5button" *ngIf="isBrowser==true">
+        <button type="button" class="btn btn-primary" style="width:150px;" routerLink="/application">Get Start</button>
+    </div>
+          
+    <div class="section5button" *ngIf="isBrowser==false">
+        <button type="button" class="btn btn-primary" style="width:150px;" href="www.gradspace.org/application">Get Start</button>
+    </div>
     </div>
   </header>
 
@@ -18,7 +24,7 @@
           <img class="serviceimages" src="../../assets/186376.png">
           <br>
           <br>
-          <h2 class="m1" style="color:black">
+          <h2 class="m2 padding" style="color:black">
             Software developed
             <br>
             engineering career program
@@ -39,7 +45,7 @@
         <img class="serviceimages" src="../../assets/186376.png">
         <br>
         <br>
-        <h2 class="m1" style="color:black">
+        <h2 class="m2 padding" style="color:black">
             Software develop
             <br>
             career for beginner
@@ -59,7 +65,7 @@
         <img class="serviceimages" src="../../assets/186376.png">
         <br>
         <br>
-        <h2 class="m1" style="color:black">
+        <h2 class="m2 padding" style="color:black">
           Software develop
           <br>
           career for senior
@@ -91,7 +97,7 @@
         <label class="custom-control-label" for="defaultUnchecked1">
         <br>
         <img class="serviceimages" src="../../assets/parttime.png" style="margin-right:10px;">
-        <h3 class="m1" >
+        <h3 class="m2 padding" >
             Learn
             <br>
             Parttime
@@ -103,7 +109,7 @@
         <label class="custom-control-label" for="defaultUnchecked2">
             <br>
             <img class="serviceimages" src="../../assets/fulltime.png">
-            <h3 class="m1" >
+            <h3 class="m2 padding" >
             Learn
             <br>
             Fulltime
@@ -112,7 +118,12 @@
     </div>
   </div>
     <br><br>
-  <button id="getstartbtn" class="btn btn-primary" routerLink="/application">Get Started</button>
+    <div class="section5button" *ngIf="isBrowser==true">
+        <button id="getstartbtn" class="btn btn-primary" routerLink="/application">Get Started</button>
+    </div>
+    <div class="section5button" *ngIf="isBrowser==false">
+        <button id="getstartbtn" class="btn btn-primary" href="www.gradspace.org/application">Get Started</button>
+    </div>
 </section>
 <br><br>
 <br><br>
@@ -126,10 +137,10 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="coursescontainer">
-                  <div class="m1">
+                  <div class="m2 padding">
                       Systematic course
                   </div>
-                    <div class="s2">
+                    <div class="s2 spec">
                         Whether you're entering the workforce for the first time, 
                         or considering a new career choice after years of employment, 
                         <br>
@@ -141,10 +152,10 @@
             <div class="col-md-4">
                 <div class="coursescontainer">
                   <div class="coursesdiv1">
-                      <div class="m1">
+                      <div class="m2 padding">
                           Systematic course
                       </div>
-                        <div class="s2">
+                        <div class="s2 spec">
                             Whether you're entering the workforce for the first time, 
                             or considering a new career choice after years of employment, 
                             <br>
@@ -158,10 +169,10 @@
                 <div class="coursescontainer">
                     <div class="coursescontainer">
                         <div class="coursesdiv1">
-                            <div class="m1">
+                            <div class="m2 padding">
                                 Systematic course
                             </div>
-                            <div class="s2">
+                            <div class="s2 spec">
                                   Whether you're entering the workforce for the first time, 
                                   or considering a new career choice after years of employment, 
                                   <br>
@@ -176,10 +187,10 @@
           <div class="row">
               <div class="col-md-4">
                   <div class="coursescontainer">
-                    <div class="m1">
+                    <div class="m2 padding">
                         Systematic course
                     </div>
-                      <div class="s2">
+                      <div class="s2 spec">
                           Whether you're entering the workforce for the first time, 
                           or considering a new career choice after years of employment, 
                           <br>
@@ -191,10 +202,10 @@
               <div class="col-md-4">
                   <div class="coursescontainer">
                     <div class="coursesdiv1">
-                        <div class="m1">
+                        <div class="m2 padding">
                             Systematic course
                         </div>
-                          <div class="s2">
+                          <div class="s2 spec">
                               Whether you're entering the workforce for the first time, 
                               or considering a new career choice after years of employment, 
                               <br>
@@ -208,10 +219,10 @@
                   <div class="coursescontainer">
                       <div class="coursescontainer">
                           <div class="coursesdiv1">
-                              <div class="m1">
+                              <div class="m2 padding">
                                   Systematic course
                               </div>
-                              <div class="s2">
+                              <div class="s2 spec">
                                     Whether you're entering the workforce for the first time, 
                                     or considering a new career choice after years of employment, 
                                     <br>

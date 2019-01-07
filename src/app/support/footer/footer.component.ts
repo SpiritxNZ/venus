@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-footer',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
+  isBrowser=false;
 
-  constructor() { }
+  constructor( @Inject(PLATFORM_ID) private platformId) { 
+    if (isPlatformBrowser(this.platformId)) {
+      this.isBrowser = true
+    }
+  }
 
   ngOnInit() {
+    // if(!this.isBrowser){
+    //   return ;
+    // }
   }
 
 }
