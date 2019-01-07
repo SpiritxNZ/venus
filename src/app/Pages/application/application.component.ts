@@ -25,31 +25,37 @@ export class ApplicationComponent implements OnInit {
     {
       "input": "input1",
       "id": "1",
-      "backgroundimageurl": "../../../assets/icons/interest1.svg"
+      "backgroundimageurl": "../../../assets/icons/interest1.svg",
+      "name": "a label"
     },
     {
       "input": "input2",
       "id": "2",
-      "backgroundimageurl": "../../../assets/icons/interest2.svg"
+      "backgroundimageurl": "../../../assets/icons/interest2.svg",
+      "name": "ONE"
     },
     {
       "input": "input3",
       "id": "3",
-      "backgroundimageurl": "../../../assets/icons/interest3.svg"
+      "backgroundimageurl": "../../../assets/icons/interest3.svg",
+      "name": "two"
     },
     {
       "input": "input4",
       "id": "4",
-      "backgroundimageurl": "../../../assets/icons/interest4.svg"
+      "backgroundimageurl": "../../../assets/icons/interest4.svg",
+      "name": "getting money"
     },
     {
       "input": "input5",
       "id": "5",
-      "backgroundimageurl": "../../../assets/icons/interest5.svg"
+      "backgroundimageurl": "../../../assets/icons/interest5.svg",
+      "name": "words are good"
     }, {
       "input": "input6",
       "id": "6",
-      "backgroundimageurl": "../../../assets/icons/interest6.svg"
+      "backgroundimageurl": "../../../assets/icons/interest6.svg",
+      "name": "take a shot"
     }
 
   ];
