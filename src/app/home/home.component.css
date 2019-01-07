@@ -9,7 +9,7 @@
 }
 header{
     height:620px;
-    background-image: url("../../assets/index-header-pic.jpg");
+    background-image: url("../../assets/header_images/index-header-pic.jpg");
     border-radius:0px;
     background-size: cover;
     text-align:center;
@@ -97,12 +97,12 @@ div.col-md-3
     padding-bottom: 40px;
 }
 #section5{
-    background-image: url("../../assets/cloud.svg");
+    background-image: url("../../assets/header_images/cloud.svg");
     background-size: cover;
     padding-bottom: 20px;
 }
 #section6{
-    background-image: url("../../assets/cloud-blue.jpg");
+    background-image: url("../../assets/header_images/cloud-blue.jpg");
     background-size: cover;
 }
 .sectionimages

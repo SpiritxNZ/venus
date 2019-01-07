@@ -23,7 +23,7 @@ export class CoursesComponent implements OnInit {
   courseLecturer = {
     name: "Edwin Zhu", role: "Senior Lecturer",
     subject: "Backend development", 
-    image: "/assets/40ceae84961e343ddf7747cb28fc347f.card-korean.jpg",
+    image: "/assets/tutor_images/40ceae84961e343ddf7747cb28fc347f.card-korean.jpg",
     expList: [] = [
     "Graduated from such-and-such",
     "4 years experience with blablabla",

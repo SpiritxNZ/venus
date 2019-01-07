@@ -19,7 +19,7 @@ export class CourseshomeComponent implements OnInit {
  courses: any [] = [
   {
     name: "Course 3", lecturer: "Jon Smith", desc: "Some summary of the course. The course is about",
-    thumbnail: "/assets/40ceae84961e343ddf7747cb28fc347f.card-korean.jpg",
+    thumbnail: "/assets/tutor_images/40ceae84961e343ddf7747cb28fc347f.card-korean.jpg",
     link: "/courses/3", freetrial: false
   }
 

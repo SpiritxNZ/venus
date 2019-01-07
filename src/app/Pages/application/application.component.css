@@ -1,26 +1,26 @@
 #section1 {
     height: 40vh;
     width: 100%;
-    background-image: url("../../../assets/darkbackgroundimage.jpg");
+    background-image: url("../../../assets/header_images/darkbackgroundimage.jpg");
     background-size: cover;
 }
 #div1 {
-    background-image: url("../../../assets/interest1.svg");
+    background-image: url("../../../assets/icons/interest1.svg");
 }
 #div2 {
-    background-image: url("../../../assets/interest2.svg");
+    background-image: url("../../../assets/icons/interest2.svg");
 }
 #div3 {
-    background-image: url("../../../assets/interest3.svg");
+    background-image: url("../../../assets/icons/interest3.svg");
 }
 #div4 {
-    background-image: url("../../../assets/interest4.svg");
+    background-image: url("../../../assets/icons/interest4.svg");
 }
 #div5 {
-    background-image: url("../../../assets/interest5.svg");
+    background-image: url("../../../assets/icons/interest5.svg");
 }
 #div6 {
-    background-image: url("../../../assets/interest6.svg");
+    background-image: url("../../../assets/icons/interest6.svg");
 }
 .interestlabel {
     width: 100%;
@@ -64,22 +64,22 @@
     display: inline-block;margin-top: 20px;
 }
 #sectionimage1 {
-    background-image: url('../../../assets/interest3large.svg');
+    background-image: url('../../../assets/sundry_images/interest3large.svg');
 }
 #sectionimage2 {
-    background-image: url('../../../assets/interest1large.svg');
+    background-image: url('../../../assets/sundry_images/interest1large.svg');
 }
 #sectionimage3 {
-    background-image: url('../../../assets/interest2large.svg');
+    background-image: url('../../../assets/sundry_images/interest2large.svg');
 }
 #sectionimage4 {
-    background-image: url('../../../assets/interest4large.svg');
+    background-image: url('../../../assets/sundry_images/interest4large.svg');
 }
 #sectionimage5 {
-    background-image: url('../../../assets/interest5large.svg');
+    background-image: url('../../../assets/sundry_images/interest5large.svg');
 }
 #sectionimage6 {
-    background-image: url('../../../assets/interest6large.svg');
+    background-image: url('../../../assets/sundry_images/interest6large.svg');
 }
 #showinterest
 {
