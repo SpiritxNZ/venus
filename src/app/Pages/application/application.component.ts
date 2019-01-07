@@ -25,31 +25,31 @@ export class ApplicationComponent implements OnInit {
     {
       "input": "input1",
       "id": "1",
-      "backgroundimageurl": "../../../assets/interest1.svg"
+      "backgroundimageurl": "../../../assets/icons/interest1.svg"
     },
     {
       "input": "input2",
       "id": "2",
-      "backgroundimageurl": "../../../assets/interest2.svg"
+      "backgroundimageurl": "../../../assets/icons/interest2.svg"
     },
     {
       "input": "input3",
       "id": "3",
-      "backgroundimageurl": "../../../assets/interest3.svg"
+      "backgroundimageurl": "../../../assets/icons/interest3.svg"
     },
     {
       "input": "input4",
       "id": "4",
-      "backgroundimageurl": "../../../assets/interest4.svg"
+      "backgroundimageurl": "../../../assets/icons/interest4.svg"
     },
     {
       "input": "input5",
       "id": "5",
-      "backgroundimageurl": "../../../assets/interest5.svg"
+      "backgroundimageurl": "../../../assets/icons/interest5.svg"
     }, {
       "input": "input6",
       "id": "6",
-      "backgroundimageurl": "../../../assets/interest6.svg"
+      "backgroundimageurl": "../../../assets/icons/interest6.svg"
     }
 
   ];
