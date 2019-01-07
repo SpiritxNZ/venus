@@ -22,39 +22,6 @@
 #div6 {
     background-image: url("../../../assets/icons/interest6.svg");
 }
-.interestlabel {
-    width: 100%;
-    border: 3px solid transparent;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-    text-align: center;
-    background-color: white;
-    border: 2px solid lightgrey;
-}
-.interestlabel img {
-    max-width: 80px;
-}
-.interestlabel h3 {
-    margin-bottom: 0;
-    margin-top: 5px;
-}
-.interestinput {
-    visibility:hidden;
-    height: 0px;
-    width: 0px;
-}
-.interestinput:checked + .interestlabel {
-    border: 3px solid rgba(40, 140, 255, 0.712);
-}
-.interestinput:hover + .interestlabel {
-    box-shadow: 0 2px 12px 3px hsla(0,0%,89%,.55);
-    background-color: aliceblue;
-}
-#section2toprow {
-    padding-top: 30px;
-    padding-bottom: 20px;
-}
 /* left side images */
 .sectionimages {
     width: 370px;
@@ -151,10 +118,61 @@ input:checked + label
     padding-left: 25px;
     padding-right: 25px;
 }
-.interest-section {
+/* right side labels */
+.interestlabel {
     width: 100%;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+    text-align: center;
+    background-color: white;
+    border: 2px solid lightgrey;
     margin: 0;
 }
+.interestlabel img {
+    max-width: 50px;
+}
+.interestlabel h3 {
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+.interestinput {
+    position: absolute;
+    visibility:hidden;
+}
+.interestinput:checked + .interestlabel {
+    border: 3px solid rgba(40, 140, 255, 0.712);
+}
+.interestinput:hover + .interestlabel {
+    box-shadow: 0 2px 12px 3px hsla(0,0%,89%,.55);
+    background-color: aliceblue;
+}
+#section2toprow {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+.interest-section {
+    max-width: 480px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
 .interest-section .col-6 {
-    padding: 5px;
+    padding: 10px;
+}
+@media (max-width: 992px){
+    .interest-section .col-6 {
+        padding: 5px;
+    }
+    .interest-section {
+        max-width: 480px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+@media (max-width: 768px){
+    .interest-section {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 }
