@@ -56,7 +56,7 @@ div.img-box
 }
 .wrapper .text-center:hover .num
 {
-    background: #5091e6;color: #fff;
+    background: #0099ff;color: #fff;
 }
 /* Process specific css */
 .wrapper .num
@@ -67,9 +67,9 @@ div.img-box
     height: 40px;
     line-height: 40px;
     text-align: center;
-    border: 2px solid #5091e6;
+    border: 2px solid #0099ff;
     border-radius: 100%;
-    color: #5091e6;
+    color: #0099ff;
 }
 .wrapper .img-box{margin: 37px auto;}
 .wrapper .img-box .none{display: none;}
@@ -97,7 +97,7 @@ hr
     position: absolute;
     left: 61%;
     top: 0px;
-    border-top: 2px dashed rgb(80, 145, 230);
+    border-top: 2px dashed #0099ff;
     color: rgb(255, 255, 255);
     background-color: rgb(255, 255, 255);
     height: 1px;
@@ -159,7 +159,7 @@ hr
 li.nav-item{
     width: 25%;
     background-color: #ebebeb;
-    color: #5091e6;
+    color:  #0099ff;
     border-radius: 0;
 }
 .nav-link.active {
@@ -214,7 +214,7 @@ li.nav-item{
   margin-bottom: 0.5rem;
 }
 #section5 .l2{
-  color: #2e86de;
+  color: #0099ff;
 }
 #section5 .s2{
   font-weight: bold;
@@ -239,7 +239,7 @@ li.nav-item{
   outline:none;
 }
 #applyButton:hover{
-  background-color: #3768a8;
+  background-color: #0099ff;
 }
 .course-info {
     text-align: justify;
