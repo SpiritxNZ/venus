@@ -5,6 +5,9 @@
     background-size: cover;
     background-position: center;
 }
+#section2 {
+    background-color: #f4f4f4
+}
 
 /* left side images */
 .sectionimages {
@@ -40,7 +43,8 @@
     text-align: center;
 }
 #showinterest .card {
-    box-shadow: 0 2px 12px 3px hsla(0,0%,89%,.55);
+    box-shadow: 0 2px 12px 3px hsla(0,0%,79%,.55);
+    border: none;
 }
 .detail {
     text-align: left;
