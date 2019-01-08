@@ -26,19 +26,19 @@ export class ApplicationComponent implements OnInit {
       "input": "input1",
       "id": "1",
       "backgroundimageurl": "../../../assets/icons/interest1.svg",
-      "name": "University Admission Support",
+      "name": "Software Developer Program",
     },
     {
       "input": "input2",
       "id": "2",
       "backgroundimageurl": "../../../assets/icons/interest2.svg",
-      "name": "ONE"
+      "name": "Software Testing Program"
     },
     {
       "input": "input3",
       "id": "3",
       "backgroundimageurl": "../../../assets/icons/interest3.svg",
-      "name": "two"
+      "name": "Business Analyst Program"
     },
     {
       "input": "input4",
