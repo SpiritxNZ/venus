@@ -187,6 +187,7 @@
     border-color:transparent;
     border-width: 1px;
     border-radius: 24px;
+    outline: 0 !important;
 }
 .btn{
     cursor:pointer;
