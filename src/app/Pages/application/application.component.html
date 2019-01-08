@@ -6,17 +6,19 @@
     <div class="container">
         <div class="row" id="section2toprow">
             <div class="col-6 d-none d-md-block" id="showinterest">
+                <div class="card">
                 <div *ngIf="divname == '1'; then styleone"></div>
                 <div *ngIf="divname == '2'; then styletwo"></div>
                 <div *ngIf="divname == '3'; then stylethree"></div>
                 <div *ngIf="divname == '4'; then stylefour"></div>
                 <div *ngIf="divname == '5'; then stylefive"></div>
                 <div *ngIf="divname == '6'; then stylesix"></div>
+                </div>
                 <ng-template #styleone>
                     <div class="sectionimages" id="sectionimage1"></div>
-                    <h4 class="j1" id="detailtitle">University Admission Support</h4>
+                    <h4 class="l2" id="detailtitle">University Admission Support</h4>
                     <div class="container">
-                        <h5 id="detail">
+                        <h5 class="s2" id="detail">
                             Tap into an expert network of strategists, tutors and mentors who will guide you on
                             best-fit
                             universities and advise you on how to stand out as a top applicant. Typically, support will

@@ -54,14 +54,10 @@
     overflow: hidden; 
     text-align: center;
 }
-#detail
-{
-    font-size: 18px;
+#detail {
     text-align: left;
-    line-height:25px;
 }
-#detailtitle
-{
+#detailtitle {
     color:black; 
     font-size: 30px;
 }
