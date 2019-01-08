@@ -109,6 +109,7 @@ hr
     height: 45px;
     width: 45px;
     position: relative;
+    opacity:0.5;
 }
 .none
 {
