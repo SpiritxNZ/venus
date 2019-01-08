@@ -5,7 +5,8 @@
 <section id="section2">
     <div class="container">
         <div class="row" id="section2toprow">
-            <div class="col-6 d-none d-md-block" id="showinterest">
+            <div class="col-5 d-none d-md-block" id="showinterest">
+                <div class="card">
                 <div *ngIf="divname == '1'; then styleone"></div>
                 <div *ngIf="divname == '2'; then styletwo"></div>
                 <div *ngIf="divname == '3'; then stylethree"></div>
@@ -13,10 +14,10 @@
                 <div *ngIf="divname == '5'; then stylefive"></div>
                 <div *ngIf="divname == '6'; then stylesix"></div>
                 <ng-template #styleone>
-                    <div class="sectionimages" id="sectionimage1"></div>
-                    <h4 class="j1" id="detailtitle">University Admission Support</h4>
-                    <div class="container">
-                        <h5 id="detail">
+                    <div class="sectionimages card-img-top" id="sectionimage1"></div>
+                    <h4 class="card-title l2 detailtitle">University Admission Support</h4>
+                    <div class="container card-body">
+                        <h5 class="s1 card-text detail">
                             Tap into an expert network of strategists, tutors and mentors who will guide you on
                             best-fit
                             universities and advise you on how to stand out as a top applicant. Typically, support will
@@ -37,49 +38,50 @@
                 </ng-template>
                 <ng-template #styletwo>
                         <div class="sectionimages" id="sectionimage2"></div>
-                        <h4 class="j1" id="detailtitle">two</h4>
-                        <div class="container">
-                            <h5 id="detail">
+                        <h4 class="card-title l2 detailtitle">two</h4>
+                        <div class="container card-body">
+                            <h5 class="s1 card-text detail">
                                 2. something else
                             </h5>
                         </div>
                 </ng-template>
                 <ng-template #stylethree>
                         <div class="sectionimages" id="sectionimage3"></div>
-                        <h4 class="j1" id="detailtitle">number 3</h4>
-                        <div class="container">
-                            <h5 id="detail">
+                        <h4 class="card-title l2 detailtitle">number 3</h4>
+                        <div class="container card-body">
+                            <h5 class="s1 card-text detail">
                                 3. something else
                             </h5>
                         </div>
                 </ng-template>
                 <ng-template #stylefour>
                         <div class="sectionimages" id="sectionimage4"></div>
-                        <h4 class="j1" id="detailtitle">number4</h4>
-                        <div class="container">
-                            <h5 id="detail">
+                        <h4 class="card-title l2 detailtitle">number4</h4>
+                        <div class="container card-body">
+                            <h5 class="s1 card-text detail">
                                 4. something else
                             </h5>
                         </div>
                 </ng-template>
                 <ng-template #stylefive>
                         <div class="sectionimages" id="sectionimage5"></div>
-                        <h4 class="j1" id="detailtitle">number 5</h4>
-                        <div class="container">
-                            <h5 id="detail">
+                        <h4 class="card-title l2 detailtitle">number 5</h4>
+                        <div class="container card-body">
+                            <h5 class="s1 card-text detail">
                                 5. something else
                             </h5>
                         </div>
                 </ng-template>
                 <ng-template #stylesix>
                         <div class="sectionimages" id="sectionimage6"></div>
-                        <h4 class="j1" id="detailtitle">Number 6</h4>
-                        <div class="container">
-                            <h5 id="detail">
+                        <h4 class="card-title l2 detailtitle">Number 6</h4>
+                        <div class="container card-body">
+                            <h5 class="s1 card-text detail">
                                 6. something else
                             </h5>
                         </div>
                 </ng-template>
+                </div>
             </div>
 
 
@@ -172,7 +174,7 @@
                         </span>
                     </div>
 
-                    <button [disabled]="myForm.invalid" type="button" class="getstartbtn_blue_large btn-submit" (click)="submit()">Submit</button>
+                    <button [disabled]="myForm.invalid" type="button" class="btn btn-primary btn-submit" (click)="submit()">Send</button>
                     <div class="feedback error-feedback" *ngIf="errorMessage && !successMessage"><b>{{errorMessage}}</b></div>
                     <div class="feedback success-feedback" *ngIf="successMessage"><b>{{successMessage}}</b></div>
                 </form>
