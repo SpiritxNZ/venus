@@ -5,7 +5,7 @@
 <section id="section2">
     <div class="container">
         <div class="row" id="section2toprow">
-            <div class="col-6 d-none d-md-block" id="showinterest">
+            <div class="col-5 d-none d-md-block" id="showinterest">
                 <div class="card">
                 <div *ngIf="divname == '1'; then styleone"></div>
                 <div *ngIf="divname == '2'; then styletwo"></div>
@@ -86,7 +86,7 @@
 
 
             <!-- right side -->
-            <div class="col-md-6 col-12">
+            <div class="col-md-5 col-12">
 
                 <div class="feedback error-feedback" *ngIf="errorMessage && !successMessage"><b>{{errorMessage}}</b></div>
                 <div class="feedback success-feedback" *ngIf="successMessage"><b>{{successMessage}}</b></div>
@@ -174,7 +174,7 @@
                         </span>
                     </div>
 
-                    <button [disabled]="myForm.invalid" type="button" class="btn btn-primary btn-submit" (click)="submit()">Submit</button>
+                    <button [disabled]="myForm.invalid" type="button" class="btn btn-primary btn-submit" (click)="submit()">Send</button>
                     <div class="feedback error-feedback" *ngIf="errorMessage && !successMessage"><b>{{errorMessage}}</b></div>
                     <div class="feedback success-feedback" *ngIf="successMessage"><b>{{successMessage}}</b></div>
                 </form>

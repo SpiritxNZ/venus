@@ -99,7 +99,7 @@ input:checked + label
     border-color: rgb(85, 164, 255);
 }
 
-.col-md-6 {
+.col-md-5 {
     padding-left: 25px;
     padding-right: 25px;
 }
