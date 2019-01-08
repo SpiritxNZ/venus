@@ -189,6 +189,31 @@
     border-radius: 24px;
     outline: 0 !important;
 }
+.getstartbtn_blue_large{
+    font-size: 20px;
+    background-color: #0099FF;
+    margin-bottom: 13px;
+    padding: 8px 33px 8px 33px;
+    text-decoration: bold;
+    color:white;
+    border-color:transparent;
+    border-width: 1px;
+    border-radius: 24px;
+    outline: 0 !important;
+}
+.getstartbtn_large{
+    font-size: 20px;
+    background-color: white;
+    margin-bottom: 13px;
+    padding: 8px 33px 8px 33px;
+    text-decoration: bold;
+    color:white;
+    border-color:transparent;
+    border-width: 1px;
+    border-radius: 24px;
+    outline: 0 !important;
+}
+
 .btn{
     cursor:pointer;
 }

@@ -172,7 +172,7 @@
                         </span>
                     </div>
 
-                    <button [disabled]="myForm.invalid" type="button" class="btn btn-primary btn-submit" (click)="submit()">Submit</button>
+                    <button [disabled]="myForm.invalid" type="button" class="getstartbtn_blue_large btn-submit" (click)="submit()">Submit</button>
                     <div class="feedback error-feedback" *ngIf="errorMessage && !successMessage"><b>{{errorMessage}}</b></div>
                     <div class="feedback success-feedback" *ngIf="successMessage"><b>{{successMessage}}</b></div>
                 </form>

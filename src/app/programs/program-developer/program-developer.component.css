@@ -164,6 +164,7 @@ li.nav-item{
 }
 .nav-link.active {
     border-radius: 0;
+    background-color: #0099ff;
 }
 .nav-link
 {

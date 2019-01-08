@@ -112,7 +112,6 @@ input:checked + label
 }
 .btn-submit:disabled {
     background-color: rgb(85, 164, 255);
-    border-color: rgb(85, 164, 255);
 }
 
 .col-md-6 {
