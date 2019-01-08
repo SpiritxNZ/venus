@@ -106,8 +106,9 @@ div.col-12
 }
 /* section6------------------------------------------------------------------------------------- */
 #section6{
-    background-image: url("../../assets/header_images/cloud-blue.jpg");
+    /* background-image: url("../../assets/header_images/cloud-blue.jpg"); */
     background-size: cover;
+    background-color: #0099ff;
 }
 .blogimages
 {
