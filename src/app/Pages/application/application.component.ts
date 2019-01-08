@@ -26,7 +26,7 @@ export class ApplicationComponent implements OnInit {
       "input": "input1",
       "id": "1",
       "backgroundimageurl": "../../../assets/icons/interest1.svg",
-      "name": "a label"
+      "name": "University Admission Support",
     },
     {
       "input": "input2",

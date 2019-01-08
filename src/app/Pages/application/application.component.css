@@ -5,31 +5,16 @@
     background-size: cover;
     background-position: center;
 }
-#div1 {
-    background-image: url("../../../assets/icons/interest1.svg");
-}
-#div2 {
-    background-image: url("../../../assets/icons/interest2.svg");
-}
-#div3 {
-    background-image: url("../../../assets/icons/interest3.svg");
-}
-#div4 {
-    background-image: url("../../../assets/icons/interest4.svg");
-}
-#div5 {
-    background-image: url("../../../assets/icons/interest5.svg");
-}
-#div6 {
-    background-image: url("../../../assets/icons/interest6.svg");
-}
+
 /* left side images */
 .sectionimages {
-    width: 370px;
-    height: 150px;
-    background-size: cover;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     border: 0px;
-    display: inline-block;margin-top: 20px;
+    display: inline-block;
+    margin-top: 20px;
 }
 #sectionimage1 {
     background-image: url('../../../assets/sundry_images/interest3large.svg');
@@ -54,12 +39,11 @@
     overflow: hidden; 
     text-align: center;
 }
-#detail {
-    text-align: left;
+#showinterest .card {
+    box-shadow: 0 2px 12px 3px hsla(0,0%,89%,.55);
 }
-#detailtitle {
-    color:black; 
-    font-size: 30px;
+.detail {
+    text-align: left;
 }
 .col-xs-12.col-sm-6.col-md-4.col-lg-4
 {
@@ -151,9 +135,8 @@ input:checked + label
     padding-bottom: 20px;
 }
 .interest-section {
-    max-width: 480px;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 0;
+    margin-right: 0;
 }
 .interest-section .col-6 {
     padding: 10px;
@@ -163,7 +146,6 @@ input:checked + label
         padding: 5px;
     }
     .interest-section {
-        max-width: 480px;
         margin-left: 0px;
         margin-right: 0px;
     }
