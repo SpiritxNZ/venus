@@ -54,27 +54,6 @@
 {
     text-align: center;
 }
-/* input + label
-{
-    background-image: url("../../../assets/interest1.svg");
-    background-size: cover;
-    height: 134px;
-    width: 134px;
-    border: 3px solid transparent;
-    border-radius: 5px;
-    padding: 0 0 0 0px;
-}
-
-input:checked + label
-{
-    background-image: url("../../../assets/interest1.svg");
-    background-size: cover;
-    height: 134px;
-    width: 134px;
-    border: 3px solid rgba(40, 140, 255, 0.712);
-    border-radius: 5px;
-    padding: 0 0 0 0px;
-} */
 
 /* feedback text */
 .feedback {
