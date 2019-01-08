@@ -5,12 +5,6 @@ import 'core-js/es7/reflect';
 import { ApiService } from '../../services/api.service';
 import { Meta, Title } from '@angular/platform-browser';
 
-export interface showlist {
-  imageurl: string;
-  detailtitle: string;
-  detail: string;
-}
-
 @Component({
   selector: 'app-application',
   templateUrl: './application.component.html',
