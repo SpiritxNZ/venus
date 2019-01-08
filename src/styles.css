@@ -175,8 +175,19 @@
     color:white;
     border-color:white;
     border-width: 1px;
+    border-radius: 5px;
 }
-
+.getstartbtn_blue{
+    font-size: 20px;
+    background-color: #0099FF;
+    margin-bottom: 13px;
+    padding: 8px 23px 8px 23px;
+    text-decoration: bold;
+    color:white;
+    border-color:transparent;
+    border-width: 1px;
+    border-radius: 5px;
+}
 .btn{
     cursor:pointer;
 }

@@ -21,9 +21,6 @@
         background-size: cover;
         text-align:center;
     }
-    .btn.btn-primary{
-        width: 200px;
-    }
     
 /* section2------------------------------------------------------------------------------------- */
 #sectionimage{
@@ -111,13 +108,6 @@ div.col-12
 #section6{
     background-image: url("../../assets/header_images/cloud-blue.jpg");
     background-size: cover;
-}
-#botbtn
-{
-    margin-top: 60px;
-    margin-bottom: 70px;
-    size: 100px;
-    background-color: #0099ff;
 }
 .blogimages
 {

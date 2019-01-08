@@ -74,12 +74,7 @@ div.col-md-4.program
     border-radius: 8px;
     text-align: center;
 }
-#getstartbtn
-{
-    width: 240px;
-    height: 40px;
-    font-size: 20px;
-}
+
 @media(max-width:576px) {
     .custom-control.custom-checkbox
     {
