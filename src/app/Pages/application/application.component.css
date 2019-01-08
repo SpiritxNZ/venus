@@ -131,7 +131,6 @@ input:checked + label
     border: 3px solid rgba(40, 140, 255, 0.712);
 }
 .interestinput:hover + .interestlabel {
-    box-shadow: 0 2px 12px 3px hsla(0,0%,89%,.55);
     background-color: aliceblue;
 }
 #section2toprow {
