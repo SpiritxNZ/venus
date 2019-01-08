@@ -9,33 +9,57 @@
 
   <section id="section3">
     <div class="container">
-      <div class="card video-card">
-        <div class="row video-row">
-          <div class="col-lg-5 col-md-6">
-            <div class="embed-responsive embed-responsive-16by9 video">
-              <iframe class="embed-responsive-item" [src]="video1" allowfullscreen></iframe>
+      <div class="row align-items-center">
+        <div class="col-1">
+          <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </div>
+        <div class="col-10">
+          <div class="carousel slide" id="carousel" data-ride="carousel" data-interval="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="card video-card">
+                  <div class="row video-row">
+                    <div class="col-lg-5 col-md-12">
+                      <div class="embed-responsive embed-responsive-16by9 video">
+                        <iframe class="embed-responsive-item" [src]="video1" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                    <div class="col-lg-7 col-md-12">
+                      <h3 class="s1">{{videoPerson1.name}} | {{videoPerson1.uni}}</h3>
+                      <h3 class="s2blue">Offer: {{videoPerson1.jobLoc}}, {{videoPerson1.job}}</h3>
+                      <p class="s2 description">{{videoPerson1.description}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card video-card">
+                  <div class="row video-row">
+                    <div class="col-lg-5 col-md-12">
+                      <div class="embed-responsive embed-responsive-16by9 video">
+                        <iframe class="embed-responsive-item" [src]="video2" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                    <div class="col-lg-7 col-md-12">
+                      <h3 class="s1">{{videoPerson2.name}} | {{videoPerson2.uni}}</h3>
+                      <h3 class="s2blue">Offer: {{videoPerson2.jobLoc}}, {{videoPerson2.job}}</h3>
+                      <p class="s2 description">{{videoPerson2.description}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-lg-7 col-md-6">
-            <h3 class="s1">{{videoPerson1.name}} | {{videoPerson1.uni}}</h3>
-            <h3 class="s2 primarycolorfont">Offer: {{videoPerson1.jobLoc}}, {{videoPerson1.job}}</h3>
-            <p class="s2 description">{{videoPerson1.description}}</p>
-          </div>
         </div>
-      </div>
-      <div class="card video-card">
-        <div class="row video-row">
-          <div class="col-lg-7 col-md-6">
-            <h3 class="s1">{{videoPerson2.name}} | {{videoPerson2.uni}}</h3>
-            <h3 class="s2 primarycolorfont">Offer: {{videoPerson2.jobLoc}}, {{videoPerson2.job}}</h3>
-            <p class="s2 description">{{videoPerson2.description}}</p>
+          <div class="col-1">
+            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
           </div>
-          <div class="col-lg-5 col-md-6">
-            <div class="embed-responsive embed-responsive-16by9 video">
-              <iframe class="embed-responsive-item" [src]="video2" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -48,10 +72,10 @@
             <div class="praise-card">
               <img class="successcasesimage" src="{{ person.image }}" alt="img">
               <div class="div1">
-                <h3 class="h3">
+                <h3 class="s1">
                   {{ person.name }}&nbsp;|&nbsp;{{ person.university }}
                 </h3>
-                <div class="primarycolorfont">
+                <div class="s2blue">
                   <div class="div3">
                     Offer: {{ person.offerlocation }}, {{ person.offerposition }}
                   </div>
@@ -59,7 +83,7 @@
                   </div>
                 </div>
               </div>
-              <div class="div4">
+              <div class="s2 description">
                 {{ person.details | slice: 0:210}}
               </div>
             </div>

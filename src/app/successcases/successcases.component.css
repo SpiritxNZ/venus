@@ -52,13 +52,6 @@
     padding-top: 55px; 
     text-align: center;
 }
-.primarycolorfont
-{
-    font-size: 0.875em; 
-    color: #0099ff; 
-    line-height: 24px; 
-    font-weight: 200;
-}
 .div3
 {
     height: 24px; 
@@ -66,33 +59,13 @@
     text-overflow: ellipsis; 
     white-space: nowrap;
 }
-.div4
-{
-    height: 220px; 
-    font-size: 0.8em; 
-    font-weight: 200; 
-    color: rgb(136, 136, 136); 
-    line-height: 24px; 
-    overflow: hidden; 
-    text-overflow: ellipsis; 
-    display: -webkit-box; 
-    -webkit-line-clamp: 9; 
-    white-space: normal; 
-    overflow-wrap: break-word; 
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    -webkit-line-clamp: 2;
+
+/* top container */ 
+#section3 .container {
+    padding: 20px;
 }
-.h3
-{
-    height: 24px; 
-    font-size: 1.05em; 
-    overflow: hidden; 
-    text-overflow: ellipsis; 
-    white-space: nowrap; 
-    color: rgb(53, 53, 53); 
-    font-weight: 300; 
-    margin: 0px 0px 7px;
+#section3 .col-1 {
+    padding: 0;
 }
 
 /* row holding one of the videos */
@@ -102,7 +75,7 @@
 }
 
 .video {
-    height: 50vh;
+    height: 40vh;
     border-radius: 2px;
 }
 .video-card {
@@ -119,8 +92,23 @@
 #section3 .div2 {
     font-size: 16px;
 }
-#section3 .description {
+.description {
     color: grey;
     text-align: justify;
-    font-weight: 200; 
+}
+
+/* Carousel styling */
+.carousel-control-prev, .carousel-control-next {
+    height: 40px;
+    width: 100%;
+    position: relative;
+}
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    box-shadow: 0 2px 12px 3px hsla(0,0%,89%,.55);
+}
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%353535' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%353535' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
