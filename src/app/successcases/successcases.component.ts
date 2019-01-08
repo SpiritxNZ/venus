@@ -12,15 +12,15 @@ export class SuccesscasesComponent implements OnInit {
   video2:any;
 
   videoPerson1 = {
-    name: 'Akemi Homura',
-    uni: 'Mitakihara High',
-    job: 'Chief Executive',
-    jobLoc: 'Pocket Dimension',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.\
-    Ut quam ante, varius id ultricies ut, mattis gravida dolor. Sed placerat\
-    ipsum lorem, a blandit erat aliquet in. In placerat sollicitudin metus\
-    id vestibulum. Vestibulum ut tempor ex. Donec eu velit consequat, pellentesque\
-    ipsum quis, laoreet turpis. Suspendisse potenti.'
+    name: 'Neo',
+    uni: 'ICL Business School',
+    job: 'Junior Developer',
+    jobLoc: 'Hatch Web & Design',
+    description: 'Neo came to us in March 2017 while he was still attending \
+    ICL business school in Auckland. In less than 6 months, Neo came from only \
+    basic knowledge in HTML and CSS to being able to proficiently use the \
+    Angular framework with JavaScript and TypeScript, and able to use the \
+    Laravel framework (PHP) as a RESTful API.'
   }
   videoPerson2 = {
     name: 'Kaname Madoka',
