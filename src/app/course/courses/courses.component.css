@@ -38,6 +38,11 @@
     background-color: aliceblue;
     cursor: pointer;
 }
+.list-group-item.active {
+    background-color: rgb(205, 232, 255);
+    color: black;
+    border: none;
+}
 
 /*video info layout*/
 .head {

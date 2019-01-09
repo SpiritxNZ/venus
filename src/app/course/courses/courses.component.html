@@ -61,7 +61,8 @@
           Lesson List
         </div>
         <div class="list-group list-group-flush">
-          <button class="list-group-item m3" *ngFor="let lecture of lectures; index as i" (click)="onClickLecture(i)">
+          <button class="m3 list-group-item" *ngFor="let lecture of lectures; index as i" 
+            [ngClass]="{'active': currentLecture === i }" (click)="onClickLecture(i)">
             {{lecture.name}}
           </button>
         </div>
