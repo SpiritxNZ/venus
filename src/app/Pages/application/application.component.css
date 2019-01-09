@@ -28,8 +28,7 @@
 #sectionimage3 {
     background-image: url('/assets/icons/Business Analyst.png');
 }
-#showinterest
-{
+#showinterest {
     overflow: hidden; 
     text-align: center;
 }
@@ -63,7 +62,7 @@
 .btn-submit:disabled {
     background-color: rgb(85, 164, 255);
 }
-
+/* right column */
 .col-md-6 {
     padding-left: 25px;
     padding-right: 25px;
