@@ -14,7 +14,7 @@
         <div class="card-body">
           <!--video info-->
           <div class="info">
-            <h5 class="info-head m2">Lecture Info</h5>
+          <h5 class="info-head m2">{{lectures[currentLecture].name}}</h5>
             <p class="info-body s2">{{lectures[currentLecture].desc}}</p>
           </div>
           <hr />
@@ -45,7 +45,7 @@
             </div>
           </div>
           <!--bottom section of lecturer info-->
-          <div class="info">
+          <div class="info experience">
             <h5 class="info-head m2">Experience</h5>
             <ul>
               <li class="s2" *ngFor="let expItem of courseLecturer.expList">{{expItem}}</li>
@@ -61,7 +61,8 @@
           Lesson List
         </div>
         <div class="list-group list-group-flush">
-          <button class="list-group-item m3" *ngFor="let lecture of lectures; index as i" (click)="onClickLecture(i)">
+          <button class="m3 list-group-item" *ngFor="let lecture of lectures; index as i" 
+            [ngClass]="{'active': currentLecture === i }" (click)="onClickLecture(i)">
             {{lecture.name}}
           </button>
         </div>

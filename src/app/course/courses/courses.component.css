@@ -15,7 +15,7 @@
 /* main container */
 .container {
     margin-bottom: 50px;
-    margin-top: 20px;
+    margin-top: 80px;
 }
 
 /*video and list cards*/
@@ -37,6 +37,11 @@
 .list-group-item:hover {
     background-color: aliceblue;
     cursor: pointer;
+}
+.list-group-item.active {
+    background-color: rgb(205, 232, 255);
+    color: black;
+    border: none;
 }
 
 /*video info layout*/
@@ -63,6 +68,9 @@
 }
 .card-body .col-lg-3 {
     padding:5px;
+}
+.experience {
+    padding-left: 15px;
 }
 /* Page Header */
 header{
