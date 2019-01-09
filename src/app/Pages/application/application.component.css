@@ -41,11 +41,6 @@
 .detail {
     text-align: left;
 }
-.col-xs-12.col-sm-6.col-md-4.col-lg-4
-{
-    text-align: center;
-}
-
 /* feedback text */
 .feedback {
     font-size: 18px;
@@ -110,6 +105,7 @@
 .interest-section {
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: 15px;
 }
 .interest-section .col-6 {
     padding: 10px;
