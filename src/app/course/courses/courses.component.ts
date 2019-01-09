@@ -30,9 +30,7 @@ export class CoursesComponent implements OnInit {
     { name: "Fidentus Omnium", desc: "description", video: null },
     { name: "Magister Mentium", desc: "description", video: null },
     { name: "Lorem Ipsum", desc: "description", video: null },
-    { name: "Fidentus Omnium", desc: "description", video: null },
-    { name: "Magister Mentium", desc: "description", video: null },
-    { name: "Lorem Ipsum", desc: "description", video: null },
+    { name: "Fidentus Omnium", desc: "description", video: null }
   ];
 
   courseLecturer = {
