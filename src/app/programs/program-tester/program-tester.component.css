@@ -166,6 +166,10 @@ li.nav-item{
     background-color: #0099ff;
     border-radius: 0;
 }
+li.nav-item:hover
+{
+    cursor:pointer;
+}
 .nav-link
 {
     height:100%;
