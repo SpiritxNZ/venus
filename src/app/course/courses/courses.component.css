@@ -8,7 +8,7 @@
 }
 
 /*top part of the video card info*/
-.head {
+.container.head {
     margin-bottom: 20px;
 }
 

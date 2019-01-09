@@ -1,17 +1,10 @@
-<!-- Header -->
-<header id="header">
-    <div class="jumbotron-fluid">
-        <h1 class="j1">Course Page</h1>
-        <h2 class="s1">This is a course header</h2>
-    </div>
-</header>
 <div class="container">
     <h5 class="title l2">{{courseInfo.name}}</h5>
     <div class="row">
       <!--video and info-->
       <div class="col-md-8">
         <div class="card">
-          <!--video-->
+          <!--video (may not have video)-->
           <div class="card-image">
             <div class="embed-responsive embed-responsive-16by9 video">
               <iframe id="video" class="embed-responsive-item" [src]="video"
@@ -19,7 +12,13 @@
             </div>
           </div>
           <div class="card-body">
-            <!--top section of video info-->
+            <!--video info-->
+            <div class="info">
+              <h5 class="info-head m2">Lecture Info</h5>
+              <p class="info-body s2">{{courseInfo.description}}</p>
+            </div>
+            <hr/>
+            <!--lecturer info-->
             <div class="container head">
               <div class="row">
                 <div class="col-lg-6 col-md-12 align-self-center">
@@ -45,15 +44,12 @@
                 </div>
               </div>
             </div>
-            <hr />
-            <!--bottom section of video info-->
+            <!--bottom section of lecturer info-->
             <div class="info">
               <h5 class="info-head m2">Experience</h5>
               <ul>
                 <li class="s2" *ngFor="let expItem of courseLecturer.expList">{{expItem}}</li>
               </ul>
-              <h5 class="info-head m2">Info</h5>
-              <p class="info-body s2">{{courseInfo.description}}</p>
             </div>
           </div>
         </div>
