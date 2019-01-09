@@ -6,8 +6,12 @@
     background-size: cover;
     background-position: center;
 }
+#section1 .jumbotron-fluid {
+    padding-top: 15vh;
+    text-align: center;
+}
 #section2 {
-    background-color: #f4f4f4
+    background-color: #f4f4f4;
 }
 /* left side images */
 .sectionimages {
