@@ -5,4 +5,11 @@
     background-image: url("../../../assets/header_images/darkbackgroundimage.jpg");
     background-size: cover;
 }
-
+.col-md-12
+{
+    text-align: center;
+}
+p.s1
+{
+    text-align: left;
+}
