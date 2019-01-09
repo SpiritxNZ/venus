@@ -12,6 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 export class CoursesComponent implements OnInit {
   courseId:any;
   video:any;
+  currentLecture: any;
 
   /**Test data for course ---------- */
   name = "Course Title"; 
@@ -54,6 +55,7 @@ export class CoursesComponent implements OnInit {
   ) { 
     this.video = sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/4CbLXeGSDxg");
     this.courseId = this.route.snapshot.params['id'];
+    this.currentLecture = 0;
     
   }
 
@@ -64,6 +66,11 @@ export class CoursesComponent implements OnInit {
       (err)=>console.warn(err)
     )
 
+  }
+
+  // sets the current lecture by index
+  onClickLecture(i) {
+    this.currentLecture = i;
   }
 
 }
