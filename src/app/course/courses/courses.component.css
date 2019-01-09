@@ -15,7 +15,7 @@
 /* main container */
 .container {
     margin-bottom: 50px;
-    margin-top: 20px;
+    margin-top: 80px;
 }
 
 /*video and list cards*/
@@ -63,6 +63,9 @@
 }
 .card-body .col-lg-3 {
     padding:5px;
+}
+.experience {
+    padding-left: 15px;
 }
 /* Page Header */
 header{
