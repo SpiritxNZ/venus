@@ -1,76 +1,71 @@
-<!-- Header -->
-<header id="header">
-    <div class="jumbotron-fluid">
-        <h1 class="j1">Course Page</h1>
-        <h2 class="s1">This is a course header</h2>
-    </div>
-</header>
 <div class="container">
-    <h5 class="title l2">{{courseInfo.name}}</h5>
-    <div class="row">
-      <!--video and info-->
-      <div class="col-md-8">
-        <div class="card">
-          <!--video-->
-          <div class="card-image">
-            <div class="embed-responsive embed-responsive-16by9 video">
-              <iframe id="video" class="embed-responsive-item" [src]="video"
-                frameborder="0" allowfullscreen></iframe>
-            </div>
+  <h5 class="title l2">{{name}}</h5>
+  <div class="row">
+    <!--video and info-->
+    <div class="col-md-8">
+      <div class="card">
+        <!--video (may not have video)-->
+        <div class="card-image" *ngIf="lectures[currentLecture].video">
+          <div class="embed-responsive embed-responsive-16by9 video">
+            <iframe id="video" class="embed-responsive-item" [src]="lectures[currentLecture].video" frameborder="0"
+              allowfullscreen></iframe>
           </div>
-          <div class="card-body">
-            <!--top section of video info-->
-            <div class="container head">
-              <div class="row">
-                <div class="col-lg-6 col-md-12 align-self-center">
-                  <img class="portrait" style="float:left" src="{{courseLecturer.image}}">
-                  <h1 class="card-title m1">{{courseLecturer.name}}</h1>
-                  <h5 class="card-subtitle s1">{{courseLecturer.role}}</h5>
-                </div>
-                <div class="col-lg-3 col-md-6 col-xs-12 d-flex align-items-stretch">
-                  <div class="card card-small">
-                    <div class="card-body">
-                      <h6 class="s3bold">Teaches</h6>
-                      <p class="s4">{{courseLecturer.subject}}</p>
-                    </div>
+        </div>
+        <div class="card-body">
+          <!--video info-->
+          <div class="info">
+            <h5 class="info-head m2">Lecture Info</h5>
+            <p class="info-body s2">{{lectures[currentLecture].desc}}</p>
+          </div>
+          <hr />
+          <!--lecturer info-->
+          <div class="container head">
+            <div class="row">
+              <div class="col-lg-6 col-md-12 align-self-center">
+                <img class="portrait" style="float:left" src="{{courseLecturer.image}}">
+                <h1 class="card-title m1">{{courseLecturer.name}}</h1>
+                <h5 class="card-subtitle s1">{{courseLecturer.role}}</h5>
+              </div>
+              <div class="col-lg-3 col-md-6 col-xs-12 d-flex align-items-stretch">
+                <div class="card card-small">
+                  <div class="card-body">
+                    <h6 class="s3bold">Teaches</h6>
+                    <p class="s4">{{courseLecturer.subject}}</p>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-xs-12 d-flex align-items-stretch">
-                  <div class="card card-small">
-                    <div class="card-body">
-                      <h6 class="s3bold">Intended Learners</h6>
-                      <p class="s4">{{courseInfo.target}}</p>
-                    </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-xs-12 d-flex align-items-stretch">
+                <div class="card card-small">
+                  <div class="card-body">
+                    <h6 class="s3bold">Intended Learners</h6>
+                    <p class="s4">{{target}}</p>
                   </div>
                 </div>
               </div>
             </div>
-            <hr />
-            <!--bottom section of video info-->
-            <div class="info">
-              <h5 class="info-head m2">Experience</h5>
-              <ul>
-                <li class="s2" *ngFor="let expItem of courseLecturer.expList">{{expItem}}</li>
-              </ul>
-              <h5 class="info-head m2">Info</h5>
-              <p class="info-body s2">{{courseInfo.description}}</p>
-            </div>
           </div>
-        </div>
-      </div>
-      <!--lesson list-->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-header m1">
-            Lesson List
-          </div>
-          <div class="list-group list-group-flush">
-            <a class="list-group-item m3" routerLink="{{courseItem.link}}"
-              *ngFor="let courseItem of courseList">
-              {{courseItem.name}}
-            </a>
+          <!--bottom section of lecturer info-->
+          <div class="info">
+            <h5 class="info-head m2">Experience</h5>
+            <ul>
+              <li class="s2" *ngFor="let expItem of courseLecturer.expList">{{expItem}}</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
+    <!--lesson list-->
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header m1">
+          Lesson List
+        </div>
+        <div class="list-group list-group-flush">
+          <button class="list-group-item m3" *ngFor="let lecture of lectures; index as i" (click)="onClickLecture(i)">
+            {{lecture.name}}
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
+</div>

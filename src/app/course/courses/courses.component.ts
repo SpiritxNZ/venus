@@ -12,13 +12,26 @@ import { ActivatedRoute } from '@angular/router';
 export class CoursesComponent implements OnInit {
   courseId:any;
   video:any;
+  currentLecture: any;
 
   /**Test data for course ---------- */
-  courseInfo = {
-    name: "Video Title", target: "University Level", 
-    description: "Information about the video. Illo et et laborum maxime ut nam. Doloribus et enim voluptatem \
+  name = "Course Title"; 
+  target = "University Level";
+
+  lectures: any[] = [
+    {
+      name: "Fidentus Omnium", desc: "Information about the video. Illo et et laborum maxime ut nam. Doloribus et enim voluptatem \
     quidem dignissimos et. Fuga vitae earum distinctio et officia dolor et aliquam. Ipsa odio unde velit similique. \
-    Aut aperiam optio voluptate omnis veritatis. Officia nesciunt earum suscipit nesciunt quas et vel" }
+    Aut aperiam optio voluptate omnis veritatis. Officia nesciunt earum suscipit nesciunt quas et vel",
+      video: this.sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/4CbLXeGSDxg")
+    },
+    { name: "Magister Mentium", desc: "description", video: null },
+    { name: "Lorem Ipsum", desc: "description", video: null },
+    { name: "Fidentus Omnium", desc: "description", video: null },
+    { name: "Magister Mentium", desc: "description", video: null },
+    { name: "Lorem Ipsum", desc: "description", video: null },
+    { name: "Fidentus Omnium", desc: "description", video: null }
+  ];
 
   courseLecturer = {
     name: "Edwin Zhu", role: "Senior Lecturer",
@@ -31,18 +44,6 @@ export class CoursesComponent implements OnInit {
     ]
   };
 
-  courseList: any[] = [
-    { name: "Fidentus Omnium", link: "/courses" },
-    { name: "Magister Mentium", link: "/courses" },
-    { name: "Lorem Ipsum", link: "/courses" },
-    { name: "Fidentus Omnium", link: "/courses" },
-    { name: "Magister Mentium", link: "/courses" },
-    { name: "Lorem Ipsum", link: "/courses" },
-    { name: "Fidentus Omnium", link: "/courses" },
-    { name: "Magister Mentium", link: "/courses" },
-    { name: "Lorem Ipsum", link: "/courses" },
-  ];
-
   /** End of test data -------------------------- */
 
   constructor(
@@ -52,6 +53,7 @@ export class CoursesComponent implements OnInit {
   ) { 
     this.video = sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/4CbLXeGSDxg");
     this.courseId = this.route.snapshot.params['id'];
+    this.currentLecture = 0;
     
   }
 
@@ -62,6 +64,11 @@ export class CoursesComponent implements OnInit {
       (err)=>console.warn(err)
     )
 
+  }
+
+  // sets the current lecture by index
+  onClickLecture(i) {
+    this.currentLecture = i;
   }
 
 }

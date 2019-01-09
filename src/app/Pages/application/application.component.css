@@ -1,3 +1,4 @@
+/* header & bg */
 #section1 {
     height: 40vh;
     width: 100%;
@@ -8,7 +9,6 @@
 #section2 {
     background-color: #f4f4f4
 }
-
 /* left side images */
 .sectionimages {
     height: 100px;
@@ -28,6 +28,7 @@
 #sectionimage3 {
     background-image: url('/assets/icons/Business Analyst.png');
 }
+/* left side card */
 #showinterest {
     overflow: hidden; 
     text-align: center;
