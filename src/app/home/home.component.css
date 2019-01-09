@@ -16,7 +16,7 @@
     }
     header{
         height:620px;
-        background-image: url("../../assets/header_images/index-header-pic.jpg");
+        background-image: url("../../assets/header_images/homepage.png");
         border-radius:0px;
         background-size: cover;
         text-align:center;
@@ -82,6 +82,13 @@ div.col-md-3
     height: 100%;
 }
 /* section4------------------------------------------------------------------------------------- */
+.s2
+{
+    float: left;
+}
+b.m2{
+    line-height: 90%
+}
 #section4{
     padding-bottom: 40px;
 }

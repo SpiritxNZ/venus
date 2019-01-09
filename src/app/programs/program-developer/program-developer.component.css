@@ -162,6 +162,10 @@ li.nav-item{
     color:  #0099ff;
     border-radius: 0;
 }
+li.nav-item:hover
+{
+    cursor:pointer;
+}
 .nav-link.active {
     border-radius: 0;
     background-color: #0099ff;
