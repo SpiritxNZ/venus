@@ -104,6 +104,7 @@ hr
     width: 75%;
     padding-left: 5px;
 }
+/* when mouse hover opacity become to 1 */
 .block
 {
     height: 45px;
@@ -117,6 +118,7 @@ hr
     width: 45px;
     position: relative;
 }
+/* set up different hr sizes for different screen sizes */
 @media only screen and (max-width: 768px){
     hr
     {
