@@ -26,8 +26,11 @@
 #sectionimage{
     height:80%;
     width: 80%;
-    padding-top: 40px;
-
+    margin-top: 40px;
+}
+section#section2
+{
+    padding-bottom: 40px;
 }
 /* section3------------------------------------------------------------------------------------- */
 #section3{
@@ -82,9 +85,14 @@ div.col-md-3
 #section4{
     padding-bottom: 40px;
 }
+.whyContent {
+    padding-left:25px;
+    padding-right:25px;
+}
 .icon{
     height:40px;
     width: 40px;
+    float: left;
 }
 @media (max-width: 576px) {
     .whyContent {
