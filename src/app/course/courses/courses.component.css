@@ -32,9 +32,11 @@
 .list-group-item {
     padding-top: 15px;
     padding-bottom: 15px;
+    text-align: left;
 }
 .list-group-item:hover {
     background-color: aliceblue;
+    cursor: pointer;
 }
 
 /*video info layout*/
