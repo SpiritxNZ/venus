@@ -5,7 +5,8 @@
     background-image: url("../../../assets/header_images/darkbackgroundimage.jpg");
     background-size: cover;
 }
-.col-md-4
+
+#section2,p.s1.center
 {
     text-align: center;
 }
