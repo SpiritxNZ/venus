@@ -1,13 +1,13 @@
 <div class="container">
-    <h5 class="title l2">{{courseInfo.name}}</h5>
+    <h5 class="title l2">{{name}}</h5>
     <div class="row">
       <!--video and info-->
       <div class="col-md-8">
         <div class="card">
           <!--video (may not have video)-->
-          <div class="card-image">
+          <div class="card-image" *ngIf="lectures[0].video">
             <div class="embed-responsive embed-responsive-16by9 video">
-              <iframe id="video" class="embed-responsive-item" [src]="video"
+              <iframe id="video" class="embed-responsive-item" [src]="lectures[0].video"
                 frameborder="0" allowfullscreen></iframe>
             </div>
           </div>
@@ -15,7 +15,7 @@
             <!--video info-->
             <div class="info">
               <h5 class="info-head m2">Lecture Info</h5>
-              <p class="info-body s2">{{courseInfo.description}}</p>
+              <p class="info-body s2">{{lectures[0].desc}}</p>
             </div>
             <hr/>
             <!--lecturer info-->
@@ -38,7 +38,7 @@
                   <div class="card card-small">
                     <div class="card-body">
                       <h6 class="s3bold">Intended Learners</h6>
-                      <p class="s4">{{courseInfo.target}}</p>
+                      <p class="s4">{{target}}</p>
                     </div>
                   </div>
                 </div>
@@ -61,9 +61,8 @@
             Lesson List
           </div>
           <div class="list-group list-group-flush">
-            <a class="list-group-item m3" routerLink="{{courseItem.link}}"
-              *ngFor="let courseItem of courseList">
-              {{courseItem.name}}
+            <a class="list-group-item m3" *ngFor="let lecture of lectures" routerlink="#">
+              {{lecture.name}}
             </a>
           </div>
         </div>
