@@ -3,7 +3,7 @@
 .transB{background-color: transparent;}
 .transB1{background-color: rgba(0,0,0,0.2);}
 .whiteF{color: white;}
-.blackF{color: black;}
+.blackF{color: #0099FF;}
 
 
 
@@ -14,18 +14,13 @@
 .fontColor1{color: #0099FF;}
 .fontColor2{color: white;}
 .fontColor3{color: #424242;}
-.blackF{color:#0099FF};
-.coursesicon
-{
-    background-image: url("../../../assets/icons/shejiyeiconmsafb3bnqs1.png");
-    background-position: left center;
-    background-size: 25px;
-    background-repeat: no-repeat;
-}
+
 .dropdown-item {
     margin-left: 5px;
     background-color: transparent;
+    font-family: Coltan-Gea-Light;
 }
+.navLink{font-family: Coltan-Gea-Light !important;}
 .dropdown-item:active {
     color:black;
 }

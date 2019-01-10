@@ -91,11 +91,13 @@
     font-size:50px;
     font-weight: bold;
     color:white;
+    font-family: Coltan-Gea-Bold;
 }
 .j2{
     font-size:40px;
     font-weight: bold;
     color:white;
+    font-family: Coltan-Gea-Bold;
 }
 
 @media (max-width: 576px) {
