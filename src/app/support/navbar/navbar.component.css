@@ -5,6 +5,12 @@
 .whiteF{color: white;}
 .blackF{color: #0099FF;}
 
+.icon
+{
+    height: 45px;
+    width: 45px;
+    position: relative;
+}
 
 
 
@@ -18,9 +24,9 @@
 .dropdown-item {
     margin-left: 5px;
     background-color: transparent;
-    font-family: Coltan-Gea-Light;
+    font-family: Coltan-Gea-Bold;
 }
-.navLink{font-family: Coltan-Gea-Light !important;}
+.navLink{font-family: Coltan-Gea-Bold !important;}
 .dropdown-item:active {
     color:black;
 }
