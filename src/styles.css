@@ -1,5 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+/* add some typefaces */
+@font-face { 
+    font-family: Coltan-Gea-Bold;  
+    src: 
+    url('assets/font/Coltan-Gea-Bold-demo-FFP.ttf');
+    }
+    
+@font-face { 
+    font-family: Coltan-Gea-BoldItalic; 
+    src: 
+    url('assets/font/Coltan-Gea-BoldItalic-demo-FFP.ttf');
+    }
+@font-face { 
+    font-family: Coltan-Gea-Light;  
+    src: 
+    url('assets/font/Coltan-Gea-Light-demo-FFP.ttf');
+    }
+        
+@font-face { 
+    font-family: Coltan-Gea-LightItalic; 
+    src: 
+    url('assets/font/Coltan-Gea-LightItalic-demo-FFP.ttf');
+    }
+    
 .dialog1 .mat-dialog-container{
     border-radius: 10px;
     width:600px;
