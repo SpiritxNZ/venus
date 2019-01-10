@@ -1,7 +1,6 @@
 <nav class="navbar navbar-expand-md fixed-top " id="imnavbar" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)?'whiteB borderColor1':'transB1 borderColor2'">
   <!-- Brand/logo -->
-  <img src="../../assets/logo/learnspace_logo_transparent.png"  routerLink='/' alt="tutoring" style="height: 30px; outline: 0;"
-    class="navbar-brand">
+  <h1   routerLink='/' alt="tutoring" style="height: 30px; padding-top: 10px; font-family: Coltan-Gea-Bold;" class="s1" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">Gradspace</h1>
   <!-- Links -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
