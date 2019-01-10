@@ -42,10 +42,9 @@
       </li>
 
       <li class="nav-item">
-          <a class="nav-link navLink" style="padding-right:15px;padding-left:15px; font-family: Helvetica !important;" routerLink="/aboutus" 
-            href="#" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">
-            <!-- <img class="icon" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'bluephoneF':'whitephoneF'"> -->
-            1231415
+          <a class="nav-link disabled" style="padding-right:15px;padding-left:23px; font-family: Helvetica !important; " 
+            href="#" data-toggle="tooltip" data-placement="bottom" title="0212264770" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">
+            <i class="fas fa-phone-volume"></i>
           </a>
         </li>
       <li class="nav-item">
