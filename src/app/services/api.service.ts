@@ -16,6 +16,10 @@ export class ApiService {
     return this.http.post(this.baseUrl+'/contacts', data)
   }
 
+  postEmail(data) {
+    return this.http.post('https://spiritx.co.nz/mail', data)
+  }
+
   getAllCourses(){
     return this.http.get(this.baseUrl+'/findcourses')
   }

@@ -33,7 +33,6 @@
           <li class="coursesdropdown">
             <a class="dropdown-item" routerLink='/program-tester' [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">Tester</a>
           </li>
-
         </ul>
       </li>
 
@@ -43,14 +42,10 @@
 
       <li class="nav-item">
           <a class="nav-link disabled" style="padding-right:15px;padding-left:23px; font-family: Helvetica !important; " 
-            href="#"  [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">
-            <i class="fas fa-phone-volume">&nbsp;&nbsp;0212264770</i>
+            href="tel:+642102264770"  [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">
+            <i class="fas fa-phone-volume">&nbsp;&nbsp;+64 2102264770</i>
           </a>
         </li>
-      <li class="nav-item">
-        <a class="nav-link navLink" style="padding-right:15px;padding-left:15px;" routerLink="/aboutus" id="navitems4"
-          href="#" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">About Us</a>
-      </li>
 
       <li class="nav-item">
         <a class="nav-link navLink" routerLink="/application" href="#" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">Get Started</a>

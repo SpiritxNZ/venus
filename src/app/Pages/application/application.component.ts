@@ -12,7 +12,7 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 
 export class ApplicationComponent implements OnInit {
-  isBrowser=false
+  isBrowser = false
   errorMessage: string;
   successMessage: string;
   interests: any[] = [
@@ -48,7 +48,7 @@ export class ApplicationComponent implements OnInit {
 
   ) {
     this.meta.addTags([
-      { name: 'keywords', content: 'IT training, IT graduates, IT jobs, software developer training, software graduates, web developer training, web dev study, web dev jobs, web developer jobs, web developer graduate, front end graduate'},
+      { name: 'keywords', content: 'IT training, IT graduates, IT jobs, software developer training, software graduates, web developer training, web dev study, web dev jobs, web developer jobs, web developer graduate, front end graduate' },
       { name: 'description', content: 'Gradspace About us' }
     ])
     this.titleService.setTitle('Gradspace | About ');
@@ -59,7 +59,7 @@ export class ApplicationComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (!this.isBrowser){
+    if (!this.isBrowser) {
       return;
     }
     this.myForm = this.fb.group({
@@ -90,10 +90,10 @@ export class ApplicationComponent implements OnInit {
     });
   }
 
-    // sets the displayed left item on hover
-    mouseHoverEnter(a) {
-      this.divname = a;
-    }
+  // sets the displayed left item on hover
+  mouseHoverEnter(a) {
+    this.divname = a;
+  }
 
   // returns the full name
   getFullName() {
