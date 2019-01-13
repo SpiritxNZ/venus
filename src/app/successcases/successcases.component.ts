@@ -23,26 +23,31 @@ export class SuccesscasesComponent implements OnInit {
     Laravel framework (PHP) as a RESTful API.'
   }
   videoPerson2 = {
-    name: 'Kaname Madoka',
-    uni: 'Redacted',
-    job: 'Arch-Mage of Redacted',
-    jobLoc: 'Japan',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.\
-    Ut quam ante, varius id ultricies ut, mattis gravida dolor. Sed placerat\
-    ipsum lorem, a blandit erat aliquet in. In placerat sollicitudin metus\
-    id vestibulum. Vestibulum ut tempor ex. Donec eu velit consequat, pellentesque\
-    ipsum quis, laoreet turpis. Suspendisse potenti.'
+    name: 'Bill',
+    uni: 'AUT',
+    job: 'Junior Developer',
+    jobLoc: 'Lancom Technology',
+    description: 'Bill came to us in June 2017 after he graduated from AUT. \
+    While at Gradspace, Bill learnt and entered the depth of the Angular \
+    framework, developed essential leadership skills while leading a team \
+    of graduates to complete a major commercial project.'
   }
 
   successfulpeople: any[] = [
     {
       "image":"../../assets/tutor_images/successcasesimage1.jpg",
-      "name": "Douglas  Pace",
-      "university":"Stanford University",
-      "offerlocation":"Nilson",
-      "offerposition":"Shanghai SFA Analyst",
-      "courses":"Number41",
-      "details":"The lawyer for a top Chinese executive who faces fraud charges in the US says it would be inconceivable she would flee because she would not her embarrass her father or the enormous company she has helped build. Monday is the second day of a bail hearing in Canada on whether to release Meng Wanzhou, the chief financial officer of telecommunications giant Huawei and also the daughter of its founder."
+      "name": "Irene",
+      "university":"",
+      "offerlocation":"Magiq Software",
+      "offerposition":"Junior Developer",
+      "courses":"Software Developer Programme",
+      "details":"Gradspace helped me to improve my technical skills and \
+      lots of smart tips on how to make myself more employable. You also \
+      get lots of chances to work on real live projects with experienced \
+      developers in the programme. It's no surprise that you’ll gain heaps \
+      of practical experience from the programme that you don’t get from \
+      the university. Thanks Gradspace for providing this fantastic \
+      program for IT graduates. "
     },
     {
       "image":"../../assets/tutor_images/successcasesimage1.jpg",
@@ -92,8 +97,8 @@ export class SuccesscasesComponent implements OnInit {
   ];
   
   constructor(private sanitizer: DomSanitizer) { 
-    this.video1 = sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/4CbLXeGSDxg");
-    this.video2 = sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/4CbLXeGSDxg");
+    this.video1 = sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/Nbpl_8ijhUo");
+    this.video2 = sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/qw2b4HEgoeA");
   }
   ngOnInit() {
   }
