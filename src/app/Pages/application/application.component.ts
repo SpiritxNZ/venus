@@ -97,7 +97,7 @@ export class ApplicationComponent implements OnInit {
 
   // returns the full name
   getFullName() {
-    return this.myForm.get('firstname') + " " + this.myForm.get('lastname');
+    return this.myForm.get('firstname').value + " " + this.myForm.get('lastname').value;
   }
 
   //Submits form data 
