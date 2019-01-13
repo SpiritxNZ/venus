@@ -9,20 +9,22 @@ export class FaqComponent implements OnInit {
 
   questions: any[] = [
     {
-      question: 'Who is the best character in PMMM?',
-      answer: 'Kyubey.'
+      question: 'What happens in a free Gradspace consultation?',
+      answer: 'In a consultation, you will get an idea of what it takes to get into your dream job. \
+      Get a personalised and detailed understanding of the services we can provide to you. \
+      Discuss your strength and weaknesses in your pathway to career success.'
     },
     {
-      question: 'Why did Cleopatra fall to despair?',
-      answer: 'Kyubey.'
+      question: 'How long is the Gradspace Software Developer Program?',
+      answer: 'That depends on the graduate and their time commitment. It may last anywhere between 1 month to 1 year.'
     },
     {
-      question: 'What is a famous restaurant in Japan?',
-      answer: 'Kyubey.'
+      question: 'When do programs start?',
+      answer: 'Most Gradspace programs start on the Monday of every month.'
     },
     {
-      question: 'Big long question is very long and long and long and probably going to be too long?',
-      answer: 'Long question has a long, long answer. Something something lorem ipsum; this is a long answer as you can see. This is also a tautology but whatever.'
+      question: 'Are graduates enrolled in the Gradspace programs guaranteed to find a job?',
+      answer: 'You are guaranteed to find a job in your discipline/field, provided reasonably continuous commitment.'
     }
   ];
 
