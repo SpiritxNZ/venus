@@ -35,7 +35,7 @@ export class SuccesscasesComponent implements OnInit {
 
   successfulpeople: any[] = [
     {
-      "image":"../../assets/tutor_images/successcasesimage1.jpg",
+      "image":"../../assets/tutor_images/successcasesirene.jpg",
       "name": "Irene",
       "university":"University of Auckland",
       "offerlocation":"Magiq Software",
