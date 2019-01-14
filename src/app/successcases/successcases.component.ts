@@ -37,7 +37,7 @@ export class SuccesscasesComponent implements OnInit {
     {
       "image":"../../assets/tutor_images/successcasesimage1.jpg",
       "name": "Irene",
-      "university":"",
+      "university":"University of Auckland",
       "offerlocation":"Magiq Software",
       "offerposition":"Junior Developer",
       "courses":"Software Developer Programme",
