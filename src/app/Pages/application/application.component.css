@@ -44,6 +44,8 @@
 }
 .detail {
     text-align: left;
+    padding-bottom:3px;
+    line-height: 20px;
 }
 /* feedback text */
 .feedback {
