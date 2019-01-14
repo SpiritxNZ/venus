@@ -152,7 +152,6 @@ hr
 .section4container {
     position: relative;
     background-color: white;
-    height: 250px;
     width: 80%;
     display: inline-block;
     margin-bottom: 50px;
@@ -182,7 +181,7 @@ li.nav-item:hover
 .container.tab-pane {
     margin: 0px;
     background-color:white;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 @media only screen and (max-width: 768px){
     .section4container {
