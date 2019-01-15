@@ -40,7 +40,8 @@ const routes: Routes = [
   { path:'program-developer-beginner', component: ProgramDeveloperBeginnerComponent},
   { path:'program-tester', component: ProgramTesterComponent},
   { path:'application', component:ApplicationComponent },
-  { path:'faq', component:FaqComponent }
+  { path:'faq', component:FaqComponent },
+  { path: '**',  component: HomeComponent }
   ];
 
 @NgModule({
