@@ -81,27 +81,22 @@
                         <div class="col">
                             <div class="form-group">
                                 <label for="firstname">First Name</label>
-                                <input class="form-control" formControlName="firstname" placeholder="First Name">
+                                <input class="form-control" id="firstname" formControlName="firstname" type="text" placeholder="First Name">
                                 <span class="invalid_feedback" *ngIf="myForm.controls.firstname.invalid && myForm.controls.firstname.touched">
-                                    <div *ngIf="myForm.controls.firstname.errors.required">First name is
-                                        required</div>
-                                    <div *ngIf="myForm.controls.firstname.errors.minlength">First name must be
-                                        at least 2 characters</div>
-                                    <div *ngIf="myForm.controls.firstname.errors.maxlength">First name must be
-                                        at most 20 characters</div>
+                                    <div *ngIf="myForm.controls.firstname.errors.required">First name is required</div>
+                                    <div *ngIf="myForm.controls.firstname.errors.minlength">First name must be at least 2 characters</div>
+                                    <div *ngIf="myForm.controls.firstname.errors.maxlength">First name must be at most 20 characters</div>
                                 </span>
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-group">
                                 <label for="lastname">Last Name</label>
-                                <input class="form-control" formControlName="lastname" placeholder="Last Name">
+                                <input class="form-control" id="lastname" formControlName="lastname" type="text" placeholder="Last Name">
                                 <span class="invalid_feedback" *ngIf="myForm.controls.lastname.invalid && myForm.controls.lastname.touched">
                                     <div *ngIf="myForm.controls.lastname.errors.required">Last name is required</div>
-                                    <div *ngIf="myForm.controls.lastname.errors.minlength">Last name must be at
-                                        least 2 characters</div>
-                                    <div *ngIf="myForm.controls.lastname.errors.maxlength">Last name must be at
-                                        most 30 characters</div>
+                                    <div *ngIf="myForm.controls.lastname.errors.minlength">Last name must be at least 2 characters</div>
+                                    <div *ngIf="myForm.controls.lastname.errors.maxlength">Last name must be at most 30 characters</div>
                                 </span>
                             </div>
                         </div>
@@ -109,32 +104,28 @@
 
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input class="form-control" formControlName="email" placeholder="example@example.com">
+                        <input class="form-control" id="email" formControlName="email" type="text" placeholder="example@example.com">
                         <span class="invalid_feedback" *ngIf="myForm.controls.email.invalid && myForm.controls.email.touched">
                             <div *ngIf="myForm.controls.email.errors.required">Email address is required</div>
-                            <div *ngIf="myForm.controls.email.errors.minlength">Email address must be at least
-                                6 characters</div>
-                            <div *ngIf="myForm.controls.email.errors.email">Email address must be a valid email
-                                address</div>
+                            <div *ngIf="myForm.controls.email.errors.minlength">Email address must be at least 6 characters</div>
+                            <div *ngIf="myForm.controls.email.errors.email">Email address must be a valid email address</div>
                         </span>
                     </div>
 
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
-                        <input class="form-control" formControlName="phone" placeholder="Phone Number">
+                        <input class="form-control" id="phone" formControlName="phone" placeholder="Phone Number">
                         <span class="invalid_feedback" *ngIf="myForm.controls.phone.invalid && myForm.controls.phone.touched">
                             <div *ngIf="myForm.controls.phone.errors.required">Phone number is required</div>
-                            <div *ngIf="myForm.controls.phone.errors.minlength">Phone number must be at least 5
-                                characters</div>
-                            <div *ngIf="myForm.controls.phone.errors.maxlength">Phone number must be at most 20
-                                characters</div>
+                            <div *ngIf="myForm.controls.phone.errors.minlength">Phone number must be at least 5 characters</div>
+                            <div *ngIf="myForm.controls.phone.errors.maxlength">Phone number must be at most 20 characters</div>
                             <div *ngIf="myForm.controls.phone.errors.pattern">Please enter a valid phone number</div>
                         </span>
                     </div>
 
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea class="form-control" formControlName="message" placeholder="Your Message" rows="4"></textarea>
+                        <textarea class="form-control" id="message" formControlName="message" placeholder="Your Message" rows="4"></textarea>
                         <span class="invalid_feedback" *ngIf="myForm.controls.message.invalid && myForm.controls.message.touched">
                             <div>Message is required</div>
                         </span>
