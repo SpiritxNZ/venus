@@ -7,6 +7,32 @@
       </div>
   </section>
 
+
+  <section id="section2">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 d-flex align-items-stretch" *ngFor="let videoPerson of videoPersons">
+          <div class="card video-card">
+            <div class="row video-row">
+              <div class="col-12">
+                <div class="embed-responsive embed-responsive-16by9 video">
+                  <iframe class="embed-responsive-item" [src]="videoPerson.video" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="row video-row">
+              <div class="col-12">
+                <h3 class="s1">{{videoPerson.name}} | {{videoPerson.uni}}</h3>
+                <h3 class="s2blue">Offer: {{videoPerson.jobLoc}}, {{videoPerson.job}}</h3>
+                <p class="s2 description">{{videoPerson.description}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="section3">
     <div class="container">
       <div class="row align-items-center">
@@ -53,29 +79,5 @@
       </div>
     </div>
   </section>
-
-  <section id="section2">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 d-flex align-items-stretch" *ngFor="let videoPerson of videoPersons">
-          <div class="card video-card">
-            <div class="row video-row">
-              <div class="col-12">
-                <div class="embed-responsive embed-responsive-16by9 video">
-                  <iframe class="embed-responsive-item" [src]="videoPerson.video" allowfullscreen></iframe>
-                </div>
-              </div>
-            </div>
-            <div class="row video-row">
-              <div class="col-12">
-                <h3 class="s1">{{videoPerson.name}} | {{videoPerson.uni}}</h3>
-                <h3 class="s2blue">Offer: {{videoPerson.jobLoc}}, {{videoPerson.job}}</h3>
-                <p class="s2 description">{{videoPerson.description}}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 </div>

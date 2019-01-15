@@ -37,7 +37,7 @@ videoPersons: any[] = [
     of graduates to complete a major commercial project.`
   },
   {
-    video: 'https://www.youtube.com/embed/Nbpl_8ijhUo',
+    video: 'https://www.youtube.com/embed/EYd_USvuDdI',
     name: 'Pirlo',
     uni: 'AUT',
     job: 'Intermediate Developer',
@@ -66,9 +66,6 @@ videoPersons: any[] = [
   ];
   
   constructor(private sanitizer: DomSanitizer) { 
-    // this.video1 = sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/Nbpl_8ijhUo");
-    // this.video2 = sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/qw2b4HEgoeA");
-    // this.video3 = sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/EYd_USvuDdI");
     this.videoPersons.forEach(person => {
       person.video = sanitizer.bypassSecurityTrustResourceUrl(person.video);
     });
