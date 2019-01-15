@@ -80,6 +80,16 @@ div.col-md-3 {
 .modal-body {
     padding: 0;
 }
+.close {
+    position:absolute;
+    right:-30px;
+    top:0;
+    z-index:999;
+    font-size:2rem;
+    font-weight: normal;
+    color:#fff;
+    opacity:1;
+  }
 /* section4------------------------------------------------------------------------------------- */
 .s2
 {
@@ -109,7 +119,7 @@ b.m2 {
     margin-top:45px;
 }
 /* section5------------------------------------------------------------------------------------- */
-#section5{
+#section5 {
     background-image: url("../../assets/header_images/cloud.svg");
     background-size: cover;
     padding-bottom: 20px;
