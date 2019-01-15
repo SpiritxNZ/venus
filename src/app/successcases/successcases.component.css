@@ -19,17 +19,12 @@
 {
     background-color: white;
 }
-#section2 .row
-{
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
 .successcasescontainer
 {
     position: relative;
-    height: 400px;
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 50px;
     margin-top: 55px;
     border: 1px solid #e5e5e5;
     border-radius: 4px;
@@ -68,29 +63,22 @@
     padding: 0;
 }
 
-/* row holding the videos */
-.video-row {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
+/* cards holding the videos */
 .video {
-    height: 40vh;
     border-radius: 2px;
+}
+#section2 h3.s1 {
+    margin-top: 20px;
 }
 .video-card {
     width: 100%;
     margin-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 2px 0px;
 }
-#section3 .col-lg-7 {
+#section3 .col-12 {
     padding-top: 10px;
-}
-#section3 .div2 {
-    font-size: 16px;
 }
 .description {
     color: grey;
@@ -114,7 +102,7 @@
 .carousel-control-next-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%353535' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
     .video {
         height: 50vh;
     }
@@ -123,4 +111,4 @@
     .video {
         height: 40vh;
     }
-}
+} */

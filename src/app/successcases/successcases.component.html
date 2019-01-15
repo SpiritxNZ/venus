@@ -19,50 +19,24 @@
         <div class="col-10">
           <div class="carousel slide" id="carousel" data-ride="carousel" data-interval="false">
             <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="card video-card">
-                  <div class="row video-row">
-                    <div class="col-lg-5 col-md-12">
-                      <div class="embed-responsive embed-responsive-16by9 video">
-                        <iframe class="embed-responsive-item" [src]="video1" allowfullscreen></iframe>
+              <div class="carousel-item active" *ngFor="let person of successfulpeople">
+                <div class="successcasescontainer">
+                  <div class="praise-card">
+                    <img class="successcasesimage" src="{{ person.image }}" alt="img">
+                    <div class="div1">
+                      <h3 class="s1">
+                        {{ person.name }}&nbsp;|&nbsp;{{ person.university }}
+                      </h3>
+                      <div class="s2blue">
+                        <div class="div3">
+                          Offer: {{ person.offerlocation }}, {{ person.offerposition }}
+                        </div>
+                        <div class="div3">Program: {{ person.courses }}
+                        </div>
                       </div>
                     </div>
-                    <div class="col-lg-7 col-md-12">
-                      <h3 class="s1">{{videoPerson1.name}} | {{videoPerson1.uni}}</h3>
-                      <h3 class="s2blue">Offer: {{videoPerson1.jobLoc}}, {{videoPerson1.job}}</h3>
-                      <p class="s2 description">{{videoPerson1.description}}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="card video-card">
-                  <div class="row video-row">
-                    <div class="col-lg-5 col-md-12">
-                      <div class="embed-responsive embed-responsive-16by9 video">
-                        <iframe class="embed-responsive-item" [src]="video2" allowfullscreen></iframe>
-                      </div>
-                    </div>
-                    <div class="col-lg-7 col-md-12">
-                      <h3 class="s1">{{videoPerson2.name}} | {{videoPerson2.uni}}</h3>
-                      <h3 class="s2blue">Offer: {{videoPerson2.jobLoc}}, {{videoPerson2.job}}</h3>
-                      <p class="s2 description">{{videoPerson2.description}}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="card video-card">
-                  <div class="row video-row">
-                    <div class="col-lg-5 col-md-12">
-                      <div class="embed-responsive embed-responsive-16by9 video">
-                        <iframe class="embed-responsive-item" [src]="video3" allowfullscreen></iframe>
-                      </div>
-                    </div>
-                    <div class="col-lg-7 col-md-12">
-                      <h3 class="s1">{{videoPerson3.name}} | {{videoPerson3.uni}}</h3>
-                      <h3 class="s2blue">Offer: {{videoPerson3.jobLoc}}, {{videoPerson3.job}}</h3>
-                      <p class="s2 description">{{videoPerson3.description}}</p>
+                    <div class="s2 description">
+                      {{ person.details}}
                     </div>
                   </div>
                 </div>
@@ -83,24 +57,20 @@
   <section id="section2">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4" *ngFor="let person of successfulpeople">
-          <div class="successcasescontainer">
-            <div class="praise-card">
-              <img class="successcasesimage" src="{{ person.image }}" alt="img">
-              <div class="div1">
-                <h3 class="s1">
-                  {{ person.name }}&nbsp;|&nbsp;{{ person.university }}
-                </h3>
-                <div class="s2blue">
-                  <div class="div3">
-                    Offer: {{ person.offerlocation }}, {{ person.offerposition }}
-                  </div>
-                  <div class="div3">Program: {{ person.courses }}
-                  </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 d-flex align-items-stretch" *ngFor="let videoPerson of videoPersons">
+          <div class="card video-card">
+            <div class="row video-row">
+              <div class="col-12">
+                <div class="embed-responsive embed-responsive-16by9 video">
+                  <iframe class="embed-responsive-item" [src]="videoPerson.video" allowfullscreen></iframe>
                 </div>
               </div>
-              <div class="s2 description">
-                {{ person.details}}
+            </div>
+            <div class="row video-row">
+              <div class="col-12">
+                <h3 class="s1">{{videoPerson.name}} | {{videoPerson.uni}}</h3>
+                <h3 class="s2blue">Offer: {{videoPerson.jobLoc}}, {{videoPerson.job}}</h3>
+                <p class="s2 description">{{videoPerson.description}}</p>
               </div>
             </div>
           </div>
