@@ -9,6 +9,12 @@ import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { MatFormFieldModule} from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 
+
+// import ngx-translate and the http loader
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {HttpClient} from '@angular/common/http';
+
 // Begin all components
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './support/navbar/navbar.component';
@@ -73,10 +79,20 @@ const routes: Routes = [
     MatCheckboxModule,
     MatSelectModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
+  })
   ],
   exports:[RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
