@@ -12,7 +12,9 @@ export class SuccesscasesComponent implements OnInit {
   video2:any;
   video3:any;
 
-  videoPerson1 = {
+videoPersons: any[] = [
+  {
+    video: 'https://www.youtube.com/embed/Nbpl_8ijhUo',
     name: 'Neo',
     uni: 'ICL Business School',
     job: 'Junior Developer',
@@ -22,8 +24,9 @@ export class SuccesscasesComponent implements OnInit {
     basic knowledge in HTML and CSS to being able to proficiently use the 
     Angular framework with JavaScript and TypeScript, and able to use the 
     Laravel framework (PHP) as a RESTful API.`
-  }
-  videoPerson2 = {
+  },
+  {
+    video: 'https://www.youtube.com/embed/qw2b4HEgoeA',
     name: 'Bill',
     uni: 'AUT',
     job: 'Junior Developer',
@@ -32,8 +35,9 @@ export class SuccesscasesComponent implements OnInit {
     While at Gradspace, Bill learnt and entered the depth of the Angular 
     framework, developed essential leadership skills while leading a team 
     of graduates to complete a major commercial project.`
-  }
-  videoPerson3 = {
+  },
+  {
+    video: 'https://www.youtube.com/embed/EYd_USvuDdI',
     name: 'Pirlo',
     uni: 'AUT',
     job: 'Intermediate Developer',
@@ -41,6 +45,8 @@ export class SuccesscasesComponent implements OnInit {
     description: `Pirlo came to us in July 2017. While at Gradspace, 
     Pirlo learnt the Angular framework, NodeJS and used them to create a commercial web based chatting application.`
   }
+];
+
   successfulpeople: any[] = [
     {
       "image":"../../assets/tutor_images/successcasesirene.jpg",
@@ -49,20 +55,20 @@ export class SuccesscasesComponent implements OnInit {
       "offerlocation":"Magiq Software",
       "offerposition":"Junior Developer",
       "courses":"Software Developer Programme",
-      "details":"Gradspace helped me to improve my technical skills and \
-      lots of smart tips on how to make myself more employable. You also \
-      get lots of chances to work on real live projects with experienced \
-      developers in the programme. It's no surprise that you’ll gain heaps \
-      of practical experience from the programme that you don’t get from \
-      the university. Thanks Gradspace for providing this fantastic \
-      program for IT graduates. "
+      "details":`Gradspace helped me to improve my technical skills and 
+      lots of smart tips on how to make myself more employable. You also 
+      get lots of chances to work on real live projects with experienced 
+      developers in the programme. It's no surprise that you’ll gain heaps 
+      of practical experience from the programme that you don’t get from 
+      the university. Thanks Gradspace for providing this fantastic 
+      program for IT graduates.`
     }
   ];
   
   constructor(private sanitizer: DomSanitizer) { 
-    this.video1 = sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/Nbpl_8ijhUo");
-    this.video2 = sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/qw2b4HEgoeA");
-    this.video3 = sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/EYd_USvuDdI");
+    this.videoPersons.forEach(person => {
+      person.video = sanitizer.bypassSecurityTrustResourceUrl(person.video);
+    });
   }
   ngOnInit() {
   }

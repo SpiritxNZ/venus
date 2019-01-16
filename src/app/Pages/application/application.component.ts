@@ -12,9 +12,13 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 
 export class ApplicationComponent implements OnInit {
+  
   isBrowser = false
   errorMessage: string;
   successMessage: string;
+  myForm: FormGroup;
+  divname: any = 1;
+
   interests: any[] = [
     {
       "input": "input1",
@@ -35,15 +39,12 @@ export class ApplicationComponent implements OnInit {
       "name": "Business Analyst Program"
     }
   ];
-  id = 1;
-  myForm: FormGroup;
-  divname: any = 1;
 
   constructor(
     @Inject(PLATFORM_ID) private platformId,
     private meta: Meta,
     private titleService: Title,
-    private fb: FormBuilder,
+    private formBuilder: FormBuilder,
     private apiService: ApiService,
 
   ) {
@@ -62,12 +63,7 @@ export class ApplicationComponent implements OnInit {
     if (!this.isBrowser) {
       return;
     }
-    this.myForm = this.fb.group({
-      email: ['', [
-        Validators.required,
-        Validators.minLength(6),
-        Validators.email
-      ]],
+    this.myForm = this.formBuilder.group({
       firstname: ['', [
         Validators.required,
         Validators.minLength(2),
@@ -77,6 +73,11 @@ export class ApplicationComponent implements OnInit {
         Validators.required,
         Validators.minLength(2),
         Validators.maxLength(30)
+      ]],
+      email: ['', [
+        Validators.required,
+        Validators.minLength(6),
+        Validators.email
       ]],
       phone: ['', [
         Validators.required,
