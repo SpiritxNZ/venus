@@ -27,4 +27,12 @@ export class ApiService {
   showCourse(courseId){
     return this.http.get(this.baseUrl+'/findcourses/'+courseId)
   }
+
+  getAllBlogs(){
+    return this.http.get(this.baseUrl+'/gradspace/blogs')
+  }
+
+  getBlog(blogId){
+    return this.http.get(this.baseUrl+'/gradspace/blogs/'+blogId)
+  }
 }
