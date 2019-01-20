@@ -89,7 +89,7 @@ const routes: Routes = [
       }
   })
   ],
-  exports:[RouterModule],
+  exports:[RouterModule,NavbarComponent,FooterComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

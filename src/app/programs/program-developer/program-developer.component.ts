@@ -1,7 +1,8 @@
 import { Component, OnInit , Inject, PLATFORM_ID } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { isPlatformBrowser } from '@angular/common';
-
+import { LangService } from '../../services/lang.service';
+import {TranslateService} from '@ngx-translate/core';
 @Component({
   selector: 'app-program-developer',
   templateUrl: './program-developer.component.html',
@@ -14,8 +15,11 @@ export class ProgramDeveloperComponent implements OnInit {
   constructor(
     @Inject(PLATFORM_ID) private platformId,
     private meta: Meta,
-    private titleService: Title
+    private titleService: Title,
+    private translate: TranslateService,
+    private data: LangService
   ) {
+    translate.setDefaultLang('program-developer'+this.data.test);
     if (isPlatformBrowser(this.platformId)) {
       this.isBrowser = true
     }

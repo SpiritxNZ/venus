@@ -4,6 +4,8 @@ import { isPlatformBrowser } from '@angular/common';
 import 'core-js/es7/reflect';
 import { ApiService } from '../../services/api.service';
 import { Meta, Title } from '@angular/platform-browser';
+import { LangService } from '../../services/lang.service';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-application',
@@ -46,8 +48,11 @@ export class ApplicationComponent implements OnInit {
     private titleService: Title,
     private formBuilder: FormBuilder,
     private apiService: ApiService,
+    private translate: TranslateService,
+    private data: LangService
 
   ) {
+    translate.setDefaultLang('application'+this.data.test);
     this.meta.addTags([
       { name: 'keywords', content: 'IT training, IT graduates, IT jobs, software developer training, software graduates, web developer training, web dev study, web dev jobs, web developer jobs, web developer graduate, front end graduate' },
       { name: 'description', content: 'Gradspace About us' }

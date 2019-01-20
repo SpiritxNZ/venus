@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-
+import { LangService } from '../services/lang.service';
+import {TranslateService} from '@ngx-translate/core';
 @Component({
   selector: 'app-successcases',
   templateUrl: './successcases.component.html',
@@ -65,8 +66,12 @@ videoPersons: any[] = [
     }
   ];
   
-  constructor(private sanitizer: DomSanitizer) { 
+  constructor(
+    private translate: TranslateService,
+    private data: LangService,
+    private sanitizer: DomSanitizer) { 
     this.videoPersons.forEach(person => {
+      translate.setDefaultLang('successcases'+this.data.test);
       person.video = sanitizer.bypassSecurityTrustResourceUrl(person.video);
     });
   }

@@ -5,14 +5,15 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+  <div class="collapse navbar-collapse justify-content-end"  id="collapsibleNavbar">
     <ul class="navbar-nav ">
       <!-- <li class="nav-item">
         <a class="nav-link navLink" routerLink='/courseshome' [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">Courses</a>
       </li> -->
 
+
       <li class="nav-item dropdown">
-        <a class="nav-link navLink dropdown-toggle" href="#" role="button" data-toggle="dropdown" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">Services
+        <a class="nav-link navLink dropdown-toggle" href="#" role="button" data-toggle="dropdown" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">{{'Navitem1' | translate }}
           <span class="sr-only">(current)</span>
         </a>
         <ul class="dropdown-menu" id="dropdown-menu" aria-labelledby="navbarDropdown" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)?'whiteB borderColor1':'transB1 borderColor2'">
@@ -23,7 +24,7 @@
           </li> -->
 
           <li class="coursesdropdown">
-            <a class="dropdown-item" routerLink='/program-developer' [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">Developer</a>
+            <a class="dropdown-item" routerLink='/program-developer' [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">{{'Navitem2' | translate }}</a>
           </li>
 
           <!-- <li class="coursesdropdown">
@@ -36,8 +37,10 @@
         </ul>
       </li>
 
+
+
       <li class="nav-item">
-        <a class="nav-link navLink" routerLink='/successcases' href="#" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">Success Cases</a>
+        <a class="nav-link navLink" routerLink='/successcases' href="#" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">{{'Navitem3' | translate }}</a>
       </li>
 
       <li class="nav-item">
@@ -48,8 +51,40 @@
         </li>
 
       <li class="nav-item">
-        <a class="nav-link navLink" routerLink="/application" href="#" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">Get Started</a>
+        <a class="nav-link navLink" routerLink="/application" href="#" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">{{'Navitem4' | translate }}</a>
       </li>
+          <!--change language-------------------------------------------------------------------------------- -->
+    <li class="nav-item dropdown">
+      <a class="nav-link navLink dropdown-toggle" href="#" role="button" data-toggle="dropdown" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">
+        <i class="fas fa-globe-americas"></i>
+        {{'Navitem5' | translate }}
+        <span class="sr-only">(current)</span>
+      </a>
+      <ul class="dropdown-menu" id="dropdown-menu" aria-labelledby="navbarDropdown" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)?'whiteB borderColor1':'transB1 borderColor2'">
+
+        <!-- <hr id="navhr" style=" border-top: 1px solid white;"> -->
+        <!-- <li class="coursesdropdown">
+          <a class="dropdown-item " routerLink='/programsmain' [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">Programs Menu</a>
+        </li> -->
+
+        <li class="coursesdropdown">
+          <i class="dropdown-item disabled" style="cursor:pointer"  (click)="changelangtocn()" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">中文</i>
+        </li>
+        <li class="coursesdropdown">
+          <i class="dropdown-item disabled" style="cursor:pointer" (click)="changelangtoen()" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">English</i>
+        </li>
+        <!-- <li class="coursesdropdown">
+          <a class="dropdown-item" routerLink='/program-developer-beginner' [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">Developer-Beginner</a>
+        </li> -->
+
+        <!-- <li class="coursesdropdown">
+          <a class="dropdown-item" routerLink='/program-tester' [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">Tester</a>
+        </li> -->
+      </ul>
+    </li>
+
+<!--change language-------------------------------------------------------------------------------- -->
     </ul>
+
   </div>
 </nav>
