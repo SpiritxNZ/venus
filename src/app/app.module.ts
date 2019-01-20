@@ -15,7 +15,6 @@ import { NavbarComponent } from './support/navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './support/footer/footer.component';
 import { ProgramsmainComponent } from './programs/programsmain/programsmain.component';
-import { BlogComponent } from './Pages/blog/blog.component';
 import { SuccesscasesComponent } from './successcases/successcases.component';
 import { AboutusComponent } from './Pages/aboutus/aboutus.component';
 import { ContactusComponent } from './Pages/contactus/contactus.component';
@@ -26,11 +25,14 @@ import { FaqComponent } from './Pages/faq/faq.component';
 import { ProgramTesterComponent } from './programs/program-tester/program-tester.component';
 import { ProgramDeveloperComponent } from './programs/program-developer/program-developer.component';
 import { ProgramDeveloperBeginnerComponent } from './programs/program-developer-beginner/program-developer-beginner.component';
+import { BlogsListComponent } from './blog/blogs-list/blogs-list.component';
+import { BlogComponent } from './blog/blog/blog.component';
 
 const routes: Routes = [
   { path:'', component:HomeComponent },
   { path:'programsmain', component:ProgramsmainComponent },
-  { path:'blog', component:BlogComponent },
+  { path:'blogs', component:BlogsListComponent },
+  { path:'blogs/:id', component:BlogComponent },
   { path:'successcases', component:SuccesscasesComponent },
   { path:'aboutus', component:AboutusComponent },
   { path:'contactus', component:ContactusComponent },
@@ -51,7 +53,6 @@ const routes: Routes = [
     HomeComponent,
     FooterComponent,
     ProgramsmainComponent,
-    BlogComponent,
     SuccesscasesComponent,
     AboutusComponent,
     ContactusComponent,
@@ -61,8 +62,9 @@ const routes: Routes = [
     FaqComponent,
     ProgramTesterComponent,
     ProgramDeveloperComponent,
-    ProgramDeveloperBeginnerComponent
-
+    ProgramDeveloperBeginnerComponent,
+    BlogsListComponent,
+    BlogComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
