@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import {TranslateService} from '@ngx-translate/core';
+import { ActivatedRoute } from "@angular/router";
 @Component({
   selector: 'app-faq',
   templateUrl: './faq.component.html',
@@ -28,7 +29,10 @@ export class FaqComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(
+    private translate: TranslateService,
+    private route: ActivatedRoute
+  ) {translate.setDefaultLang(this.route.snapshot.paramMap.get('lang')); }
 
   ngOnInit() {
   }

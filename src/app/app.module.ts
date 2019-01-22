@@ -35,21 +35,23 @@ import { BlogsListComponent } from './blog/blogs-list/blogs-list.component';
 import { BlogComponent } from './blog/blog/blog.component';
 
 const routes: Routes = [
-  { path:'', component:HomeComponent },
-  { path:'programsmain', component:ProgramsmainComponent },
-  { path:'blogs', component:BlogsListComponent },
+  { path:'', redirectTo :'en/home', pathMatch: 'full' },
+  { path:':lang/home', component:HomeComponent },
+  { path:':lang/programsmain', component:ProgramsmainComponent },
+  { path:':lang/blogs', component:BlogsListComponent },
   { path:'blogs/:id', component:BlogComponent },
-  { path:'successcases', component:SuccesscasesComponent },
-  { path:'aboutus', component:AboutusComponent },
+  { path:':lang/successcases', component:SuccesscasesComponent },
+  { path:':lang/aboutus', component:AboutusComponent },
   { path:'contactus', component:ContactusComponent },
-  { path:'courseshome', component:CourseshomeComponent },
-  { path:'courses/:id', component:CoursesComponent },
-  { path:'program-developer', component: ProgramDeveloperComponent},
-  { path:'program-developer-beginner', component: ProgramDeveloperBeginnerComponent},
-  { path:'program-tester', component: ProgramTesterComponent},
-  { path:'application', component:ApplicationComponent },
-  { path:'faq', component:FaqComponent },
-  { path: '**',  component: HomeComponent }
+  { path:':lang/courseshome', component:CourseshomeComponent },
+  { path:':lang/courses', component:CoursesComponent },
+  // { path:':lang/courses/:id', component:CoursesComponent },
+  { path:':lang/program-developer', component: ProgramDeveloperComponent},
+  { path:':lang/program-developer-beginner', component: ProgramDeveloperBeginnerComponent},
+  { path:':lang/program-tester', component: ProgramTesterComponent},
+  { path:':lang/application', component:ApplicationComponent },
+  { path:':lang/faq', component:FaqComponent },
+  // { path: '**',  component: HomeComponent }
   ];
 
 @NgModule({
@@ -96,6 +98,7 @@ const routes: Routes = [
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }

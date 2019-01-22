@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
 import { ApiService } from '../../services/api.service';
 import { ActivatedRoute } from '@angular/router';
+import {TranslateService} from '@ngx-translate/core';
 
 
 @Component({
@@ -47,8 +48,10 @@ export class CoursesComponent implements OnInit {
   constructor(
     public apiService: ApiService,
     private route: ActivatedRoute,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private translate: TranslateService
   ) { 
+    translate.setDefaultLang(this.route.snapshot.paramMap.get('lang'));
     this.courseId = this.route.snapshot.params['id'];
     this.currentLecture = 0;
     

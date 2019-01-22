@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md fixed-top " id="imnavbar" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)?'whiteB borderColor1':'transB1 borderColor2'">
   <!-- Brand/logo -->
-  <h1   routerLink='/' alt="tutoring" style="height: 30px; padding-top: 5px;font-size: 23px; font-family: Coltan-Gea-Bold; outline: 0; cursor: pointer;" class="m1" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">Gradspace</h1>
+  <a [routerLink]="['/'+language+'/home']"  id='gradspaceicon'  alt="tutoring" style="text-decoration: none; height: 30px; padding-top: 5px;font-size: 23px; font-family: Coltan-Gea-Bold; outline: 0; cursor: pointer;" class="m1" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">Gradspace</a>
   <!-- Links -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
@@ -24,7 +24,7 @@
           </li> -->
 
           <li class="coursesdropdown">
-            <a class="dropdown-item" routerLink='/program-developer' [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">{{'Navitem2' | translate }}</a>
+            <a class="dropdown-item" [routerLink]="['/'+language+'/program-developer']"  [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">{{'Navitem2' | translate }}</a>
           </li>
 
           <!-- <li class="coursesdropdown">
@@ -40,7 +40,7 @@
 
 
       <li class="nav-item">
-        <a class="nav-link navLink" routerLink='/successcases' href="#" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">{{'Navitem3' | translate }}</a>
+        <a class="nav-link navLink" [routerLink]="['/'+language+'/successcases']"    [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">{{'Navitem3' | translate }}</a>
       </li>
 
       <li class="nav-item">
@@ -51,7 +51,7 @@
         </li>
 
       <li class="nav-item">
-        <a class="nav-link navLink" routerLink="/application" href="#" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">{{'Navitem4' | translate }}</a>
+        <a class="nav-link navLink" [routerLink]="['/'+language+'/application']"  [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">{{'Navitem4' | translate }}</a>
       </li>
           <!--change language-------------------------------------------------------------------------------- -->
     <li class="nav-item dropdown">
@@ -68,10 +68,10 @@
         </li> -->
 
         <li class="coursesdropdown">
-          <i class="dropdown-item disabled" style="cursor:pointer"  (click)="changelangtocn()" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">中文</i>
+          <a class="dropdown-item" style="cursor:pointer" [href]="['http://localhost:4200/cn'+component]"  [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">中文</a>
         </li>
         <li class="coursesdropdown">
-          <i class="dropdown-item disabled" style="cursor:pointer" (click)="changelangtoen()" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">English</i>
+          <a class="dropdown-item" style="cursor:pointer" [href]="['http://localhost:4200/en'+component]"  [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">English</a>
         </li>
         <!-- <li class="coursesdropdown">
           <a class="dropdown-item" routerLink='/program-developer-beginner' [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">Developer-Beginner</a>

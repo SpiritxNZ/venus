@@ -1,9 +1,9 @@
-import { Component, OnInit, ElementRef, Inject, PLATFORM_ID,EventEmitter, Input, Output } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { Component, OnInit, ElementRef, Inject, PLATFORM_ID,EventEmitter, Input, Output,OnChanges } from '@angular/core';
+import { isPlatformBrowser, Location } from '@angular/common';
 import * as $ from 'jquery';
 import {TranslateService} from '@ngx-translate/core';
-import { LangService } from '../../services/lang.service';
-import { Router } from '@angular/router';
+import { Router, Route } from '@angular/router';
+import { ActivatedRoute,NavigationStart,NavigationEnd  } from "@angular/router";
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -14,36 +14,48 @@ export class NavbarComponent implements OnInit {
   collapseStatus = false;
   screenStatus = false;
   isBrowser=false;
-  @Output() languageChange: EventEmitter<string> = new EventEmitter<string>();
-  private language: string;
-  private router:Router;
-  changelangtocn()
-  {
-    var datalang='cn';
-    this.data.changetesttocn();
-    this.translate.use(window.location.pathname+this.data.test);
-    this.router.navigate(['/successcases',datalang]);
-  }
-  changelangtoen()
-  {
-    var datalang='en';
-    this.data.changetesttoen();
-    this.translate.use(window.location.pathname+this.data.test);
-    this.router.navigate([window.location.href,datalang]);
-  }
+  language: string;
+  component=" ";
   constructor(
     @Inject(PLATFORM_ID) private platformId,
     private elem: ElementRef,
     private translate: TranslateService,
-    private data: LangService
-
-  ) {
-
+    private router:Router,
+    private route: ActivatedRoute,
+    private location: Location
+    ) {
+      
+ 
+    
     if (isPlatformBrowser(this.platformId)) {
       this.isBrowser = true
     }
+
    }
+
+
   ngOnInit() {
+    
+this.router.events
+.subscribe((event) => {
+  if (event instanceof NavigationEnd) { 
+    // NavigationEnd do something
+    let ba = event.urlAfterRedirects;
+    let e = ba.split("/")
+    this.language = e['1']
+    if(ba=='')
+    {
+      this.language='en'
+    }
+    if(e['2']){
+      this.component = '/'+e['2']
+    }
+  }
+});
+    
+    // console.log(this.location.path());
+    // console.log(this.language);
+    // console.log(this.component);
     if(!this.isBrowser){
       return ;
     }
@@ -80,5 +92,5 @@ export class NavbarComponent implements OnInit {
       this.collapseStatus = false;
     }
   }
-  
+
 }

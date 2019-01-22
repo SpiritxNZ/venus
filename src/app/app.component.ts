@@ -7,10 +7,6 @@ import { AngularWaitBarrier } from 'blocking-proxy/built/lib/angular_wait_barrie
 })
 export class AppComponent {
   title = 'findjob';
-  lang='en';
-  language: string = this.lang;
 
-  onlanguageChange(language: string) {
-    this.language = language;
-  }
+
 }

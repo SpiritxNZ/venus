@@ -1,8 +1,8 @@
 import { Component, OnInit , Inject, PLATFORM_ID } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { isPlatformBrowser } from '@angular/common';
-import { LangService } from '../../services/lang.service';
 import {TranslateService} from '@ngx-translate/core';
+import { ActivatedRoute } from "@angular/router";
 @Component({
   selector: 'app-program-developer',
   templateUrl: './program-developer.component.html',
@@ -11,15 +11,16 @@ import {TranslateService} from '@ngx-translate/core';
 
 export class ProgramDeveloperComponent implements OnInit {
   isBrowser=false;
-
+  currentlang=" ";
   constructor(
     @Inject(PLATFORM_ID) private platformId,
     private meta: Meta,
     private titleService: Title,
     private translate: TranslateService,
-    private data: LangService
+    private route: ActivatedRoute
+    
   ) {
-    translate.setDefaultLang('program-developer'+this.data.test);
+    translate.setDefaultLang('program-developer'+this.route.snapshot.paramMap.get('lang'));
     if (isPlatformBrowser(this.platformId)) {
       this.isBrowser = true
     }
@@ -28,9 +29,18 @@ export class ProgramDeveloperComponent implements OnInit {
       { name: 'description', content: 'Software developer training programme in Auckland.' }
     ])
     this.titleService.setTitle('Gradspace | Software developer training');
-  }
 
+
+    // this.route.params.subscribe( params => console.log(params) );
+
+  }
+  passdata()
+  {
+    this.currentlang=this.route.snapshot.paramMap.get('lang');
+  }
+  
   ngOnInit() {
+    this.passdata()
     // if(!this.isBrowser){
     //   return ;
     // }

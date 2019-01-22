@@ -1,6 +1,8 @@
 import { Component, OnInit , Inject, PLATFORM_ID } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { isPlatformBrowser } from '@angular/common';
+import {TranslateService} from '@ngx-translate/core';
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-programsmain',
@@ -14,8 +16,11 @@ export class ProgramsmainComponent implements OnInit {
   constructor(
     @Inject(PLATFORM_ID) private platformId,
     private meta: Meta,
-    private titleService: Title
+    private titleService: Title,
+    private translate: TranslateService,
+    private route: ActivatedRoute
   ) {
+    translate.setDefaultLang(this.route.snapshot.paramMap.get('lang')); 
     if (isPlatformBrowser(this.platformId)) {
       this.isBrowser = true
     }

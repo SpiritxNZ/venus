@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { LangService } from '../services/lang.service';
 import {TranslateService} from '@ngx-translate/core';
+import { Router } from '@angular/router';
+import { ActivatedRoute } from "@angular/router";
 @Component({
   selector: 'app-successcases',
   templateUrl: './successcases.component.html',
@@ -12,7 +13,7 @@ export class SuccesscasesComponent implements OnInit {
   video1:any;
   video2:any;
   video3:any;
-
+cnoren:string;
 videoPersons: any[] = [
   {
     video: 'https://www.youtube.com/embed/Nbpl_8ijhUo',
@@ -68,13 +69,19 @@ videoPersons: any[] = [
   
   constructor(
     private translate: TranslateService,
-    private data: LangService,
+    private router:Router,
+    private route: ActivatedRoute,
     private sanitizer: DomSanitizer) { 
+    this.translatePage();
+  }
+
+  translatePage(){
     this.videoPersons.forEach(person => {
-      translate.setDefaultLang('successcases'+this.data.test);
-      person.video = sanitizer.bypassSecurityTrustResourceUrl(person.video);
+      this.translate.setDefaultLang('successcases'+this.route.snapshot.paramMap.get('lang'));
+      person.video = this.sanitizer.bypassSecurityTrustResourceUrl(person.video);
     });
   }
+
   ngOnInit() {
   }
 }

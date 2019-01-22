@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
-
+import {TranslateService} from '@ngx-translate/core';
+import { ActivatedRoute } from "@angular/router";
 @Component({
   selector: 'app-courseshome',
   templateUrl: './courseshome.component.html',
   styleUrls: ['./courseshome.component.css']
 })
 export class CourseshomeComponent implements OnInit {
-
+  
   /** Test data for course cards. Properties:
    * name: name of the course; string
    * lecturer: lecturer/teacher for the course; string
@@ -24,12 +25,18 @@ export class CourseshomeComponent implements OnInit {
   }
 
 ];
-  
+  currentlang=" ";
   constructor(
+    private translate: TranslateService,
+    private route: ActivatedRoute,
     public apiService: ApiService
-  ) { }
-
+  ) {translate.setDefaultLang(this.route.snapshot.paramMap.get('lang'));  }
+  passdata()
+  {
+    this.currentlang=this.route.snapshot.paramMap.get('lang');
+  }
   ngOnInit() {
+    this.passdata;
     // Gets list of courses from API 
     this.apiService.getAllCourses().subscribe(
       (res)=>console.log(res),

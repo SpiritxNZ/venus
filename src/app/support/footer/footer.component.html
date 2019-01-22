@@ -4,17 +4,17 @@
       <div class="col-md-3 col-sm-6">
         <h5 >Gradspace</h5>
         <div *ngIf="isBrowser==true">
-          <p class="footer_list"><a routerLink="/blog">{{'footeritem1' | translate }}</a></p>
-          <p class="footer_list"><a routerLink="/successcases">{{'footeritem2' | translate }}</a></p>
-          <p class="footer_list"><a routerLink="/faq">{{'footeritem3' | translate }}</a></p>
-          <p class="footer_list"><a routerLink="/aboutus">{{'footeritem4' | translate }}</a></p>
+          <p class="footer_list"><a [routerLink]="['/'+language+'/blog']" >{{'footeritem1' | translate }}</a></p>
+          <p class="footer_list"><a [routerLink]="['/'+language+'/successcases']"  >{{'footeritem2' | translate }}</a></p>
+          <p class="footer_list"><a [routerLink]="['/'+language+'/faq']" >{{'footeritem3' | translate }}</a></p>
+          <p class="footer_list"><a [routerLink]="['/'+language+'/aboutus']" >{{'footeritem4' | translate }}</a></p>
           <!-- <p class="footer_list"><a routerLink="/contactus">Contact Us</a></p> -->
         </div>
         <div *ngIf="isBrowser==false">
-          <p class="footer_list"><a href="www.gradspace.org/blog">{{'footeritem1' | translate }}</a></p>
-          <p class="footer_list"><a href="www.gradspace.org/successcases">{{'footeritem2' | translate }}</a></p>
-          <p class="footer_list"><a href="www.gradspace.org/faq">{{'footeritem3' | translate }}</a></p>
-          <p class="footer_list"><a href="www.gradspace.org/aboutus">{{'footeritem4' | translate }}</a></p>
+          <p class="footer_list"><a [href]="['http://localhost:4200/'+language+'/blog']">{{'footeritem1' | translate }}</a></p>
+          <p class="footer_list"><a [href]="['http://localhost:4200/'+language+'/successcases']" >{{'footeritem2' | translate }}</a></p>
+          <p class="footer_list"><a [href]="['http://localhost:4200/'+language+'/faq']">{{'footeritem3' | translate }}</a></p>
+          <p class="footer_list"><a [href]="['http://localhost:4200/'+language+'/aboutus']" >{{'footeritem4' | translate }}</a></p>
           <!-- <p class="footer_list"><a href="http://www.gradspace.org/contactus">Contact Us</a></p> -->
         </div>
       </div>
@@ -22,8 +22,8 @@
       <div class="col-md-3 col-sm-6">
         <h5>Services</h5>
         <div *ngIf="isBrowser==true">
-          <p class="footer_list"><a routerLink="/courseshome">{{'footeritem5' | translate }}</a></p>
-          <p class="footer_list"><a routerLink="/programsmain">{{'footeritem6' | translate }}</a></p>
+          <p class="footer_list"><a [routerLink]="['/'+language+'/courseshome']" >{{'footeritem5' | translate }}</a></p>
+          <p class="footer_list"><a [routerLink]="['/'+language+'/programsmain']" >{{'footeritem6' | translate }}</a></p>
         </div>
         <div *ngIf="isBrowser==false">
           <p class="footer_list"><a href="www.gradspace.org/courseshome">{{'footeritem5' | translate }}</a></p>
@@ -34,10 +34,10 @@
       <div class="col-md-3 col-sm-6">
         <h5>Apply</h5>
         <div *ngIf="isBrowser==true">
-          <p class="footer_list"><a routerLink="/application">{{'footeritem7' | translate }}</a></p>
+          <p class="footer_list"><a [routerLink]="['/'+language+'/application']">{{'footeritem7' | translate }}</a></p>
         </div>
         <div *ngIf="isBrowser==false">
-          <p class="footer_list"><a href="www.gradspace.org/application">{{'footeritem7' | translate }}</a></p>
+          <p class="footer_list"><a [href]="['http://localhost:4200/'+language+'/application']">{{'footeritem7' | translate }}</a></p>
         </div>
       </div>
 

@@ -3,7 +3,7 @@
   <div id="headerdiv">
     <b class="j1">{{'hometitle' | translate }}</b>
     <h2 class="m2 mid1Content">Accelerate your IT career with personalised graduate career acceleration programs.</h2>
-    <button class="getstartbtn_blue"  type="button" name="button" routerLink="/application">Get Started</button>
+    <button class="getstartbtn_blue" style="text-decoration: none;"  type="button" name="button" [routerLink]="['/'+currentlang+'/application']" >Get Started</button>
     <!--button links to application page -->
   </div>
 </header>

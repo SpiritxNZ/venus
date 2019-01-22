@@ -303,9 +303,9 @@
   </div>
   <!-- using style.css btn getstartbtn_blue-->
   <div class="section5button" *ngIf="isBrowser==true">
-    <button class="getstartbtn_blue"  type="button" name="button" routerLink="/application">Apply Now</button>
+    <button class="getstartbtn_blue" [routerLink]="['/'+currentlang+'/application']"  type="button" name="button" >Apply Now</button>
   </div>
-  
+  <!-- [href]="['http://localhost:4200/'+language+'/application']" -->
   <div class="section5button" *ngIf="isBrowser==false">
     <button class="getstartbtn_blue"  type="button" name="button" href="www.gradspace.org/application">Apply Now</button>
   </div>
