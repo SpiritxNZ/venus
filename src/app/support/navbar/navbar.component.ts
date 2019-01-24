@@ -24,9 +24,8 @@ export class NavbarComponent implements OnInit {
     private route: ActivatedRoute,
     private location: Location
     ) {
-      
- 
-    
+
+
     if (isPlatformBrowser(this.platformId)) {
       this.isBrowser = true
     }
