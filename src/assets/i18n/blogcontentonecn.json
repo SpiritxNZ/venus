@@ -3,7 +3,7 @@
   "Navitem2": "开发人员",
   "Navitem3": "成功案例",
   "Navitem4": "开始",
-  "Navitem5": "新西兰",
+  "Navitem5": "新西兰",  
   "footeritem1": "博客",  
   "footeritem2": "成功案例",  
   "footeritem3": "常见问题",  
@@ -12,5 +12,5 @@
   "footeritem6": "项目",  
   "footeritem7": "开始",  
   "footeritem8": "脸书",
-  "blog_title": "博客"
-}
+  "blog_content_one_title":"我是标题"
+  }

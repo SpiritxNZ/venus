@@ -1,0 +1,11 @@
+#section1
+{
+    height: 40vh;
+    width: 100%;
+    background-image: url("../../../assets/header_images/blogheader.jpg");
+    background-size: cover;
+}
+.bigimageholder
+{
+    width: 100%;
+}

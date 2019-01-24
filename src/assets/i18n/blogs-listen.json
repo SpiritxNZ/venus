@@ -1,10 +1,9 @@
 {
-
   "Navitem1": "Services",
   "Navitem2": "Developer",
   "Navitem3": "Success Cases",
   "Navitem4": "Get Started",
-  "Navitem5": "NZ",
+  "Navitem5": "NZ",  
   "footeritem1": "Blog",  
   "footeritem2": "Success Cases",  
   "footeritem3": "FAQ",  
@@ -12,6 +11,7 @@
   "footeritem5": "Courses",  
   "footeritem6": "Programs",  
   "footeritem7": "Get Started",  
-  "footeritem8": "Facebook",
-  "blog_title": "Blog" 
-}
+  "footeritem8": "Facebook", 
+  "blogs-list_title": "Blog Home" 
+    
+  }

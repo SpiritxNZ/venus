@@ -33,13 +33,17 @@ import { ProgramDeveloperComponent } from './programs/program-developer/program-
 import { ProgramDeveloperBeginnerComponent } from './programs/program-developer-beginner/program-developer-beginner.component';
 import { BlogsListComponent } from './blog/blogs-list/blogs-list.component';
 import { BlogComponent } from './blog/blog/blog.component';
-
+import { BlogcontentoneComponent } from './blog/blog/content/blogcontentone/blogcontentone.component';
+import { BlogcontenttwoComponent } from './blog/blog/content/blogcontenttwo/blogcontenttwo.component';
 const routes: Routes = [
   { path:'', redirectTo :'en/home', pathMatch: 'full' },
   { path:':lang/home', component:HomeComponent },
   { path:':lang/programsmain', component:ProgramsmainComponent },
   { path:':lang/blogs', component:BlogsListComponent },
-  { path:'blogs/:id', component:BlogComponent },
+  { path:':lang/blogs-list', component:BlogsListComponent },
+  { path:':lang/blogcontentone', component:BlogcontentoneComponent },
+  { path:':lang/blogcontenttwo', component:BlogcontenttwoComponent },
+  { path:':lang/blog', component:BlogComponent },
   { path:':lang/successcases', component:SuccesscasesComponent },
   { path:':lang/aboutus', component:AboutusComponent },
   { path:'contactus', component:ContactusComponent },
@@ -72,7 +76,9 @@ const routes: Routes = [
     ProgramDeveloperComponent,
     ProgramDeveloperBeginnerComponent,
     BlogsListComponent,
-    BlogComponent
+    BlogComponent,
+    BlogcontentoneComponent,
+    BlogcontenttwoComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
