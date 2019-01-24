@@ -71,10 +71,10 @@
         </li> -->
 
         <li class="coursesdropdown">
-          <a class="dropdown-item" style="cursor:pointer" [href]="['http://localhost:4200/cn'+component]"  [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">中文</a>
+          <a class="dropdown-item" style="cursor:pointer" [href]="['/cn'+component]"  [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">中文</a>
         </li>
         <li class="coursesdropdown">
-          <a class="dropdown-item" style="cursor:pointer" [href]="['http://localhost:4200/en'+component]"  [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">English</a>
+          <a class="dropdown-item" style="cursor:pointer" [href]="['/en'+component]"  [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">English</a>
         </li>
         <!-- <li class="coursesdropdown">
           <a class="dropdown-item" routerLink='/program-developer-beginner' [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">Developer-Beginner</a>
