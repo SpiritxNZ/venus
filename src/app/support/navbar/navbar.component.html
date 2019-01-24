@@ -26,6 +26,9 @@
           <li class="coursesdropdown">
             <a class="dropdown-item" [routerLink]="['/'+language+'/program-developer']"  [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">{{'Navitem2' | translate }}</a>
           </li>
+          <li class="coursesdropdown">
+            <a class="dropdown-item" [routerLink]="['/'+language+'/program-tester']"  [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">{{'Navitem6' | translate }}</a>
+          </li>
 
           <!-- <li class="coursesdropdown">
             <a class="dropdown-item" routerLink='/program-developer-beginner' [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">Developer-Beginner</a>

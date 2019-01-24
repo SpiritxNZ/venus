@@ -3,7 +3,7 @@
 {
     height: 40vh;
     width: 100%;
-    background-image: url("../../../assets/header_images/abstract-access-close-up-1089438-BLUE.jpg");
+    background-image: url("../../../assets/header_images/wallpaper-digital-7.jpg");
     background-size: cover;
 }
 /* section2--------------------------------------------------------------------------------------------------------------------- */
@@ -97,13 +97,14 @@ hr
     position: absolute;
     left: 61%;
     top: 0px;
-    border-top: 2px dashed  #0099ff;
+    border-top: 2px dashed #0099ff;
     color: rgb(255, 255, 255);
     background-color: rgb(255, 255, 255);
     height: 1px;
     width: 75%;
     padding-left: 5px;
 }
+/* when mouse hover opacity become to 1 */
 .block
 {
     height: 45px;
@@ -117,6 +118,7 @@ hr
     width: 45px;
     position: relative;
 }
+/* set up different hr sizes for different screen sizes */
 @media only screen and (max-width: 768px){
     hr
     {
@@ -150,7 +152,6 @@ hr
 .section4container {
     position: relative;
     background-color: white;
-    height: 250px;
     width: 80%;
     display: inline-block;
     margin-bottom: 50px;
@@ -162,13 +163,13 @@ li.nav-item{
     color:  #0099ff;
     border-radius: 0;
 }
-.nav-link.active {
-    background-color: #0099ff;
-    border-radius: 0;
-}
 li.nav-item:hover
 {
     cursor:pointer;
+}
+.nav-link.active {
+    border-radius: 0;
+    background-color: #0099ff;
 }
 .nav-link
 {
@@ -180,7 +181,7 @@ li.nav-item:hover
 .container.tab-pane {
     margin: 0px;
     background-color:white;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 @media only screen and (max-width: 768px){
     .section4container {
@@ -219,7 +220,7 @@ li.nav-item:hover
   margin-bottom: 0.5rem;
 }
 #section5 .l2{
-  color:  #0099ff;
+  color: #0099ff;
 }
 #section5 .s2{
   font-weight: bold;
@@ -231,6 +232,7 @@ li.nav-item:hover
   color: white;
   margin-bottom: 0.5rem;
 }
+
 
 .course-info {
     text-align: justify;
