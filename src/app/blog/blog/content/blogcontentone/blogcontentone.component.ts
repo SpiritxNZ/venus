@@ -26,7 +26,7 @@ export class BlogcontentoneComponent implements OnInit {
       { name: 'keywords', content: 'IT training, IT graduates, IT jobs, software developer training, software graduates, web developer training, web dev study, web dev jobs, web developer jobs, web developer graduate, front end graduate'},
       { name: 'description', content: 'Gradspace Home, IT Career training in Auckland.' }
     ])
-    this.titleService.setTitle('Gradspace | Blogcontentone');
+    this.titleService.setTitle('2019新西兰IT工作就业免费讲座');
 
   }
 
