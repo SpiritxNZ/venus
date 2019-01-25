@@ -10,6 +10,7 @@ import { ActivatedRoute,NavigationStart,NavigationEnd  } from "@angular/router";
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  chinese=false;
   navStatus = false;
   collapseStatus = false;
   screenStatus = false;
@@ -42,9 +43,18 @@ this.router.events
     let ba = event.urlAfterRedirects;
     let e = ba.split("/")
     this.language = e['1']
+    if(e['1']=='cn')
+    {
+      this.chinese=true;
+    }
+    else
+    {
+      this.chinese=false;
+    }
     if(ba=='')
     {
       this.language='en'
+      this.chinese=false
     }
     if(e['2']){
       this.component = '/'+e['2']

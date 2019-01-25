@@ -3,7 +3,7 @@
   "Navitem2": "软件开发培训",
   "Navitem3": "成功案例",
   "Navitem4": "联系我们",
-  "Navitem5": "新西兰",
+  "Navitem5": "English",
   "Navitem6": "软件测试培训",
   "footeritem1": "博客",  
   "footeritem2": "成功案例",  
@@ -13,5 +13,6 @@
   "footeritem6": "软件测试培训",
   "footeritem7": "联系我们",  
   "footeritem8": "facebook",  
-  "hometitle": "你的梦想从这启程"
+  "hometitle": "你的梦想从这启程",
+  "homesubtitle": "跨越职场校园的鸿沟，从零到搞定Offer，我们为你保驾护航"
 }

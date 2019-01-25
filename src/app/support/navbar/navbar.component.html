@@ -56,26 +56,38 @@
       <li class="nav-item">
         <a class="nav-link navLink" [routerLink]="['/'+language+'/application']"  [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">{{'Navitem4' | translate }}</a>
       </li>
+      <div *ngIf="chinese; then thenBlock else elseBlock"></div>
+      <ng-template #thenBlock>
+          <li class="nav-item">
+              <a class="nav-link navLink"  [href]="['/en'+component]"   [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'"><i class="fas fa-globe-americas"></i>English</a>
+            </li>
+      </ng-template>
+      <ng-template #elseBlock>
+          <li class="nav-item">
+              <a class="nav-link navLink"  [href]="['/cn'+component]"   [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'"><i class="fas fa-globe-americas"></i>中文</a>
+            </li>
+      </ng-template>
+      
           <!--change language-------------------------------------------------------------------------------- -->
-    <li class="nav-item dropdown">
+    <!-- <li class="nav-item dropdown">
       <a class="nav-link navLink dropdown-toggle" href="#" role="button" data-toggle="dropdown" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">
         <i class="fas fa-globe-americas"></i>
         {{'Navitem5' | translate }}
         <span class="sr-only">(current)</span>
       </a>
-      <ul class="dropdown-menu" id="dropdown-menu" aria-labelledby="navbarDropdown" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)?'whiteB borderColor1':'transB1 borderColor2'">
+      <ul class="dropdown-menu" id="dropdown-menu" aria-labelledby="navbarDropdown" [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)?'whiteB borderColor1':'transB1 borderColor2'"> -->
 
         <!-- <hr id="navhr" style=" border-top: 1px solid white;"> -->
         <!-- <li class="coursesdropdown">
           <a class="dropdown-item " routerLink='/programsmain' [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">Programs Menu</a>
         </li> -->
 
-        <li class="coursesdropdown">
+        <!-- <li class="coursesdropdown">
           <a class="dropdown-item" style="cursor:pointer" [href]="['/cn'+component]"  [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">中文</a>
         </li>
         <li class="coursesdropdown">
           <a class="dropdown-item" style="cursor:pointer" [href]="['/en'+component]"  [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">English</a>
-        </li>
+        </li> -->
         <!-- <li class="coursesdropdown">
           <a class="dropdown-item" routerLink='/program-developer-beginner' [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">Developer-Beginner</a>
         </li> -->
@@ -83,8 +95,8 @@
         <!-- <li class="coursesdropdown">
           <a class="dropdown-item" routerLink='/program-tester' [ngClass]="(screenStatus && (navStatus || collapseStatus) ) || (!screenStatus && navStatus)? 'blackF':'whiteF'">Tester</a>
         </li> -->
-      </ul>
-    </li>
+      <!-- </ul>
+    </li> -->
 
 <!--change language-------------------------------------------------------------------------------- -->
     </ul>
