@@ -35,14 +35,17 @@ import { BlogsListComponent } from './blog/blogs-list/blogs-list.component';
 import { BlogComponent } from './blog/blog/blog.component';
 import { BlogcontentoneComponent } from './blog/blog/content/blogcontentone/blogcontentone.component';
 import { BlogcontenttwoComponent } from './blog/blog/content/blogcontenttwo/blogcontenttwo.component';
+import { PageNotFoundComponent } from './Pages/page-not-found/page-not-found.component';
+
+
 const routes: Routes = [
   { path:'', redirectTo :'en/home', pathMatch: 'full' },
   { path:':lang/home', component:HomeComponent },
   { path:':lang/programsmain', component:ProgramsmainComponent },
   { path:':lang/blogs', component:BlogsListComponent },
   { path:':lang/blogs-list', component:BlogsListComponent },
-  { path:':lang/blogcontentone', component:BlogcontentoneComponent },
-  { path:':lang/blogcontenttwo', component:BlogcontenttwoComponent },
+  { path:':lang/blog-nz-it-job-seminar', component:BlogcontentoneComponent },
+  { path:':lang/blog-gradspace-intro', component:BlogcontenttwoComponent },
   { path:':lang/blog', component:BlogComponent },
   { path:':lang/successcases', component:SuccesscasesComponent },
   { path:':lang/aboutus', component:AboutusComponent },
@@ -55,7 +58,7 @@ const routes: Routes = [
   { path:':lang/program-tester', component: ProgramTesterComponent},
   { path:':lang/application', component:ApplicationComponent },
   { path:':lang/faq', component:FaqComponent },
-  // { path: '**',  component: HomeComponent }
+  { path: '**',  component: PageNotFoundComponent }
   ];
 
 @NgModule({
@@ -78,7 +81,8 @@ const routes: Routes = [
     BlogsListComponent,
     BlogComponent,
     BlogcontentoneComponent,
-    BlogcontenttwoComponent
+    BlogcontenttwoComponent,
+    PageNotFoundComponent
   ],
   imports: [
     RouterModule.forRoot(routes),

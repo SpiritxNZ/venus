@@ -17,13 +17,13 @@ export class BlogcontenttwoComponent implements OnInit {
     private route: ActivatedRoute,
     private translate: TranslateService
   ) {
-    translate.setDefaultLang('blogcontenttwo'+this.route.snapshot.paramMap.get('lang'));
+    translate.setDefaultLang('blog-gradspace-intro-'+this.route.snapshot.paramMap.get('lang'));
     if (isPlatformBrowser(this.platformId)) {
       this.isBrowser = true
     }
     this.meta.addTags([
       { name: 'keywords', content: 'IT training, IT graduates, IT jobs, software developer training, software graduates, web developer training, web dev study, web dev jobs, web developer jobs, web developer graduate, front end graduate'},
-      { name: 'description', content: 'Gradspace Home, IT Career training in Auckland.' }
+      { name: 'description', content: 'Gradspace Blog introduction' }
     ])
     this.titleService.setTitle('新西兰学IT找不到工作？原来是这个原因');
 

@@ -18,15 +18,15 @@ export class BlogcontentoneComponent implements OnInit {
     private route: ActivatedRoute,
     private translate: TranslateService
   ) {
-    translate.setDefaultLang('blogcontentone'+this.route.snapshot.paramMap.get('lang'));
+    translate.setDefaultLang('blog-nz-it-job-seminar-'+this.route.snapshot.paramMap.get('lang'));
     if (isPlatformBrowser(this.platformId)) {
       this.isBrowser = true
     }
     this.meta.addTags([
       { name: 'keywords', content: 'IT training, IT graduates, IT jobs, software developer training, software graduates, web developer training, web dev study, web dev jobs, web developer jobs, web developer graduate, front end graduate'},
-      { name: 'description', content: 'Gradspace Home, IT Career training in Auckland.' }
+      { name: 'description', content: 'Gradspace NZ IT career seminar' }
     ])
-    this.titleService.setTitle('2019新西兰IT工作就业免费讲座');
+    this.titleService.setTitle('2019新西兰IT 工作就业免费讲座');
 
   }
 
