@@ -52,7 +52,7 @@ export class ApplicationComponent implements OnInit {
     private route: ActivatedRoute
 
   ) {
-    translate.setDefaultLang('application'+this.route.snapshot.paramMap.get('lang'));
+    translate.setDefaultLang('application-'+this.route.snapshot.paramMap.get('lang'));
     this.meta.addTags([
       { name: 'keywords', content: 'IT training, IT graduates, IT jobs, software developer training, software graduates, web developer training, web dev study, web dev jobs, web developer jobs, web developer graduate, front end graduate' },
       { name: 'description', content: 'Gradspace About us' }

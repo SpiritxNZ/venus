@@ -45,7 +45,39 @@
         <div class="col-10">
           <div class="carousel slide" id="carousel" data-ride="carousel" data-interval="false">
             <div class="carousel-inner">
-              <div class="carousel-item active" *ngFor="let person of successfulpeople">
+
+
+                <div class="carousel-item active" >
+                    <div class="successcasescontainer">
+                      <div class="praise-card">
+                        <img class="successcasesimage" src="../../assets/tutor_images/successcasesirene.jpg" alt="img">
+                        <div class="div1">
+                          <h3 class="s1">
+                              Irene&nbsp;|&nbsp;University of Auckland
+                          </h3>
+                          <div class="s2blue">
+                            <div class="div3">
+                              Offer: Magiq Software, Junior Developer
+                            </div>
+                            <div class="div3">Program: Software Developer Programme
+                            </div>
+                          </div>
+                        </div>
+                        <div class="s2 description">
+                            Gradspace helped me to improve my technical skills and 
+                            lots of smart tips on how to make myself more employable. You also 
+                            get lots of chances to work on real live projects with experienced 
+                            developers in the programme. It's no surprise that you’ll gain heaps 
+                            of practical experience from the programme that you don’t get from 
+                            the university. Thanks Gradspace for providing this fantastic 
+                            program for IT graduates.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+              <div class="carousel-item" *ngFor="let person of successfulpeople">
                 <div class="successcasescontainer">
                   <div class="praise-card">
                     <img class="successcasesimage" src="{{ person.image }}" alt="img">

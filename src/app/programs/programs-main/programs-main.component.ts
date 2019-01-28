@@ -6,8 +6,8 @@ import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-programsmain',
-  templateUrl: './programsmain.component.html',
-  styleUrls: ['./programsmain.component.css']
+  templateUrl: './programs-main.component.html',
+  styleUrls: ['./programs-main.component.css']
 })
 export class ProgramsmainComponent implements OnInit {
 
@@ -20,7 +20,7 @@ export class ProgramsmainComponent implements OnInit {
     private translate: TranslateService,
     private route: ActivatedRoute
   ) {
-    translate.setDefaultLang(this.route.snapshot.paramMap.get('lang')); 
+    translate.setDefaultLang('programs-main-'+this.route.snapshot.paramMap.get('lang'));
     if (isPlatformBrowser(this.platformId)) {
       this.isBrowser = true
     }

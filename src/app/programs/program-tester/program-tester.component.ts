@@ -20,7 +20,7 @@ export class ProgramTesterComponent implements OnInit {
     private route: ActivatedRoute
     
   ) {
-    translate.setDefaultLang('program-tester'+this.route.snapshot.paramMap.get('lang'));
+    translate.setDefaultLang('program-tester-'+this.route.snapshot.paramMap.get('lang'));
     if (isPlatformBrowser(this.platformId)) {
       this.isBrowser = true
     }

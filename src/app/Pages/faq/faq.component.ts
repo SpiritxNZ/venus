@@ -32,7 +32,7 @@ export class FaqComponent implements OnInit {
   constructor(
     private translate: TranslateService,
     private route: ActivatedRoute
-  ) {translate.setDefaultLang(this.route.snapshot.paramMap.get('lang')); }
+  ) {translate.setDefaultLang('faq-'+this.route.snapshot.paramMap.get('lang')); }
 
   ngOnInit() {
   }

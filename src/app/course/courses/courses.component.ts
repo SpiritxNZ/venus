@@ -51,7 +51,7 @@ export class CoursesComponent implements OnInit {
     private sanitizer: DomSanitizer,
     private translate: TranslateService
   ) { 
-    translate.setDefaultLang(this.route.snapshot.paramMap.get('lang'));
+    translate.setDefaultLang('courses-'+this.route.snapshot.paramMap.get('lang'));
     this.courseId = this.route.snapshot.params['id'];
     this.currentLecture = 0;
     

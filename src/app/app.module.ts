@@ -20,11 +20,11 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './support/navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './support/footer/footer.component';
-import { ProgramsmainComponent } from './programs/programsmain/programsmain.component';
-import { SuccesscasesComponent } from './successcases/successcases.component';
-import { AboutusComponent } from './Pages/aboutus/aboutus.component';
+import { ProgramsmainComponent } from './programs/programs-main/programs-main.component';
+import { SuccesscasesComponent } from './success-cases/success-cases.component';
+import { AboutusComponent } from './Pages/about-us/about-us.component';
 import { ContactusComponent } from './Pages/contactus/contactus.component';
-import { CourseshomeComponent } from './course/courseshome/courseshome.component';
+import { CourseshomeComponent } from './course/courses-home/courses-home.component';
 import { ApplicationComponent } from './Pages/application/application.component';
 import { CoursesComponent } from './course/courses/courses.component';
 import { FaqComponent } from './Pages/faq/faq.component';
@@ -41,16 +41,16 @@ import { PageNotFoundComponent } from './Pages/page-not-found/page-not-found.com
 const routes: Routes = [
   { path:'', redirectTo :'en/home', pathMatch: 'full' },
   { path:':lang/home', component:HomeComponent },
-  { path:':lang/programsmain', component:ProgramsmainComponent },
+  { path:':lang/programs-main', component:ProgramsmainComponent },
   { path:':lang/blogs', component:BlogsListComponent },
   { path:':lang/blogs-list', component:BlogsListComponent },
   { path:':lang/blog-nz-it-job-seminar', component:BlogcontentoneComponent },
   { path:':lang/blog-gradspace-intro', component:BlogcontenttwoComponent },
   { path:':lang/blog', component:BlogComponent },
-  { path:':lang/successcases', component:SuccesscasesComponent },
-  { path:':lang/aboutus', component:AboutusComponent },
-  { path:'contactus', component:ContactusComponent },
-  { path:':lang/courseshome', component:CourseshomeComponent },
+  { path:':lang/success-cases', component:SuccesscasesComponent },
+  { path:':lang/about-us', component:AboutusComponent },
+  { path:'contact-us', component:ContactusComponent },
+  { path:':lang/courses-home', component:CourseshomeComponent },
   { path:':lang/courses', component:CoursesComponent },
   // { path:':lang/courses/:id', component:CoursesComponent },
   { path:':lang/program-developer', component: ProgramDeveloperComponent},

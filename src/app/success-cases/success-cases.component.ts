@@ -5,8 +5,8 @@ import { Router } from '@angular/router';
 import { ActivatedRoute } from "@angular/router";
 @Component({
   selector: 'app-successcases',
-  templateUrl: './successcases.component.html',
-  styleUrls: ['./successcases.component.css']
+  templateUrl: './success-cases.component.html',
+  styleUrls: ['./success-cases.component.css']
 })
 
 export class SuccesscasesComponent implements OnInit {
@@ -51,19 +51,17 @@ videoPersons: any[] = [
 
   successfulpeople: any[] = [
     {
-      "image":"../../assets/tutor_images/successcasesirene.jpg",
-      "name": "Irene",
+      "image":"../../assets/tutor_images/successcasesmark.jpg",
+      "name": "Mark",
       "university":"University of Auckland",
-      "offerlocation":"Magiq Software",
+      "offerlocation":"Sands Software",
       "offerposition":"Junior Developer",
       "courses":"Software Developer Programme",
-      "details":`Gradspace helped me to improve my technical skills and 
-      lots of smart tips on how to make myself more employable. You also 
-      get lots of chances to work on real live projects with experienced 
-      developers in the programme. It's no surprise that you’ll gain heaps 
-      of practical experience from the programme that you don’t get from 
-      the university. Thanks Gradspace for providing this fantastic 
-      program for IT graduates.`
+      "details":`During my time at Gradspace, I learned not only the tech skills such as Angular, Javascript, 
+      CSS and Node.js but also soft skills like communication skills, 
+      time management skills, teamwork and problem-solving skills. Those soft skills are which you can’t get from the university. 
+      It helps me a lot to improve both my tech skills and soft skills til finally, I get a job from Macau as an IT developer. 
+      Highly recommend someone who graduated from university but doesn’t have many working experiences. `
     }
   ];
   

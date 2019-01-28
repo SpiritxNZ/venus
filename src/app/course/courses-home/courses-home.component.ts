@@ -4,8 +4,8 @@ import {TranslateService} from '@ngx-translate/core';
 import { ActivatedRoute } from "@angular/router";
 @Component({
   selector: 'app-courseshome',
-  templateUrl: './courseshome.component.html',
-  styleUrls: ['./courseshome.component.css']
+  templateUrl: './courses-home.component.html',
+  styleUrls: ['./courses-home.component.css']
 })
 export class CourseshomeComponent implements OnInit {
   
@@ -30,7 +30,7 @@ export class CourseshomeComponent implements OnInit {
     private translate: TranslateService,
     private route: ActivatedRoute,
     public apiService: ApiService
-  ) {translate.setDefaultLang(this.route.snapshot.paramMap.get('lang'));  }
+  ) {translate.setDefaultLang('courses-home-'+this.route.snapshot.paramMap.get('lang'));  }
   passdata()
   {
     this.currentlang=this.route.snapshot.paramMap.get('lang');

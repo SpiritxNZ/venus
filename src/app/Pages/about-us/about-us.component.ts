@@ -6,8 +6,8 @@ import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-aboutus',  
-  templateUrl: './aboutus.component.html',
-  styleUrls: ['./aboutus.component.css']
+  templateUrl: './about-us.component.html',
+  styleUrls: ['./about-us.component.css']
 })
 export class AboutusComponent implements OnInit {
 
@@ -18,7 +18,7 @@ export class AboutusComponent implements OnInit {
     private route: ActivatedRoute
   ) {
     // default language is english
-    translate.setDefaultLang('aboutus'+this.route.snapshot.paramMap.get('lang'));
+    translate.setDefaultLang('about-us-'+this.route.snapshot.paramMap.get('lang'));
     this.meta.addTags([
       { name: 'keywords', content: 'IT training, IT graduates, IT jobs, software developer training, software graduates, web developer training, web dev study, web dev jobs, web developer jobs, web developer graduate, front end graduate'},
       { name: 'description', content: 'Gradspace About us' }
