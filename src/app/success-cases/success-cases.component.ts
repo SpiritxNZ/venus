@@ -75,7 +75,7 @@ videoPersons: any[] = [
 
   translatePage(){
     this.videoPersons.forEach(person => {
-      this.translate.setDefaultLang('successcases'+this.route.snapshot.paramMap.get('lang'));
+      this.translate.setDefaultLang('success-cases-'+this.route.snapshot.paramMap.get('lang'));
       person.video = this.sanitizer.bypassSecurityTrustResourceUrl(person.video);
     });
   }
