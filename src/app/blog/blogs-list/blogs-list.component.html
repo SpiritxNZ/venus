@@ -1,94 +1,26 @@
 <section id="section2">
-    <div class="container" style="width:50%;">
+    <div class="container">
         <div class="row" style="padding-top:60px; text-align: left;">
-            <!--1st line-->
-            <div class="col-12" style="outline:none; cursor: pointer;" [routerLink]="['/'+currentlang+'/blog-nz-it-job-seminar']">
-                <img class="bigimageholder" style="text-align: -webkit-center;" src="../../../../../assets/blog_images/auckland.jpg">
-                <br><br>
-                <h1 class="m2" style="color:black;">2019 新西兰IT毕业生 就业讲座</h1>
-                <br>
-                <h1 class="s1" style="color:black;">伴随着2019的脚步，新的一年开学季马上就要到了；与此同时，也意味着又有许多刚毕业的留学生告别校园，加入求职大军中。</h1>
-                <h1 class="s2" style="padding-bottom:20px;">Published 24 Jan 2019</h1>
-            </div>
-            <br><br>
-            <br><br>
+          
 
-            <div class="col-12" style="outline:none; cursor: pointer;padding-top: 40px;" [routerLink]="['/'+currentlang+'/blog-gradspace-intro']">
-                <img class="bigimageholder" style="text-align: -webkit-center;" src="../../../../../assets/blog_images/whybloglist.jpg">
-                <br><br>
-                <h1 class="m2" style="color:black;">新西兰学IT找不到工作？原来是这个原因......</h1>
-                <br>
-                <h1 class="s1" style="color:black;">相当多的留学生从IT专业毕业后，却发现不要说企业的offer拿不到，连面试机会都没有！学IT的学生，花上一年时间也找不到工作的人并不少见。</h1>
-                <h1 class="s2" style="padding-bottom:20px;">Published 16 Jan 2019</h1>
+            <div *ngFor ="let blog of blogs" class="col-lg-6 col-md-6 col-12 cardzoom d-inline-flex" >
+                <div class="card" [routerLink]="['/'+currentlang+'/'+blog.link]" style="margin-bottom:60px;">
+                        <div class=" imgpadding" >
+                                <img class="bigimageholder" src= {{blog.image}} >
+                        </div>
+                        <div class="describe">
+                                <h1 class="subtitle"> {{blog.subtitle}} </h1>
+                                <br>
+                                <h2 class="text"> {{blog.description}} </h2>
+                                <br>        
+                                <h3 class="publishTime">{{blog.publishTime}}</h3>                                        
+                        </div>                       
+                </div>               
             </div>
-            <br><br>
-            <!--2nd line-->
-            <!-- <div class="col-xl-6" style="outline:none;cursor:pointer;" [routerLink]="['/'+currentlang+'/blogcontentone']">
-                    <img class="bigimageholder" style="text-align: -webkit-center;" src="../../../assets/blog_images/Engineering_Web.jpg">
-                    <br><br>
-                    <h1 class="m2" style="color:black;">How to register for the SAT internationally</h1>
-                    <br>
-                    <h1 class="s1" style="color:black;">The SAT is an entrance exam used by most colleges and universities in the US to make admissions decisions. The purpose of the SAT is to measure a student’s readiness for college.</h1>
-                    <h1 class="s2" style="padding-bottom:20px;">1hour ago</h1>
-            </div> -->
-            <!-- <div class="col-xl-6">
-                    <img class="bigimageholder" style="text-align: -webkit-center;" src="../../../assets/blog_images/Engineering_Web.jpg">
-                    <br><br>
-                    <h1 class="m2" style="color:black;">How to register for the SAT internationally</h1>
-                    <br>
-                    <h1 class="s1" style="color:black;">The SAT is an entrance exam used by most colleges and universities in the US to make admissions decisions. The purpose of the SAT is to measure a student’s readiness for college.</h1>
-                    <h1 class="s2" style="padding-bottom:20px;">1hour ago</h1>
-            </div> -->
-            <!--3rd line-->
-            <!-- <div class="col-xl-4">
-                    <img class="bigimageholder" style="text-align: -webkit-center;" src="../../../assets/blog_images/early_application.jpg">
-                    <br><br>
-                    <h1 class="m2" style="color:black;">How to register for the SAT internationally</h1>
-                    <br>
-                    <h1 class="s1" style="color:black;">The SAT is an entrance exam used by most colleges and universities in the US to make admissions decisions. The purpose of the SAT is to measure a student’s readiness for college.</h1>
-                    <h1 class="s2" style="padding-bottom:20px;">1hour ago</h1>
-            </div>
-            <div class="col-xl-4">
-                    <img class="bigimageholder" style="text-align: -webkit-center;" src="../../../assets/blog_images/early_decision_results.jpg">
-                    <br><br>
-                    <h1 class="m2" style="color:black;">How to register for the SAT internationally</h1>
-                    <br>
-                    <h1 class="s1" style="color:black;">The SAT is an entrance exam used by most colleges and universities in the US to make admissions decisions. The purpose of the SAT is to measure a student’s readiness for college.</h1>
-                    <h1 class="s2" style="padding-bottom:20px;">1hour ago</h1>
-            </div>
-            <div class="col-xl-4">
-                    <img class="bigimageholder" style="text-align: -webkit-center;" src="../../../assets/blog_images/letter.jpg">
-                    <br><br>
-                    <h1 class="m2" style="color:black;">How to register for the SAT internationally</h1>
-                    <br>
-                    <h1 class="s1" style="color:black;">The SAT is an entrance exam used by most colleges and universities in the US to make admissions decisions. The purpose of the SAT is to measure a student’s readiness for college.</h1>
-                    <h1 class="s2" style="padding-bottom:20px;">1hour ago</h1>
-            </div> -->
-            <!--4th line-->
-            <!-- <div class="col-xl-4">
-                    <img class="bigimageholder" style="text-align: -webkit-center;" src="../../../assets/blog_images/michael-d-beckwith-609520-unsplash.jpg">
-                    <br><br>
-                    <h1 class="m2" style="color:black;">How to register for the SAT internationally</h1>
-                    <br>
-                    <h1 class="s1" style="color:black;">The SAT is an entrance exam used by most colleges and universities in the US to make admissions decisions. The purpose of the SAT is to measure a student’s readiness for college.</h1>
-                    <h1 class="s2" style="padding-bottom:20px;">1hour ago</h1>
-            </div>
-            <div class="col-xl-4">
-                    <img class="bigimageholder" style="text-align: -webkit-center;" src="../../../assets/blog_images/desk-discussing-discussion-1311518.jpg">
-                    <br><br>
-                    <h1 class="m2" style="color:black;">How to register for the SAT internationally</h1>
-                    <br>
-                    <h1 class="s1" style="color:black;">The SAT is an entrance exam used by most colleges and universities in the US to make admissions decisions. The purpose of the SAT is to measure a student’s readiness for college.</h1>
-                    <h1 class="s2" style="padding-bottom:20px;">1hour ago</h1>
-            </div>
-            <div class="col-xl-4">
-                    <img class="bigimageholder" style="text-align: -webkit-center;" src="../../../assets/blog_images/desk-discussing-discussion-1311518.jpg">
-                    <br><br>
-                    <h1 class="m2" style="color:black;">How to register for the SAT internationally</h1>
-                    <br>
-                    <h1 class="s1" style="color:black;">The SAT is an entrance exam used by most colleges and universities in the US to make admissions decisions. The purpose of the SAT is to measure a student’s readiness for college.</h1>
-                    <h1 class="s2" style="padding-bottom:20px;">1hour ago</h1>
-            </div> -->
+
+        
+
+
         </div>
     </div>
 

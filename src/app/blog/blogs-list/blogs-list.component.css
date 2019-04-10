@@ -2,5 +2,40 @@
 .bigimageholder
 {
     width: 100%;
+    height:180px;
     overflow: hidden;
+    object-fit: cover;
+}
+.imgpadding{
+    padding:0px;
+}
+.subtitle{
+    color:black;
+    font-size: 20px;
+    font-weight: bold;
+}
+.text{
+    color: black;
+    font-size: 15px;
+    line-height: 1.6;
+}
+.publishTime{
+    color:black;
+    font-size: 13px;
+    padding:0px;
+    position: absolute;
+    bottom:0px;
+
+   
+}
+.describe{
+    padding:7px;
+   
+}
+.cardzoom:hover{
+    transform: scale(1.05);
+    transition-duration: 1s;
+}
+.card{
+    cursor: pointer;
 }

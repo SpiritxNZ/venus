@@ -112,3 +112,25 @@
         height: 40vh;
     }
 } */
+
+#section3 h4 {
+    text-align: center;
+}
+.imgcover{
+    text-align: center;
+    /* object-fit: cover; */
+    border-radius: 50%;
+    width:40%;
+    height:40%;     
+}
+.imgpos{
+    text-align: center;
+    
+}
+.imgpadding{
+    margin-top:-100px;
+}
+.imgcontain{
+    width:140px;
+    height:140px;
+}

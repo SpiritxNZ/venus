@@ -1,115 +1,47 @@
 <div class="background">
   <section id="section1">
-      <div class="jumbotron-fluid">
-          <h1 class="j1" style="color:white; background-color: transparent">
-            {{'successcasestitle' | translate }}
-          </h1>
-      </div>
+    <div class="jumbotron-fluid">
+      <h1 class="j1" style="color:white; background-color: transparent">
+        {{'successcasestitle' | translate }}
+      </h1>
+    </div>
   </section>
+  <div class="container">
 
-
+  <!-- Video person -->
   <section id="section2">
-    <div class="container">
       <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 d-flex align-items-stretch" *ngFor="let videoPerson of videoPersons">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 d-flex align-items-stretch"
+          *ngFor="let videoPerson of videoPersons">
           <div class="card video-card">
-            <div class="row video-row">
-              <div class="col-12">
-                <div class="embed-responsive embed-responsive-16by9 video">
-                  <iframe class="embed-responsive-item" [src]="videoPerson.video" allowfullscreen></iframe>
-                </div>
-              </div>
+            <div class="embed-responsive embed-responsive-16by9 video">
+              <iframe class="embed-responsive-item" [src]="videoPerson.video" allowfullscreen></iframe>
             </div>
-            <div class="row video-row">
-              <div class="col-12">
-                <h3 class="s1">{{videoPerson.name}} | {{videoPerson.uni}}</h3>
-                <h3 class="s2blue">Offer: {{videoPerson.jobLoc}}, {{videoPerson.job}}</h3>
-                <p class="s2 description">{{videoPerson.description}}</p>
-              </div>
-            </div>
+            <h3 class="s1">{{videoPerson.name}} | {{videoPerson.uni}}</h3>
+            <h3 class="s2blue">Offer: {{videoPerson.jobLoc}}, {{videoPerson.job}}</h3>
+            <p class="s2 description">{{videoPerson.description}}</p>
           </div>
         </div>
       </div>
-    </div>
   </section>
 
+  <!-- Image person -->
   <section id="section3">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-1">
-          <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-        </div>
-        <div class="col-10">
-          <div class="carousel slide" id="carousel" data-ride="carousel" data-interval="false">
-            <div class="carousel-inner">
-
-
-                <div class="carousel-item active" >
-                    <div class="successcasescontainer">
-                      <div class="praise-card">
-                        <img class="successcasesimage" src="../../assets/tutor_images/successcasesirene.jpg" alt="img">
-                        <div class="div1">
-                          <h3 class="s1">
-                              Irene&nbsp;|&nbsp;University of Auckland
-                          </h3>
-                          <div class="s2blue">
-                            <div class="div3">
-                              Offer: Magiq Software, Junior Developer
-                            </div>
-                            <div class="div3">Program: Software Developer Programme
-                            </div>
-                          </div>
-                        </div>
-                        <div class="s2 description">
-                            Gradspace helped me to improve my technical skills and 
-                            lots of smart tips on how to make myself more employable. You also 
-                            get lots of chances to work on real live projects with experienced 
-                            developers in the programme. It's no surprise that you’ll gain heaps 
-                            of practical experience from the programme that you don’t get from 
-                            the university. Thanks Gradspace for providing this fantastic 
-                            program for IT graduates.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-
-              <div class="carousel-item" *ngFor="let person of successfulpeople">
-                <div class="successcasescontainer">
-                  <div class="praise-card">
-                    <img class="successcasesimage" src="{{ person.image }}" alt="img">
-                    <div class="div1">
-                      <h3 class="s1">
-                        {{ person.name }}&nbsp;|&nbsp;{{ person.university }}
-                      </h3>
-                      <div class="s2blue">
-                        <div class="div3">
-                          Offer: {{ person.offerlocation }}, {{ person.offerposition }}
-                        </div>
-                        <div class="div3">Program: {{ person.courses }}
-                        </div>
-                      </div>
-                    </div>
-                    <div class="s2 description">
-                      {{ person.details}}
-                    </div>
-                  </div>
-                </div>
-              </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 d-flex align-items-stretch"
+          *ngFor="let imgperson of imgPersons">
+          <div style="margin-top:100px;" class="card video-card">
+            <div class="imgpadding imgpos">
+              <img class="embed-responsive-item imgcover imgcontain" [src]="imgperson.image" allowfullscreen>
             </div>
+            <br>
+            <h4 class="s1">{{imgperson.name}} | {{imgperson.uni}}</h4>
+            <h4 class="s2blue">Offer: {{imgperson.jobLoc}}, {{imgperson.job}}</h4>
+            <p class="s2 description">{{imgperson.description}}</p>
           </div>
         </div>
-          <div class="col-1">
-            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
       </div>
-    </div>
   </section>
-  
+
+</div>
 </div>
