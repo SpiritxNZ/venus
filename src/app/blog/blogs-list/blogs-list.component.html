@@ -4,7 +4,7 @@
           
 
             <div *ngFor ="let blog of blogs" class="col-lg-6 col-md-6 col-12 cardzoom d-inline-flex" >
-                <div class="card" [routerLink]="['/'+currentlang+'/'+blog.link]" style="margin-bottom:60px;">
+                <div class="card" [routerLink]="['/'+currentlang+'/article/'+blog.link]" style="margin-bottom:60px;">
                         <div class=" imgpadding" >
                                 <img class="bigimageholder" src= {{blog.image}} >
                         </div>
@@ -17,15 +17,8 @@
                         </div>                       
                 </div>               
             </div>
-
-        
-
-
         </div>
     </div>
-
 </section>
 <br><br>
-
 <br><br>
-

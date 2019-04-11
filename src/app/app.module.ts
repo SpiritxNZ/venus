@@ -37,17 +37,19 @@ import { BlogcontentoneComponent } from './blog/blog/content/blogcontentone/blog
 import { BlogcontenttwoComponent } from './blog/blog/content/blogcontenttwo/blogcontenttwo.component';
 import { BlogContentThreeComponent } from './blog/blog/content/blog-content-three/blog-content-three.component';
 import { PageNotFoundComponent } from './Pages/page-not-found/page-not-found.component';
-
+import { BlogArticleComponent } from './blog/blog-article/blog-article.component';
 
 const routes: Routes = [
   { path:'', redirectTo :'en/home', pathMatch: 'full' },
   { path:':lang/home', component:HomeComponent },
   { path:':lang/programs-main', component:ProgramsmainComponent },
+  // Blogs
   { path:':lang/blogs', component:BlogsListComponent },
   { path:':lang/blogs-list', component:BlogsListComponent },
   { path:':lang/blog-nz-it-job-seminar', component:BlogcontentoneComponent },
   { path:':lang/blog-gradspace-intro', component:BlogcontenttwoComponent },
   { path:':lang/blog-massey-it-seminar', component:BlogContentThreeComponent },
+  { path:':lang/article/:id', component: BlogArticleComponent},
 
   { path:':lang/blog', component:BlogComponent },
   { path:':lang/success-cases', component:SuccesscasesComponent },
@@ -86,7 +88,8 @@ const routes: Routes = [
     BlogcontentoneComponent,
     BlogcontenttwoComponent,
     PageNotFoundComponent,
-    BlogContentThreeComponent
+    BlogContentThreeComponent,
+    BlogArticleComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
