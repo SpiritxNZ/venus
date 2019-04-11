@@ -29,16 +29,16 @@ export class BlogComponent implements OnInit {
     this.blogId = this.route.snapshot.params.id
 
 
-    this.apiGetBlog(this.blogId);
+    // this.apiGetBlog(this.blogId);
    }
 
    // Get all blogs from Api
-   apiGetBlog(blogId){
-    this.apiService.getBlog(blogId).subscribe(
-      (res)=>{console.log(res), this.blog=res, this.setPageTitle(this.blog.blog.post_title)},
-      (err)=>{console.warn(err)}
-    )
-   }
+  //  apiGetBlog(blogId){
+  //   this.apiService.getBlog(blogId).subscribe(
+  //     (res)=>{console.log(res), this.blog=res, this.setPageTitle(this.blog.blog.post_title)},
+  //     (err)=>{console.warn(err)}
+  //   )
+  //  }
 
    setPageTitle(blogTitle){
     this.titleService.setTitle('Gradspace | '+blogTitle);
