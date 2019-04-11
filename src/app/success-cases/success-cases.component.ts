@@ -18,7 +18,7 @@ videoPersons: any[] = [
   {
     video: 'https://www.youtube.com/embed/Nbpl_8ijhUo',
     name: 'Neo',
-    uni: 'ICL Business School',
+    uni: '',
     job: 'Junior Developer',
     jobLoc: 'Hatch Web & Design',
     description: `Neo came to us in March 2017 while he was still attending 
@@ -30,7 +30,7 @@ videoPersons: any[] = [
   {
     video: 'https://www.youtube.com/embed/qw2b4HEgoeA',
     name: 'Bill',
-    uni: 'AUT',
+    uni: '| AUT',
     job: 'Junior Developer',
     jobLoc: 'Lancom Technology',
     description: `Bill came to us in June 2017 after he graduated from AUT. 
@@ -41,7 +41,7 @@ videoPersons: any[] = [
   {
     video: 'https://www.youtube.com/embed/EYd_USvuDdI',
     name: 'Pirlo',
-    uni: 'AUT',
+    uni: '| AUT',
     job: 'Intermediate Developer',
     jobLoc: 'Parkable',
     description: `Pirlo came to us in July 2017. While at Gradspace, 
@@ -75,7 +75,7 @@ videoPersons: any[] = [
 
   translatePage(){
     this.videoPersons.forEach(person => {
-      this.translate.setDefaultLang('successcases'+this.route.snapshot.paramMap.get('lang'));
+      this.translate.setDefaultLang('success-cases-'+this.route.snapshot.paramMap.get('lang'));
       person.video = this.sanitizer.bypassSecurityTrustResourceUrl(person.video);
     });
   }

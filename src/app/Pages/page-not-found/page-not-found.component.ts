@@ -16,6 +16,7 @@ export class PageNotFoundComponent implements OnInit {
     private translate: TranslateService,
     private route: ActivatedRoute
   ) {
+    translate.setDefaultLang('blog-gradspace-intro-'+this.route.snapshot.paramMap.get('lang'));
 
 
     this.meta.addTags([

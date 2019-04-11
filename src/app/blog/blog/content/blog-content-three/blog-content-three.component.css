@@ -3,7 +3,7 @@
 {
     height: 40vh;
     width: 100%;
-    background-image: url("../../../../../assets/blog_images/auckland.jpg");
+    background-image: url("../../../../../assets/blog_images/masseyUni.jpg");
     background-size: cover;
 }
 .blog
@@ -23,7 +23,6 @@
 }
 
 .posterimage{
-    height:570px;
     width:420px;
     text-align: center；
 }
