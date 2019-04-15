@@ -13,7 +13,7 @@
 }
 .bigimageholder
 {
-    width: 100%;
+    width: 1000px;
 }
 .wechatimage
 {
@@ -26,4 +26,8 @@
     height:570px;
     width:420px;
     text-align: center；
+}
+
+.ga{
+    font-size:25px;
 }
