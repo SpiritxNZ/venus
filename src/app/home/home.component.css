@@ -23,10 +23,12 @@ header{
     
 /* section2------------------------------------------------------------------------------------- */
 #sectionimage {
-    height:80%;
-    width: 80%;
+    height:85%;
+    width: 85%;
     margin-top: 40px;
+    margin-left:40px;
 }
+
 section#section2 {
     padding-bottom: 40px;
 }
