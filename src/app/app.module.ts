@@ -8,7 +8,7 @@ import { MatCheckboxModule, MatSelectModule } from '@angular/material';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { MatFormFieldModule} from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
-
+import { SafeHtmlPipe } from './support/custom-pipes';
 
 // import ngx-translate and the http loader
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
@@ -38,6 +38,9 @@ import { BlogcontenttwoComponent } from './blog/blog/content/blogcontenttwo/blog
 import { BlogContentThreeComponent } from './blog/blog/content/blog-content-three/blog-content-three.component';
 import { PageNotFoundComponent } from './Pages/page-not-found/page-not-found.component';
 import { BlogArticleComponent } from './blog/blog-article/blog-article.component';
+import { from } from 'rxjs';
+// import {SafeHtmlPipe} from "./pipes/safehtml.pipe";
+
 
 const routes: Routes = [
   { path:'', redirectTo :'en/home', pathMatch: 'full' },
@@ -89,7 +92,8 @@ const routes: Routes = [
     BlogcontenttwoComponent,
     PageNotFoundComponent,
     BlogContentThreeComponent,
-    BlogArticleComponent
+    BlogArticleComponent,
+    SafeHtmlPipe
   ],
   imports: [
     RouterModule.forRoot(routes),
@@ -108,10 +112,11 @@ const routes: Routes = [
           useFactory: HttpLoaderFactory,
           deps: [HttpClient]
       }
-  })
+  }),
   ],
   exports:[RouterModule,NavbarComponent,FooterComponent],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

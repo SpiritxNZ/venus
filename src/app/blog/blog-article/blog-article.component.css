@@ -5,6 +5,7 @@
     width: 100%;
     /* background-image: url("../../../../../assets/blog_images/masseyUni.jpg"); */
     background-size: cover;
+    
 }
 .blog
 {
@@ -13,7 +14,7 @@
 }
 .bigimageholder
 {
-    width: 100%;
+    width: 1000px;
 }
 .wechatimage
 {
@@ -26,3 +27,4 @@
     width:420px;
     text-align: center；
 }
+

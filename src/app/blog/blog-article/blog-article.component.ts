@@ -1,63 +1,73 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { DomSanitizer } from '@angular/platform-browser'
 
 @Component({
-  selector: 'app-blog-article',
-  templateUrl: './blog-article.component.html',
-  styleUrls: ['./blog-article.component.css']
+    selector: 'app-blog-article',
+    templateUrl: './blog-article.component.html',
+    styleUrls: ['./blog-article.component.css']
 })
+
 export class BlogArticleComponent implements OnInit {
-  articleId:number
-  articleData:any;
-  colors:string;
-  blogs ={
-    seminar_aut_1:{
-    link:"seminar_aut_1",
-    image:"../../../../../assets/blog_images/auckland.jpg",
-    subtitle:'2019 新西兰IT毕业生 就业讲座',
-    description:'伴随着2019的脚步，新的一年开学季马上就要到了；与此同时，也意味着又有许多刚毕业的留学生告别校园，加入求职大军中。',
-    publishTime:'Published 24 Jan 2019',
-    content: ''
-    },
-    gradspace_intro_1:{
-    link:'gradspace_intro_1',
-    image:'../../../../../assets/blog_images/whybloglist.jpg',
-    subtitle:'新西兰学IT找不到工作？原来是这个原因......',
-    description:'相当多的留学生从IT专业毕业后，却发现不要说企业的offer拿不到，连面试机会都没有！学IT的学生，花上一年时间也找不到工作的人并不少见。',
-    publishTime:'Published 16 Jan 2019',
-    content: ''
-    },
-    seminar_massey_1:{
-    link:'seminar_massey_1',
-    image:'../../../../../assets/blog_images/masseyUni.jpg',
-    subtitle:'IT 大学毕业生就业免费讲座 - 梅西大学4月10日',
-    description:'本次讲座应梅西大学华人学生会邀请，于2019年4月10日晚6点在梅西大学SNW100 举行。 针对于大学IT类 学生，毕业生 提供就业讲座。  我们将在讲座中，向您道出新西兰IT行业招聘的一些内幕，分析很多毕业生找不到工作的原因，给广大毕业生们指明方向并提出一些建议避免走弯路。相信那些有志于在新西兰IT行业闯出一片天的毕业生们不会错过。',
-    publishTime:' Published 08/04/2019',
-    content: ''
-    },
-  }
+    articleId: number
+    articleData: any;
 
-  constructor(
-    private route:ActivatedRoute,
-    private translate: TranslateService
-
-  ) {
-    // Consoles all blogs
-    console.log(this.blogs)
+    blogs = {
+        seminar_aut_1: {
+            link: "seminar_aut_1",
+            image: "../../../../../assets/blog_images/auckland.jpg",
+            title: '2019 新西兰IT毕业生 就业讲座',
+            description: '伴随着2019的脚步，新的一年开学季马上就要到了；与此同时，也意味着又有许多刚毕业的留学生告别校园，加入求职大军中。',
+            publishTime: 'Published 24 Jan 2019',
+            content: `
+        <h1 style="text-align:center; font-size:50px">“相约2019，追逐梦想”</h1> <br> <h1 style="color:black; text-align: center; font-size:40px;">--- 2019新西兰 IT 工作就业免费讲座</h1> <br> <h2 style=" text-align: left; font-size:18px;">伴随着2019的脚步，新的一年开学季马上就要到了；与此同时，也意味着又有许多刚毕业的留学生告别校园，加入求职大军中。</h2> <br> <h1 style="text-align: left; font-size:18px;">相当多的IT留学生尚未毕业就开始执着地投简历、等回音；但是，现实的情况却是，不要说企业的offer拿不到，连面试机会都没有！很多人花上一年时间也找不到工作。</h1> <br> <h1 style="text-align: left; font-size:18px;">Why？难道是我们毕业生自身业务知识不够好吗？难道是我们留学生英语不够好吗？还是我们找工作努力的方向不对？我们对就业市场了解的不够全面？</h1> <br> <img src="../../../../../assets/blog_images/question.jpg" style="text-align:center; width:100%;"> <br><br><br> <h1 style="text-align: left; font-size:18px;">并不尽然。对于大多数毕业生来讲，来新西兰找工作都是第一次，没有任何的经验，从网上了解的案例往往都是个例或者以偏概全。即使有过硬的业务水平，要想成功的快速的找到工作很多情况下都要看运气。</h1> <br> <h1 style="text-align: left; font-size:18px;">好消息是，Gradspace希望能够帮助大家，推出了面向留学生的免费就业讲座。我们将在短短的讲座中，向您道出新西兰IT行业招聘的一些内幕，分析很多毕业生找不到工作的原因，给广大毕业生们指明方向并提出一些建议避免走弯路。相信那些有志于在新西兰IT行业闯出一片天的毕业生们不会错过。</h1> <br> <img style="text-align:center; width: 100%;" src="../../../../../assets/blog_images/speech.png" > <br><br><br> <div style="border:solid 2px #0099ff; border-radius: 15px;" class="card"> <div class="card-header"> <h1 class="m1">讲座内容 ： </h1> </div> <div class="card-body"> <ul style="text-align: left; font-size:16px;"> <li><b>3月13日，周3， 6pm-8pm</b></li> <li>针对： 开发， 测试， 架构， BI, System engineering</li> <li>新西兰IT行业薪资与就业趋势</li> <li>IT毕业生的就业趋势</li> <li>8个在新西兰IT最火的技术和经验</li> <li>毕业生和新移民怎样找到 IT 工作</li> <li>5个 IT 求助者最该具备的能力</li> <li>CV vs CV 简历 的 对比</li> <li>6个常见 面试题， 如何面试成功</li> <li>毕业生的 IT 求助成功故事</li> </ul> </div> </div> <br> <div style="border:solid 2px #0099ff; border-radius: 15px;" class="card"> <div class="card-hseader"> <h1 style="text-align: center; font-size:25px;">主讲嘉宾介绍</h1> </div> <div class="card-body" style="text-align: center; font-size:16px;"> <b>Mike Li</b>, &nbsp;&nbsp; Gradspace创始人，资深程序员, 培训师 <hr> <b>Edwin Zhu</b>, &nbsp;&nbsp; Gradspace创始人，资深软件培训师， 20 年 IT 行业经验， 从 Programmer 到 联想部门总经理 <hr> <b>Denise Zhang</b>, &nbsp;&nbsp; 新西兰教育部 高级分析师， 曾任 维多利亚大学高级 BI 分析师 等 10 余年 IT 行业经验 </div> </div> <br> <div style="border:solid 2px #0099ff; border-radius: 15px;" class="card"> <div class="card-header"><h1 style="text-align: center; font-size:25px;">讲座地址</h1></div> <div class="card-body" style="text-align: center; font-size:16px;"> 2019， 3月13号， 星期三， 6pm - 8pm <br> <b>奥克兰理工大学 AUT, 市区 WF楼，3楼 WF311</b> <br><br> <i style="color:#0099ff" class="fas fa-map-marker"></i> &nbsp; <b>Level 3, 42 Wakefield St, Auckland CBD, 1010</b> </div> </div> <br> <div style="border:solid 2px #0099ff; border-radius: 15px;" class="card"> <div class="card-header"><h1 style="text-align: center; font-size:25px;">报名和联系</h1></div> <div class="card-body" style="text-align: center; font-size:16px;"> 电话：021 02264770 <br> 微信ID: mike_L23 <br><br> 微信 二维码：<br> <img style="width:200px;" src="../../../../../assets/blog_images/wechat.jpg"> </div> </div> <br><br> <div style="text-align: center;"> <img style="width:420px; " src="../../../../../assets/blog_images/seminar2019poster.png"> </div> <br><br><br> <div style="border:solid 2px #0099ff; border-radius: 15px;"> <div class="container"> <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 18px;">Gradspace简介：</h1> <div class="container " style="font-family: 'Times New Roman', Times, serif; font-size: 18px;"> <h1 class="blog s1" style="color:black;">Gradspace是一个旨在训练与培养高校IT专业毕业生进入职场的训练营。帮助更多的新西兰留学生完成从学校到职场的过渡。通过我们的项目让更多的学生有机会利用大学里所学的知识动手实践，从而有实实在在的东西写在CV中，少走弯路并能够在短时间里找到理想的工作，实现自己在新西兰的梦想。</h1> <br> </div> </div> </div> <br> <div style="border:solid 2px #0099ff; border-radius: 15px; font-family: 'Times New Roman', Times, serif; font-size: 18px;"> <div class="container"> <h1 class="blog s1" style="color:black;">Gradspace软件开发职业培训课程 - 前期准备充分, 投入巨大精力和人足市场调研。 课程研发紧跟市场步伐。</h1> <br> <h1 class="blog s1" style="color:black;">我们课程的主要内容：</h1> <br> <ul style="text-align: left;"> <li>学习热门的职业技能，为应对新西兰IT市场需求做准备。</li> <li>提供全方位的就业指导，包括但不限于：写简历，求职信。</li> <li>为您订制个性化的求职策略，直到您获得理想的工作offer。</li> <li>为您订制个性化的培训计划，释放您的潜质，放飞自我，达到与您梦想工作相匹配的水平。</li> <li>我们保证您在参加课程一年内找到工作，或退全款 ！</li> </ul> <br><br> <h1 class="blog s1" style="color:black;">具体课程浏览：</h1> <br> <ul style="text-align: left;"> <li>学习并实践流行的前端开发框架Angular及React。</li> <li>学习并实践流行的后端开发框架 C#, ASP.Net。</li> <li>学习并实践流行的数据库以及NoSQL数据库及Microsoft SQL server，MongoDB。</li> <li>另外我们还有可选择的课程例如Python, PHP, Laravel, Ionic以及Machine learning等。</li> <li>为您订制个性化的求职策略，直到您获得理想的工作offer。</li> </ul> <br> </div> </div> <br><br> <br><br>
     
-    // Sets translator
-    translate.setDefaultLang('blog'+this.route.snapshot.paramMap.get('lang'));
+    `
+        },
+        gradspace_intro_1: {
+            link: 'gradspace_intro_1',
+            image: '../../../../../assets/blog_images/whybloglist.jpg',
+            title: '新西兰学IT找不到工作？原来是这个原因......',
+            description: '相当多的留学生从IT专业毕业后，却发现不要说企业的offer拿不到，连面试机会都没有！学IT的学生，花上一年时间也找不到工作的人并不少见。',
+            publishTime: 'Published 16 Jan 2019',
+            content: `        
+       <h1 style="font-size:50px; font-family: 'Times New Roman', Times, serif; text-align: center;">新西兰学IT找不到工作？原来是这个原因......</h1> <br> <br> <div style="font-size:15px; font-family: 'Times New Roman', Times, serif;"> 伴随着2019到来的脚步，新的一年开学季马上就要到了，留学生们纷纷从国内来到美丽的新西兰，准备开始投入新学年的紧张学习中。 <br><br> 与此同时，也意味着很多刚毕业的留学生告别校园，加入求职大军中。 <br><br> 投简历、等回音、面试，没有几个月的时间根本不可能。随着移民政策的不断加紧，对于想通过工作移民，获得PR的中国留学生来说，拿到PR的门槛是越来越高，移民局对于技术移民的薪资水平有了越来越高的要求。要说目前什么方式移民最容易，那莫属于IT技术移民了，尤其是软件方向，长期位居新西兰移民局紧缺专业之首，行业最低薪资也在年薪6W左右，拿到企业offer就能办移民。 <br> <br> 但是，现实的情况是是，相当多的留学生从IT专业毕业后，却发现不要说企业的offer拿不到，连面试机会都没有！学IT的学生，花上一年时间也找不到工作的人并不少见。 <br> <br> <img style="width:100%" src="../../../../../assets/blog_images/lookingforjob.jpg"> <br><br><br> 而与此同时，Seek和TradeMe上大量的招聘信息，很多职位常年招不到人。 <br><br> 为什么会出现这样自相矛盾的现象呢？ <br><br> </div> <img style="width:100%" src="../../../../../assets/blog_images/why.jpg"> <br><br><br> <div style="font-size:15px; font-family: 'Times New Roman', Times, serif;"> 我们咨询了Gradspace的资深程序员Edwin Zhu <br> 原因有两点 <br><br> 1.对于新西兰的软件公司而言，由于大部分公司规模都很小，企业大多是没有培养成本的。招募一个应届毕业生或没有本地经验的人的经济风险是很大的，员工一旦跳槽，企业除了之前付出的培训成本打了水漂外，还要花成本去找到能接手工作的人。这也是许多公司宁愿付出更高工资招募有工作经验的员工，也不愿意雇佣刚毕业学生的原因。 <br><br> <img style="width:100%;" src="../../../../../assets/blog_images/job-interview.jpg"> <br><br><br> 2.对于大多数学IT的毕业生而言，在大学所学的课程知识相对滞后，侧重点在基础理论课程（C#,Java等），缺乏实践并和市场严重脱节。我们对Grandspace训练营培训的学员调查发现。这些学员此前都是在新西兰完成的大学学习，他们来自的学校涵盖了几乎所有的本地大学（奥克兰大学，AUT，梅西大学，怀卡托大学，维多利亚大学等）而对于市场流行的商业软件开发环境所用的工具和技术像Angular， React，Node.js, Laravel, MVC，Restful API等, 没有一所大学开设了专门的课程！有的学生甚至快毕业了都没听说过这些名词！ <br><br> <img style="width:100%;" src="../../../../../assets/blog_images/logo.jpg"> <br><br><br> 以下是现在新西兰招聘市场常见的技术关键字： <br><br> .NET core, Python, SilverStripe, Azure, AWS, Hadoop, Augmented reality, Blockchain, machine learning <br><br> UX/UI Designers, PHP Developers, Data Scientists and Engineers, Cyber Security and Data Security <br><br> 随着时间推移，这种学校与招聘市场脱节现象已经在业内形成了恶性循环。 <br><br> </div> <h1 style="color:#0099ff;">&nbsp;&nbsp;&nbsp;&nbsp;转 • 机</h1> <br> <div style="font-size:15px; font-family: 'Times New Roman', Times, serif;"> 一年前，两位有着资深软件开发背景的人士Edwin以及Mike，举办Gradspace训练营，来帮助应届毕业生或新移民顺利找到他们的第一份专业工作！ <br><br> Edwin和Mike有着非常丰富的从业经验，并在十几年的时间里，积累了大量人脉。很多新西兰的IT公司都对训练营计划表示支持。 <br><br> 这里有的只是在职软件工程师和最新的技能和知识。 <br> 这里更像是一个为毕业生提供实践机会的桥梁。 <br><br> <b style="font-size:25px" >我们的特色： </b> <br> <br> <b style="font-size:20px" >1、讲授所有知识点，配有真实商业软件开发项目实践 </b> <br> <br> 和一般实习中培训的机构不同，我们主张先把知识补上，再来专练实战。这不仅更符合华人留学生的学习习惯，效率也更高。对于实践环节，我们有在做的真实的商业软件项目可供学员动手实践，并配有资深程序员一对一指导。一般学员通过3个月的实习，可以完全深入的了解行业领域内的知识并精通其中一到两项。完全可以覆盖新西兰IT公司对于junior程序员的技能要求。 <br><br> <b style="font-size:20px" >2、中文教知识，英文教实战 </b> <br> <br> 我们使用中文教课英文课件及英文资料，实践过程我们使用英文指导，让学员有接近真实的职场环境，不会造成语言的脱节。 <br><br> <b style="font-size:20px">3、模拟面试，教你怎么找工作，推荐优秀学员 </b> <br> <br> 我们注意到了留学生在具体找工作时会面临的一些技巧性问题，比如该怎么应对面试，怎么找推荐信，对于优秀的学员，我们会提供工作推荐。 我们有专门的面试模拟培训环节，由资深程序员英文面试。整个过程所涉及到的知识点涵盖了目前软件公司偏爱的问题。同时我们也不断收集学员在求职过程中所遇到的面试问题，力求做到真实全面。 <br><br> <b style="font-size:20px">最后，也是最重要的一点是，我们保证每位学员都能找到工作，找不到我们退全款。</b> <br> <br> </div> <b style="font-size:25px">我们有许多成功的故事： </b> <br> <br> <div class="col-12"> <div class="embed-responsive embed-responsive-16by9 video"> <iframe src="https://www.youtube.com/embed/Nbpl_8ijhUo" allowfullscreen> </iframe> </div> </div> <br> <div style="font-size:15px; font-family: 'Times New Roman', Times, serif;"> 当前职位: Junior Developer at Hatch Web & Design <br><br> 参加的课程: Software Developer Programme <br><br> Neo于2017年三月来到训练营，刚来的时候他还是ICL business school的学生。在短短不到六个月的时间里，他从只会基础的HTML转变为能够熟练应用Angular 框架、JavaScript 和 TypeScript并结合Laravel 框架提供RESTful API ，最终成为一名full stack web developer。 </div> <br> <br> <div class="col-12"> <div class="embed-responsive embed-responsive-16by9 video"> <iframe src="https://www.youtube.com/embed/qw2b4HEgoeA" allowfullscreen> </iframe> </div> </div> <br> <div style="font-size:15px; font-family: 'Times New Roman', Times, serif;"> 当前职位: Junior Developer at Lancom Technology <br><br> 参加的课程: Software Developer Programme <br><br> Bill 于2017年6月AUT 毕业后参加训练营， 在这里他深度学习了Angular 框架、restful API等商业项目中用到的实际技术，在完成商业项目的过程中逐渐成长为合格的程序员。 </div> <br> <br> <div class="col-12" > <div class="embed-responsive embed-responsive-16by9 video"> <iframe src="https://www.youtube.com/embed/EYd_USvuDdI" allowfullscreen> </iframe> </div> </div> <br> <div style="font-size:15px; font-family: 'Times New Roman', Times, serif;"> 当前职位: Junior Developer at Magiq Software <br><br> 参加的课程: Software Developer Programme <br><br> “Gradspace 帮助我提高了编程技术教了我许多找工作的技巧。在这里你可以和很多有经验的程序员一起完成真实的项目，在这里你学到许多大学课程学不到的知识。非常感谢Gradspace给我这么好的实践机会” <br><br> </div> <div style="font-size:15px; font-family: 'Times New Roman', Times, serif;"> <b>Gradspace简介：</b> <br><br> Gradspace是一个旨在训练与培养高校IT专业毕业生进入职场的训练营。它源于一个商业项目www.learnspace.co.nz，在这个项目的开发过程中，我们先后招聘了20多个学生，指导他们学习和开发商业项目，最终全部找到工作并在职场上展现了有竞争力的水平。有了这一先例，我们的创始人Edwin与Mike决定创立Gradspace来继续培养毕业生，帮助更多的新西兰留学生完成从学校到职场的过渡。通过我们的项目让更多的学生有机会利用大学里所学的知识动手实践，从而有实实在在的东西写在CV中，少走弯路并能够在短时间里找到理想的工作，实现自己在新西兰的梦想。 <br> <br> <b>训练营导师简介：</b> <br> <div class="container" style="width:85%"> Edwin Zhu，Gradspace创始人之一，湖南师范大学毕业后起初从事软件教学工作，而后就职多家上市软件企业，历任程序员、研发经理、项目经理、售前经理、产品经理、部门经理等职务，二十多年软件开发经验，精通新西兰软件行业主要流行的开发技术，并且对软件培训有着深刻理解。 <br> Denise Zhang，Gradspace创始人之一，奥克兰大学毕业，先后就职于ANZ, Victoria University of Wellington, 新西兰教育部，从事过testing analyst，senior developer analyst等职务，参加过数十个软件项目，了解新西兰软件行业现状。 <br> Mike Lee，Gradspace 创始人，同时也是learnspace创始人 ，自学成为资深程序员，精通前后端软件技术，独自开发和建立learnspace网站系统以及多个网站软件系统，通过自身经历，了解毕业生成长为程序员过程中痛点和关键点，亲手成功培养了十多名软件程序员。 <br> </div> <br> <br> <b style="font-size:25px; font-family: 'Times New Roman', Times, serif;">课程介绍： </b> <br> <br> <b style="font-size:20px; font-family: 'Times New Roman', Times, serif;">1.职业规划 </b> <br><br> 做一个属于您自己的职业规划是我们项目的第一步，我们会安排资深导师根据您的背景和期望为您订制未来的学习计划 <br> <br> <b style="font-size:20px; font-family: 'Times New Roman', Times, serif;">2.有针对性的学习相关知识 </b> <br><br> 学习相关的IT工业标准，学习当下流行的主流编程技术（例如前端：Bootstrap、JavaScript、JQuery、TS、Angular、React；后端：C#、PHP、 ASP.Net、MVC、API、Laravel、 Node.js (express)；数据库：SQL server, NoSql，工具：Postman、WebPack、Gulp、Git、Docker、Cloud） <br> <br> <b style="font-size:20px; font-family: 'Times New Roman', Times, serif;">3.商业实践 </b> <br><br> 通过真实项目获取实践技能。 项目包括：XX电商网站项目、XX管理系统项目、XX数据挖掘系统项目 <br> 我们将学员组队进行真实项目合作演练，您可以自己选择前端或者后端。 <br> <br> <b style="font-size:20px; font-family: 'Times New Roman', Times, serif;">4.求职指导 </b> <br><br> 根据我们的承诺，我们会一直陪伴您直到您找到工作。我们提供一对一CV写作指导，并帮您模拟面试，分析面试过程问题。通过我们与新西兰各界的联系帮您进行职业推荐。 <br> <br> <b style="font-size:20px; font-family: 'Times New Roman', Times, serif;"> 详细信息欢迎联系我们： <br> <img style="width:200px;" src="../../../../../assets/blog_images/wechat.jpg"> <br> Web: www.gradspace.org <br> 微信ID: mike_l23 <br> Email: info@learnspace.co.nz <br> Phone: +64 21 02264770 </b> </div>
+    `
+        },
 
-    // Get article ID from Router
-    this.articleId = this.route.snapshot.params['id'];
-    this.colors='red'
-  }
+        seminar_massey_1: {
+            link: 'seminar_massey_1',
+            image: '../../../../../assets/blog_images/masseyUni.jpg',
+            title: 'IT 大学毕业生就业免费讲座 - 梅西大学4月10日',
+            description: '本次讲座应梅西大学华人学生会邀请，于2019年4月10日晚6点在梅西大学SNW100 举行。 针对于大学IT类 学生，毕业生 提供就业讲座。  我们将在讲座中，向您道出新西兰IT行业招聘的一些内幕，分析很多毕业生找不到工作的原因，给广大毕业生们指明方向并提出一些建议避免走弯路。相信那些有志于在新西兰IT行业闯出一片天的毕业生们不会错过。',
+            publishTime: ' Published 08/04/2019',
+            content: `     
 
-  ngOnInit() {
-    // Get the article data
-    this.articleData = this.blogs[this.articleId]
-    console.log(this.articleData)
-  }
+      <h1 style="font-size:40px; font-family: 'Times New Roman', Times, serif; text-align: center;">IT 大学毕业生就业免费讲座 - 梅西大学4月10日</h1> <br> <br> <div style="text-align:center; font-size:16px;"> 本次讲座应梅西大学华人学生会邀请，于2019年4月10日晚6点在梅西大学SNW100 举行。 <br>针对于大学IT类 学生，毕业生 提供就业讲座。 <br> <br> 我们将在讲座中，向您道出新西兰IT行业招聘的一些内幕，分析很多毕业生找不到工作的原因，给广大毕业生们指明方向并提出一些建议避免走弯路。相信那些有志于在新西兰IT行业闯出一片天的毕业生们不会错过。 <br><br><br> <div style="border:solid 2px #0099ff; border-radius: 15px;" class="card"> <div class="card-header"> <h1 class="m1">讲座内容 ： </h1> </div> <div class="card-body"> <ul style="text-align: left;"> <li>和 IT Professionals 交流谈话</li> <li>IT大学生怎样准备 就业 </li> <li>新西兰IT 行业职位 分析分享</li> <li>新西兰IT 行业薪资 与 就业趋势</li> <li>IT毕业生的就业趋势</li> <li>8个在新西兰IT最火的技术和经验</li> <li>5个 IT 求助者最该具备的能力</li> </ul> </div> </div> <br> <div style="border:solid 2px #0099ff; border-radius: 15px;" class="card"> <div class="card-hseader"> <h1 class="m1">主讲嘉宾介绍</h1> </div> <div class="card-body"> <b>Mike Li</b>, &nbsp;&nbsp; Gradspace创始人，资深程序员, 培训师 <hr> <b>Edwin Zhu</b>, &nbsp;&nbsp; Gradspace创始人，资深软件培训师， 20 年 IT 行业经验， 从 Programmer 到 联想部门总经理 <hr> </div> </div> <br> <div style="border:solid 2px #0099ff; border-radius: 15px;" class="card"> <div class="card-header"><h1 class="m1">讲座地址和时间</h1></div> <div class="card-body"> 2019， 4月10号， 星期三， 6pm - 8pm <br> <br> <i style="color:#0099ff" class="fas fa-map-marker"></i> &nbsp; <b>梅西大学 Massey University SNW100, 北岸 </b> </div> </div> <br> <div style="border:solid 2px #0099ff; border-radius: 15px;" class="card"> <div class="card-header"><h1 class="m1">报名和联系</h1></div> <div class="card-body"> 电话：021 02264770 <br> 微信ID: mike_L23 <br><br> 微信 二维码：<br> <img style="width:200px;" src="../../../../../assets/blog_images/wechat.jpg"> </div> <br> <h2 class="m1">关于Gradspace:</h2> <br> <a class="m2"href="http://www.gradspace.org/cn/home">http://www.gradspace.org/cn/home</a> <br> </div> <br><br> <img style="width:350px;" src="../../../../../assets/blog_images/MUACSA.jpg"> <br><br><br> <!-- <div style="border:solid 2px #0099ff; border-radius: 15px;"> <div class="container"> <h1 class="blog s1" style="color:black;">Gradspace简介：</h1> <div class="container"> <h1 class="blog s1" style="color:black;">Gradspace是一个旨在训练与培养高校IT专业毕业生进入职场的训练营。帮助更多的新西兰留学生完成从学校到职场的过渡。通过我们的项目让更多的学生有机会利用大学里所学的知识动手实践，从而有实实在在的东西写在CV中，少走弯路并能够在短时间里找到理想的工作，实现自己在新西兰的梦想。</h1> <br> </div> </div> </div> --> <br> <!-- <div style="border:solid 2px #0099ff; border-radius: 15px;"> <div class="container"> <h1 class="blog s1" style="color:black;">Gradspace软件开发职业培训课程 - 前期准备充分, 投入巨大精力和人足市场调研。 课程研发紧跟市场步伐。帮您<b>找到工作后收钱</b>！</h1> <br> <h1 class="blog s1" style="color:black;">我们的主要服务内容：</h1> <br> <ul style="text-align: left;"> <li>学习热门的职业技能，为应对新西兰IT市场需求做准备。</li> <li>提供全方位的就业指导，包括但不限于：写简历，求职信。</li> <li>为您订制个性化的求职策略，直到达到与您梦想工作相匹配的水平 并获得理想的工作offer。</li> <li>提供实际商业项目实习，让您有宝贵的 Work/project experience</li> <li>我们保证您找到工作，找到后 收钱 ！</li> </ul> <br><br> <h1 class="blog s1" style="color:black;">具体课程浏览：</h1> <br> <ul style="text-align: left;"> <li>学习并实践流行的前端开发框架Angular及React。</li> <li>学习并实践流行的后端开发框架 C#, ASP.Net。</li> <li>学习并实践流行的数据库以及NoSQL数据库及Microsoft SQL server，MongoDB。</li> <li>另外我们还有可选择的课程例如Python, PHP, Laravel, Ionic以及Machine learning等。</li> <li>为您订制个性化的求职策略，直到您获得理想的工作offer。</li> </ul> <br> </div> </div> --> <br><br> <div class="col-12"> <!-- <img style="width:350px;" src="../../../../../assets/blog_images/courseOutline.jpg"> --> </div> <br><br> </div>
+ 
+`
+        },
+    }
 
+    constructor(
+        private route: ActivatedRoute,
+        private translate: TranslateService,
+        private sanitizer: DomSanitizer
+    ) {
+        // Consoles all blogs
+        console.log(this.blogs)
+
+        // Sets translator
+        translate.setDefaultLang('blog' + this.route.snapshot.paramMap.get('lang'));
+
+        // Get article ID from Router
+        this.articleId = this.route.snapshot.params['id'];
+        this.articleData = this.blogs[this.articleId]
+    }
+
+    ngOnInit() {
+        // Get the article data
+        console.log(this.articleData)
+    }
 }

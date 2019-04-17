@@ -1,16 +1,16 @@
-<section id="section1">
-  <br><br><br><br>
+<section id="section1" [ngStyle]="{'background-image':'url('+articleData.image+')',  'height':'40vh', 'object-fit':'cover', 'width':'100%', 'background-position':'center'}">
+  <br><br>
   <div class="container jumbotronTitle" style="text-align: center">
 
   </div>
 </section>
 <!--section 1 end----------------------------------------------------------------------->
 <section id="section2">
-  <div class="container" [ngStyle]="{'background-image':'url(' + articleData.image + ')'}">
-    <div class="row" style="padding-top:60px; text-align: left;">
+  <div class="container">
+    <div class="row" style="padding-top:30px;" >
       <!--1st line-->
-      <div class="col-12" style="text-align: -webkit-center;">
-        qwe
+      <div class="col-12">
+        <div [innerHTML]="articleData.content | safeHtml"></div>
       </div>
     </div>
   </div>
