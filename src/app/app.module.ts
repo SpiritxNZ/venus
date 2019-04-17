@@ -3,17 +3,18 @@ import 'core-js/es7/reflect';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
-import { MatChipsModule} from '@angular/material';
+import { MatChipsModule } from '@angular/material';
 import { MatCheckboxModule, MatSelectModule } from '@angular/material';
-import { ReactiveFormsModule,FormsModule } from '@angular/forms';
-import { MatFormFieldModule} from '@angular/material';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { SafeHtmlPipe } from './support/custom-pipes';
+import { from } from 'rxjs';
 
 // import ngx-translate and the http loader
-import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
-import {HttpClient} from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient } from '@angular/common/http';
 
 // Begin all components
 import { AppComponent } from './app.component';
@@ -33,41 +34,35 @@ import { ProgramDeveloperComponent } from './programs/program-developer/program-
 import { ProgramDeveloperBeginnerComponent } from './programs/program-developer-beginner/program-developer-beginner.component';
 import { BlogsListComponent } from './blog/blogs-list/blogs-list.component';
 import { BlogComponent } from './blog/blog/blog.component';
-import { BlogcontentoneComponent } from './blog/blog/content/blogcontentone/blogcontentone.component';
-import { BlogcontenttwoComponent } from './blog/blog/content/blogcontenttwo/blogcontenttwo.component';
-import { BlogContentThreeComponent } from './blog/blog/content/blog-content-three/blog-content-three.component';
 import { PageNotFoundComponent } from './Pages/page-not-found/page-not-found.component';
 import { BlogArticleComponent } from './blog/blog-article/blog-article.component';
-import { from } from 'rxjs';
 // import {SafeHtmlPipe} from "./pipes/safehtml.pipe";
 
 
 const routes: Routes = [
-  { path:'', redirectTo :'en/home', pathMatch: 'full' },
-  { path:':lang/home', component:HomeComponent },
-  { path:':lang/programs-main', component:ProgramsmainComponent },
+  { path: '', redirectTo: 'en/home', pathMatch: 'full' },
+  { path: ':lang/home', component: HomeComponent },
+  { path: ':lang/programs-main', component: ProgramsmainComponent },
   // Blogs
-  { path:':lang/blogs', component:BlogsListComponent },
-  { path:':lang/blogs-list', component:BlogsListComponent },
-  { path:':lang/blog-nz-it-job-seminar', component:BlogcontentoneComponent },
-  { path:':lang/blog-gradspace-intro', component:BlogcontenttwoComponent },
-  { path:':lang/blog-massey-it-seminar', component:BlogContentThreeComponent },
-  { path:':lang/article/:id', component: BlogArticleComponent},
+  { path: ':lang/blogs', component: BlogsListComponent },
+  { path: ':lang/blogs-list', component: BlogsListComponent },
+  { path: ':lang/article/:id', component: BlogArticleComponent },
 
-  { path:':lang/blog', component:BlogComponent },
-  { path:':lang/success-cases', component:SuccesscasesComponent },
-  { path:':lang/about-us', component:AboutusComponent },
-  { path:'contact-us', component:ContactusComponent },
-  { path:':lang/courses-home', component:CourseshomeComponent },
-  { path:':lang/courses', component:CoursesComponent },
+  { path: ':lang/blog', component: BlogComponent },
+  { path: ':lang/success-cases', component: SuccesscasesComponent },
+  { path: ':lang/about-us', component: AboutusComponent },
+  { path: 'contact-us', component: ContactusComponent },
+  { path: ':lang/courses-home', component: CourseshomeComponent },
+  { path: ':lang/courses', component: CoursesComponent },
   // { path:':lang/courses/:id', component:CoursesComponent },
-  { path:':lang/program-developer', component: ProgramDeveloperComponent},
-  { path:':lang/program-developer-beginner', component: ProgramDeveloperBeginnerComponent},
-  { path:':lang/program-tester', component: ProgramTesterComponent},
-  { path:':lang/application', component:ApplicationComponent },
-  { path:':lang/faq', component:FaqComponent },
-  { path: '**',  component: PageNotFoundComponent }
-  ];
+  { path: ':lang/program-developer', component: ProgramDeveloperComponent },
+  { path: ':lang/program-developer-beginner', component: ProgramDeveloperBeginnerComponent },
+  { path: ':lang/program-tester', component: ProgramTesterComponent },
+  { path: ':lang/application', component: ApplicationComponent },
+  { path: ':lang/faq', component: FaqComponent },
+  { path: '**', component: PageNotFoundComponent }
+  
+];
 
 @NgModule({
   declarations: [
@@ -88,10 +83,7 @@ const routes: Routes = [
     ProgramDeveloperBeginnerComponent,
     BlogsListComponent,
     BlogComponent,
-    BlogcontentoneComponent,
-    BlogcontenttwoComponent,
     PageNotFoundComponent,
-    BlogContentThreeComponent,
     BlogArticleComponent,
     SafeHtmlPipe
   ],
@@ -108,13 +100,13 @@ const routes: Routes = [
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
       }
-  }),
+    }),
   ],
-  exports:[RouterModule,NavbarComponent,FooterComponent],
+  exports: [RouterModule, NavbarComponent, FooterComponent],
   providers: [
   ],
   bootstrap: [AppComponent]
