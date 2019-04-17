@@ -10,7 +10,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class BlogArticleComponent implements OnInit {
   articleId:number
   articleData:any;
-
+  colors:string;
   blogs ={
     seminar_aut_1:{
     link:"seminar_aut_1",
@@ -51,7 +51,7 @@ export class BlogArticleComponent implements OnInit {
 
     // Get article ID from Router
     this.articleId = this.route.snapshot.params['id'];
-
+    this.colors='red'
   }
 
   ngOnInit() {

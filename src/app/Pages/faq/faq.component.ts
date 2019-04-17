@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import { ActivatedRoute } from "@angular/router";
+
 @Component({
   selector: 'app-faq',
   templateUrl: './faq.component.html',
@@ -21,11 +22,23 @@ export class FaqComponent implements OnInit {
     },
     {
       question: 'When do programs start?',
-      answer: 'Most Gradspace programs start on the Monday of every month.'
+      answer: 'Personalised programs can start whenever agreed upon.'
+    },
+    {
+      question: 'How is the course conducted?',
+      answer: 'One-on-one mentoring in our office, work on projects just like you would in the business, our consultants can also instruct on video chatting.'
+    },
+    {
+      question: 'When are the tuition fees due?',
+      answer: 'The tuition fee only becomes payable after you have secured your job offer.'
     },
     {
       question: 'Are graduates enrolled in the Gradspace programs guaranteed to find a job?',
       answer: 'You are guaranteed to find a job in your discipline/field, provided reasonably continuous commitment.'
+    },
+    {
+      question: 'What if I already have the skills and experiences and only needs help finding a job?',
+      answer: '-	No problem, we offer many different packages with different fees.'
     }
   ];
 
