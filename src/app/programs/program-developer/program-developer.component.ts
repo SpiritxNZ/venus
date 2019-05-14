@@ -18,7 +18,7 @@ export class ProgramDeveloperComponent implements OnInit {
     private titleService: Title,
     private translate: TranslateService,
     private route: ActivatedRoute
-    
+
   ) {
     translate.setDefaultLang('program-developer-'+this.route.snapshot.paramMap.get('lang'));
     if (isPlatformBrowser(this.platformId)) {

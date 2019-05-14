@@ -36,7 +36,7 @@ import { BlogsListComponent } from './blog/blogs-list/blogs-list.component';
 import { BlogComponent } from './blog/blog/blog.component';
 import { PageNotFoundComponent } from './Pages/page-not-found/page-not-found.component';
 import { BlogArticleComponent } from './blog/blog-article/blog-article.component';
-// import {SafeHtmlPipe} from "./pipes/safehtml.pipe";
+import { ProgramDataanalystComponent } from './programs/program-dataanalyst/program-dataanalyst.component';
 
 
 const routes: Routes = [
@@ -85,6 +85,7 @@ const routes: Routes = [
     BlogComponent,
     PageNotFoundComponent,
     BlogArticleComponent,
+    ProgramDataanalystComponent,
     SafeHtmlPipe
   ],
   imports: [

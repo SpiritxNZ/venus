@@ -38,7 +38,7 @@ export class ApplicationComponent implements OnInit {
       "input": "input3",
       "id": "3",
       "backgroundimageurl": "../../../assets/icons/Business Analyst.png",
-      "name": "Business Analyst Program"
+      "name": "Business Intelligence & Data Analyst Program"
     }
   ];
 

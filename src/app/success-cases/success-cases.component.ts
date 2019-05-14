@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, Meta, Title } from '@angular/platform-browser';
 import {TranslateService} from '@ngx-translate/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from "@angular/router";
@@ -89,11 +89,18 @@ imgPersons: any[]=[
 
   
   constructor(
+    private meta: Meta,
+    private titleService: Title,
     private translate: TranslateService,
     private router:Router,
     private route: ActivatedRoute,
-    private sanitizer: DomSanitizer) { 
+    private sanitizer: DomSanitizer) {
     this.translatePage();
+    this.meta.addTags([
+      { name: 'keywords', content: 'IT training, IT graduates, IT jobs, software developer training, software graduates, web developer training, web dev study, web dev jobs, web developer jobs, web developer graduate, front end graduate'},
+      { name: 'description', content: 'Software developer training programme in Auckland.' }
+    ])
+    this.titleService.setTitle('Gradspace | Success Cases');
   }
 
   translatePage(){
